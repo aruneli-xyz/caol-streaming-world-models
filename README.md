@@ -33,6 +33,7 @@ paged copy-on-write fork contributed upstream to vLLM-Omni
 | `v2/human_annotation/` | Annotation tool and frozen protocol. Consent and recruitment files are drafting templates and were not used for any study. |
 | `v2/results/provenance/gamma_world_source.patch` | The local instrumentation patch applied to Gamma-World (SHA-256 prefix `814691ca7fbb`, as cited in the paper). |
 | `docs/` | Paper source, compiled PDF, figures, the numeric macros in `results.tex`, the arXiv ancillary file `anc/data/cow_microbench.json`, the tutorial notebook, and informal project notes. |
+| `docs/arxiv_source.zip` | Self-contained upload bundle for arXiv or Overleaf: `master.tex`, `results.tex`, the five included figures, and the ancillary file. |
 
 ## Environment
 
