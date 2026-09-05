@@ -1,0 +1,159 @@
+{
+  "claims": {
+    "back": {
+      "causal_divergence_pass": true,
+      "directional_obedience_pass": false,
+      "failed_claim": "directional obedience explicitly failed",
+      "scenes": {
+        "buildHouse_flat": {
+          "causal_divergence_pass": true,
+          "claim": "causal_divergence_only",
+          "directional_obedience_pass": false
+        },
+        "buildTower_normal": {
+          "causal_divergence_pass": true,
+          "claim": "causal_divergence_only",
+          "directional_obedience_pass": false
+        }
+      }
+    },
+    "yaw_positive": {
+      "causal_divergence_pass": true,
+      "directional_obedience_pass": false,
+      "failed_claim": "directional obedience explicitly failed",
+      "scenes": {
+        "buildHouse_flat": {
+          "causal_divergence_pass": true,
+          "claim": "causal_divergence_only",
+          "directional_obedience_pass": false
+        },
+        "buildTower_normal": {
+          "causal_divergence_pass": true,
+          "claim": "causal_divergence_only",
+          "directional_obedience_pass": false
+        }
+      }
+    }
+  },
+  "config_sha256": "4bc3d7fd782a573c5d1f7c022dd80c112f25c72993d9d4cf4a1325735d5e3fd0",
+  "partition": "audit",
+  "protocol_sha256": "0b7f8574b9811ebf475491c1d0aed40d41bb96bb3225af30a7ae92908fd6f0b8",
+  "samples": 20000,
+  "schema_version": "rtwm-v2-directional-bootstrap-1",
+  "summary_sha256": "6efe6f09262bb7907e1975918fd9d6abc29608ac1dde9df1384ef605ff864d64",
+  "transitions": {
+    "back": {
+      "buildHouse_flat": {
+        "directional_obedience_fraction": {
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "mean": 0.0,
+          "n_seeds": 2
+        },
+        "paired_flow_field_l2_peak": {
+          "ci95": [
+            0.02181187691770632,
+            0.023752103022518525
+          ],
+          "mean": 0.022781989970112423,
+          "n_seeds": 2
+        },
+        "primary_detection_fraction": {
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "mean": 1.0,
+          "n_seeds": 2
+        },
+        "seed_count": 2
+      },
+      "buildTower_normal": {
+        "directional_obedience_fraction": {
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "mean": 0.0,
+          "n_seeds": 2
+        },
+        "paired_flow_field_l2_peak": {
+          "ci95": [
+            0.012559363831304734,
+            0.012659689531810053
+          ],
+          "mean": 0.012609526681557393,
+          "n_seeds": 2
+        },
+        "primary_detection_fraction": {
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "mean": 1.0,
+          "n_seeds": 2
+        },
+        "seed_count": 2
+      }
+    },
+    "yaw_positive": {
+      "buildHouse_flat": {
+        "directional_obedience_fraction": {
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "mean": 0.0,
+          "n_seeds": 2
+        },
+        "paired_flow_field_l2_peak": {
+          "ci95": [
+            6.2731767611871305,
+            7.646140670992813
+          ],
+          "mean": 6.959658716089972,
+          "n_seeds": 2
+        },
+        "primary_detection_fraction": {
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "mean": 1.0,
+          "n_seeds": 2
+        },
+        "seed_count": 2
+      },
+      "buildTower_normal": {
+        "directional_obedience_fraction": {
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "mean": 0.0,
+          "n_seeds": 2
+        },
+        "paired_flow_field_l2_peak": {
+          "ci95": [
+            6.1102911454210425,
+            6.233929454373557
+          ],
+          "mean": 6.1721102998973,
+          "n_seeds": 2
+        },
+        "primary_detection_fraction": {
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "mean": 1.0,
+          "n_seeds": 2
+        },
+        "seed_count": 2
+      }
+    }
+  },
+  "unit": "seed; views are repeated observations"
+}

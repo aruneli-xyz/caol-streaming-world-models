@@ -1,0 +1,30 @@
+{
+  "artifacts": {
+    "audit_gate_sha256": "e422222bf9176117842a329f402d80ae46312b74cdc821dcd22e266b2b95eabd",
+    "calibration_gate_sha256": "86fee3129d7a9be3572f6b0f7525b5cef350f641a150f636f4d4dbe703adbdd0",
+    "held_out_analysis_sha256": "f3b29651599bbc03101aa2975eaabdbf7c34e4dc70a11d10a27e91d2aa9f35c0",
+    "manifest_sha256": "9fb091215b5949660899d05efe26d516254666f3a860eee1cbae9a0a4421478f"
+  },
+  "checks": {
+    "all_artifact_and_tensor_hashes_valid": true,
+    "all_intervention_prefixes_exact": true,
+    "audit_frozen_without_held_out": true,
+    "exactly_24_interventions": true,
+    "exactly_52_complete_records": true,
+    "held_out_32_views_complete": true,
+    "manifest_identity": true,
+    "null_calibration_validation_passed": true
+  },
+  "config_sha256": "4bc3d7fd782a573c5d1f7c022dd80c112f25c72993d9d4cf4a1325735d5e3fd0",
+  "counts": {
+    "interventions": 24,
+    "records": 52
+  },
+  "errors": [],
+  "passed": true,
+  "protocol_sha256": "0b7f8574b9811ebf475491c1d0aed40d41bb96bb3225af30a7ae92908fd6f0b8",
+  "report_sha256": "fe221bd0af13edec6abe9c969b720bdb2cebb2e13b7b3bd9e843f768503f4058",
+  "retained_generation_h200_hours": 3.173036960219987,
+  "retained_generation_total_s": 11422.933056791953,
+  "schema_version": "rtwm-v2-directional-final-validation-1"
+}

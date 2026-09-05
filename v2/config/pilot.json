@@ -1,0 +1,151 @@
+{
+  "schema_version": "rtwm-v2-pilot-1",
+  "experiment": "matched-stop-vs-forward",
+  "model": {
+    "source_commit": "6a95de85c439d8ea73eae34c88fbfd4e89ea02e2",
+    "checkpoint": "chijw/Gamma-World/causal-few-step/model.safetensors",
+    "n_frames": 189,
+    "fps": 16,
+    "latent_stride_pixels": 4,
+    "latent_frames_per_block": 3,
+    "guidance": 5.0
+  },
+  "pilot": {
+    "change_frame": 96,
+    "seeds": [1, 2, 3, 4],
+    "delays": [0, 1],
+    "stage1_scenes": ["buildTower_normal"],
+    "stage2_scenes": ["buildHouse_flat"],
+    "arms": {
+      "control": {
+        "pre": "forward",
+        "post": "forward"
+      },
+      "stop": {
+        "pre": "forward",
+        "post": "stay"
+      }
+    },
+    "duplicate_control_canary": {
+      "enabled": true,
+      "scene": "buildTower_normal",
+      "seed": 1
+    }
+  },
+  "detector": {
+    "resize_width": 240,
+    "resize_height": 160,
+    "roi": {
+      "x0": 12,
+      "x1": 228,
+      "y0": 20,
+      "y1": 120
+    },
+    "trim_fraction": 0.1,
+    "radial_center": [119.5, 79.5],
+    "radial_min_radius": 16.0,
+    "farneback": {
+      "pyr_scale": 0.5,
+      "levels": 3,
+      "winsize": 15,
+      "iterations": 3,
+      "poly_n": 5,
+      "poly_sigma": 1.2,
+      "flags": 0
+    },
+    "baseline_before": 24,
+    "baseline_gap": 2,
+    "search_horizon": 40,
+    "persistence": 3,
+    "mad_multiplier": 4.0,
+    "relative_delta": 0.15,
+    "absolute_delta": 0.03,
+    "pair_disagreement_flag_frames": 8,
+    "transitions": {
+      "start": {
+        "signal": "magnitude",
+        "direction": "rise"
+      },
+      "stop": {
+        "signal": "magnitude",
+        "direction": "fall"
+      },
+      "reverse": {
+        "signal": "radial",
+        "direction": "fall",
+        "absolute_target": -0.03
+      },
+      "left": {
+        "signal": "horizontal",
+        "direction": "rise",
+        "absolute_target": 0.03
+      },
+      "right": {
+        "signal": "horizontal",
+        "direction": "fall",
+        "absolute_target": -0.03
+      }
+    }
+  },
+  "paired_detector": {
+    "signal": "control_magnitude_minus_stop_magnitude",
+    "direction": "rise",
+    "baseline_before": 24,
+    "baseline_gap": 2,
+    "search_horizon_after_admission": 40,
+    "persistence": 3,
+    "mad_multiplier": 4.0,
+    "relative_delta": 0.15,
+    "absolute_delta": 0.03
+  },
+  "validation": {
+    "expected_frames": 189,
+    "minimum_finite_flow_fraction": 0.999,
+    "maximum_stage1_null_false_positives": 1,
+    "maximum_view_disagreement_frames": 8,
+    "require_synthetic_tests": true,
+    "require_prefix_comparison": true
+  },
+  "view_result_fields": [
+    "schema_version",
+    "sample",
+    "pair_id",
+    "scene",
+    "seed",
+    "delay_blocks",
+    "arm",
+    "transition",
+    "change_frame",
+    "admission_frame",
+    "view_index",
+    "signal_name",
+    "expected_direction",
+    "baseline_range",
+    "search_range",
+    "baseline",
+    "mad_sigma",
+    "delta",
+    "target",
+    "onset_signal_index",
+    "onset_frame",
+    "lag_from_change",
+    "offset_from_admission",
+    "status",
+    "qc_flags"
+  ],
+  "pair_result_fields": [
+    "pair_id",
+    "scene",
+    "seed",
+    "delay_blocks",
+    "view_statuses",
+    "view_onsets",
+    "view_lags",
+    "detected_count",
+    "pair_status",
+    "both_detected_onset_mean",
+    "onset_disagreement_frames",
+    "prefix_pixel_max_error",
+    "qc_flags"
+  ]
+}

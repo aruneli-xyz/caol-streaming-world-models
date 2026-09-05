@@ -1,0 +1,53 @@
+{
+  "schema_version": "rtwm-human-onset-protocol-1",
+  "frozen": true,
+  "status": "tool_qc_validation_only",
+  "claim_status": "no_human_data_or_human_validation_claim_exists",
+  "estimand": {
+    "primary_task": "For one intervention view and its commanded transition label, the first source frame at which the commanded response becomes visible.",
+    "responses": ["onset", "none", "uncertain", "technical_failure"],
+    "paired_control_display": false,
+    "secondary_paired_divergence_task": "not_implemented"
+  },
+  "media": {
+    "source": "raw_decoded_u8_npy_only",
+    "mp4_forbidden": true,
+    "fps": 16,
+    "window": {"start_inclusive": 72, "end_exclusive": 161, "frames": 89},
+    "command_frame": 96,
+    "d0_raw_support_start_by_view": {"left": 105, "right": 105},
+    "view_shape": [720, 1280, 3],
+    "full_playback_required_before_step_or_submit": true
+  },
+  "selection": {
+    "current_validation_inputs": ["canonical directional_d0 forward_to_back", "canonical directional_d0 forward_to_true_yaw"],
+    "primary_rule": "all complete eligible intervention views from a supplied hash-bound manifest",
+    "detector_outcome_independent": true,
+    "legacy_stop_media_forbidden": true,
+    "controls_and_nulls": "hidden_qc_only"
+  },
+  "assignment": {
+    "balance_unit": "item completed count",
+    "primary_group": "scene_x_seed",
+    "repeat_primary_group_within_annotator": false,
+    "delayed_repeat_minimum_completed_primaries": 4,
+    "lease_seconds": 1800
+  },
+  "qc": {
+    "canonical_null_or_control": true,
+    "synthetic_known_onset": true,
+    "synthetic_known_no_onset": true,
+    "delayed_hidden_exact_repeat": true
+  },
+  "analysis": {
+    "source_frame": "window_start + onset_index",
+    "lag_frames": "source_frame - command_frame",
+    "lag_seconds": "lag_frames / 16",
+    "primary_exclusions": ["technical_failure"],
+    "uncertain_handling": "report separately; do not silently coerce"
+  },
+  "ethics": {
+    "recruitment_allowed": false,
+    "requirement": "obtain IRB or equivalent ethics determination and approve consent/compensation before recruitment"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "complete": true,
+  "config_sha256": "135fda5c1bc63fe13fe6c5f3ed40732f3459895aa332060ffc9d94a9b300399f",
+  "expected_pairs": 24,
+  "gate_sha256": "89b82a655c05e75090e2c6b66f279fad253ef6cb7ba67ef2a74841d0289eb1cd",
+  "invalid_pairs": 0,
+  "observed_pairs": 24,
+  "old_paper_claims_allowed": true,
+  "outputs": {
+    "pair_results.jsonl": "86edf12433c5945d47be4e4f2272f3f9b5ce2409b7a7624d0035471147b029df",
+    "statistics.json": "675d9575894ba345defcefc9eac9741fa892a2e96dffcf5e909b76e8ff374564",
+    "view_results.jsonl": "cd2d2c51fcec0a5cee6de463656f0fc4dfdb8da47782ed55e3aaf74c2bcafafb"
+  },
+  "protocol_sha256": "82c64c2ac6c9eb5bfe0cafbee4d45dd57a201ddb064d6b3f4a1708ccde263e8d",
+  "schema_version": "rtwm-v2-canonical-stop-analysis-gate-1",
+  "valid_pairs": 24
+}

@@ -1,0 +1,13 @@
+# Analysis, scoring, plotting, and tests (CPU only).
+# Versions in comments are the ones recorded in the paper's environment
+# statement; newer patch releases should work.
+numpy>=2.2        # 2.2.6
+pandas>=2.3       # 2.3.3
+matplotlib>=3.9
+opencv-python>=4.10   # OpenCV 5.0.0 was used
+einops>=0.8
+pytest>=8
+
+# GPU rollouts additionally need the Gamma-World checkout and its own
+# environment (PyTorch 2.9.0+cu130 on an H200 in the paper); see README.md.
+# torch>=2.9

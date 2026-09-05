@@ -1,0 +1,77 @@
+{
+  "action_protocol_sha256": "90e8c77467e1361f04b99740097c5fd96aab8b0d3ae6a9b902879de0a5983e15",
+  "block_reasons": [],
+  "checks": {
+    "all_12_calibration_rollouts_present": true,
+    "all_4_validation_rollouts_present": true,
+    "canonical_action_protocol_bound": true,
+    "four_scene_view_locks": true,
+    "validation_zero_strict_crossings": true
+  },
+  "config_sha256": "4bc3d7fd782a573c5d1f7c022dd80c112f25c72993d9d4cf4a1325735d5e3fd0",
+  "gate_sha256": "51d2cd505bba3333e4d952a06bab384329b6b1bc67163cbe9fc404c675b42bcf",
+  "lock_payload_sha256": {
+    "buildHouse_flat__view0.json": "70cd8377701b59543d366258e4d0272a4a6a18d4e7e878b381a8b9c2dc14cf93",
+    "buildHouse_flat__view1.json": "c73aa2cd29d5b82d22a522408e453dbc4cb1f9a0fdc736cff56486a41770980d",
+    "buildTower_normal__view0.json": "c26d74ec43ca5eed910b58527daec5bf587a114c775c9cbe87dea88fab4fa636",
+    "buildTower_normal__view1.json": "b1323a6616193eedcc435da215a66d6df08585406acc35c2f7c95f73cd3814e2"
+  },
+  "manifest_sha256": "9fb091215b5949660899d05efe26d516254666f3a860eee1cbae9a0a4421478f",
+  "passed": true,
+  "protocol_sha256": "0b7f8574b9811ebf475491c1d0aed40d41bb96bb3225af30a7ae92908fd6f0b8",
+  "schema_version": "rtwm-v2-directional-null-gate-1",
+  "validation": [
+    {
+      "crossings": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "scene": "buildTower_normal",
+      "seed": 104,
+      "threshold": 0.0,
+      "view_index": 0,
+      "zero_crossings": true
+    },
+    {
+      "crossings": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "scene": "buildTower_normal",
+      "seed": 104,
+      "threshold": 0.0,
+      "view_index": 1,
+      "zero_crossings": true
+    },
+    {
+      "crossings": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "scene": "buildHouse_flat",
+      "seed": 104,
+      "threshold": 0.0,
+      "view_index": 0,
+      "zero_crossings": true
+    },
+    {
+      "crossings": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "scene": "buildHouse_flat",
+      "seed": 104,
+      "threshold": 0.0,
+      "view_index": 1,
+      "zero_crossings": true
+    }
+  ]
+}

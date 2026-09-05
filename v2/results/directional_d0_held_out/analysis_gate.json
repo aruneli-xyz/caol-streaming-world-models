@@ -1,0 +1,56 @@
+{
+  "audit_gate_allowed": false,
+  "audit_gate_block_reasons": [
+    "back_cosine_projection_audit_expected_direction",
+    "back_radial_reversal_audit_expected_direction",
+    "yaw_positive_global_horizontal_audit_expected_direction"
+  ],
+  "claims": {
+    "back": {
+      "causal_divergence_pass": true,
+      "directional_obedience_pass": false,
+      "failed_claim": "directional obedience explicitly failed",
+      "scenes": {
+        "buildHouse_flat": {
+          "causal_divergence_pass": true,
+          "claim": "causal_divergence_only",
+          "directional_obedience_pass": false
+        },
+        "buildTower_normal": {
+          "causal_divergence_pass": true,
+          "claim": "causal_divergence_only",
+          "directional_obedience_pass": false
+        }
+      }
+    },
+    "yaw_positive": {
+      "causal_divergence_pass": true,
+      "directional_obedience_pass": false,
+      "failed_claim": "directional obedience explicitly failed",
+      "scenes": {
+        "buildHouse_flat": {
+          "causal_divergence_pass": true,
+          "claim": "causal_divergence_only",
+          "directional_obedience_pass": false
+        },
+        "buildTower_normal": {
+          "causal_divergence_pass": true,
+          "claim": "causal_divergence_only",
+          "directional_obedience_pass": false
+        }
+      }
+    }
+  },
+  "complete": true,
+  "config_sha256": "4bc3d7fd782a573c5d1f7c022dd80c112f25c72993d9d4cf4a1325735d5e3fd0",
+  "expected_views": 32,
+  "gate_sha256": "192422e3df66d94564db24b5c99ad597fec6128e98324a1fdf050f346ca5fd79",
+  "observed_views": 32,
+  "outputs": {
+    "statistics.json": "4524377c264c392341a491365a97b0c10b5b87974d493cc3c003e95806cc791b",
+    "view_results.jsonl": "5c8a140ecf147fc6bada77bed67bba37ee110cfe6ec7d84de7653bd9afd12e92"
+  },
+  "partition": "held_out",
+  "protocol_sha256": "0b7f8574b9811ebf475491c1d0aed40d41bb96bb3225af30a7ae92908fd6f0b8",
+  "schema_version": "rtwm-v2-directional-analysis-gate-1"
+}

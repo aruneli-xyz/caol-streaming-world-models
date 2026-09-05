@@ -1,0 +1,10 @@
+dataset,detector,transition,n_views,n_detected,detection_rate,mean_lag,median_lag
+intrinsic_v1_videos,v1_future_midpoint_magnitude,left,12,10,0.8333333333333334,5.5,4.0
+intrinsic_v1_videos,v1_future_midpoint_magnitude,reverse,12,8,0.6666666666666666,3.875,1.0
+intrinsic_v1_videos,v1_future_midpoint_magnitude,start,12,12,1.0,3.1666666666666665,3.0
+intrinsic_v1_videos,v1_future_midpoint_magnitude,stop,12,9,0.75,2.4444444444444446,2.0
+intrinsic_v1_videos,v2_preonly_transition_aware,left,12,0,0.0,,
+intrinsic_v1_videos,v2_preonly_transition_aware,reverse,12,0,0.0,,
+intrinsic_v1_videos,v2_preonly_transition_aware,start,12,12,1.0,1.6666666666666667,1.0
+intrinsic_v1_videos,v2_preonly_transition_aware,stop,12,2,0.16666666666666666,2.0,2.0
+serving_v1_videos,v2_preonly_transition_aware,stop,40,0,0.0,,

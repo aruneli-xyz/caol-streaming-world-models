@@ -1,0 +1,109 @@
+{
+  "schema_version": "rtwm-v2-canonical-stop-1",
+  "experiment": "fresh-solaris-canonical-forward-to-stop",
+  "immutable": true,
+  "model": {
+    "source_commit": "6a95de85c439d8ea73eae34c88fbfd4e89ea02e2",
+    "source_diff_sha256": "814691ca7fbb8ca11633d9b5ea41bc3966a95ad1849049995b529e4ebdf8a75c",
+    "checkpoint": "chijw/Gamma-World/causal-few-step/model.safetensors",
+    "checkpoint_sha256": "33a7cda5f5d701ea98bf88d73aa4d498f4757b73e651f4abf2a3c76b0d09bb61",
+    "tokenizer_sha256": "38071ab59bd94681c686fa51d75a1968f64e470262043be31f7a094e442fd981",
+    "n_frames": 189,
+    "fps": 16,
+    "change_frame": 96,
+    "latent_stride_pixels": 4,
+    "latent_frames_per_block": 3,
+    "guidance": 5.0
+  },
+  "design": {
+    "scenes": ["buildTower_normal", "buildHouse_flat"],
+    "seeds": [201, 202, 203, 204, 205, 206],
+    "delays": [
+      {"name": "d0", "admission_latent": 27},
+      {"name": "d1", "admission_latent": 30}
+    ],
+    "expected_interventions": 24,
+    "pre": {
+      "keys": ["forward"],
+      "camera_yaw_degrees": 0.0,
+      "camera_pitch_degrees": 0.0
+    },
+    "post": {
+      "keys": [],
+      "camera_yaw_degrees": 0.0,
+      "camera_pitch_degrees": 0.0
+    }
+  },
+  "action_protocol": {
+    "ordering": [
+      "inventory", "ESC", "hotbar.1", "hotbar.2", "hotbar.3",
+      "hotbar.4", "hotbar.5", "hotbar.6", "hotbar.7", "hotbar.8",
+      "hotbar.9", "forward", "back", "left", "right", "jump",
+      "sneak", "sprint", "swapHands", "attack", "use", "pickItem", "drop"
+    ],
+    "camera_ordering": ["cameraX_yaw_degrees", "cameraY_pitch_degrees"],
+    "solaris_source": "research/safeswm/external/solaris/src/data/minecraft.py",
+    "solaris_source_sha256": "3647ac53db53e472c509aa914ebc9f46df2acc9bd311aa9081ecfdcd7cb95364",
+    "canonical_action_protocol_sha256": "90e8c77467e1361f04b99740097c5fd96aab8b0d3ae6a9b902879de0a5983e15"
+  },
+  "canonical_evidence": {
+    "directional_config": "config/directional_d0.json",
+    "directional_config_sha256": "4bc3d7fd782a573c5d1f7c022dd80c112f25c72993d9d4cf4a1325735d5e3fd0",
+    "source_root": "results/directional_d0",
+    "source_manifest": "results/directional_d0/manifest.json",
+    "source_manifest_sha256": "9fb091215b5949660899d05efe26d516254666f3a860eee1cbae9a0a4421478f",
+    "source_protocol_sha256": "0b7f8574b9811ebf475491c1d0aed40d41bb96bb3225af30a7ae92908fd6f0b8",
+    "null_calibration": "results/directional_d0_calibration",
+    "null_gate": "results/directional_d0_calibration/gate_report.json",
+    "null_gate_sha256": "86fee3129d7a9be3572f6b0f7525b5cef350f641a150f636f4d4dbe703adbdd0",
+    "source_validation": "results/directional_d0_validation.json",
+    "source_validation_sha256": "806eb8f43bdb41673782fb9efd6b84dc08a2f4f5e061d39eb41d2155d5338cde",
+    "decoder_rf_manifest": "results/decoder_rf_confirmatory/buildTower_normal__seed1__d0/manifest.json",
+    "decoder_rf_manifest_sha256": "ef8ae6b28aa58d9164c820056b3463db4dc66549a2e0323c86c8693f5b6df2b0"
+  },
+  "detector": {
+    "resize_width": 240,
+    "resize_height": 160,
+    "roi": {"x0": 12, "x1": 228, "y0": 20, "y1": 120},
+    "trim_fraction": 0.1,
+    "radial_center": [119.5, 79.5],
+    "radial_min_radius": 16.0,
+    "farneback": {
+      "pyr_scale": 0.5, "levels": 3, "winsize": 15, "iterations": 3,
+      "poly_n": 5, "poly_sigma": 1.2, "flags": 0
+    },
+    "baseline_before": 24,
+    "baseline_gap": 2,
+    "search_horizon": 40,
+    "persistence": 3,
+    "mad_multiplier": 4.0,
+    "relative_delta": 0.15,
+    "absolute_delta": 0.03,
+    "pair_disagreement_flag_frames": 8,
+    "transitions": {}
+  },
+  "paired_detector": {
+    "signal": "flow_field_l2",
+    "direction": "rise",
+    "search_horizon_after_admission": 40,
+    "persistence": 3,
+    "threshold_fit": {"statistic": "maximum", "quantile": 1.0},
+    "crossing_operator": "strict_greater_than"
+  },
+  "validation": {
+    "minimum_finite_flow_fraction": 0.999,
+    "required_artifacts": ["latent", "decoded_u8", "detector_frames", "action_tensors"],
+    "require_exact_prefix": true,
+    "bootstrap_samples": 20000,
+    "throughput_tolerance_fraction": 0.05
+  },
+  "legacy_comparison": {
+    "d0_onset_lag_frames": 9.0,
+    "d1_onset_lag_frames": 21.0,
+    "d0_flow_divergence_peak": 0.017843921328932522,
+    "d1_flow_divergence_peak": 0.01743043026629965,
+    "d0_effective_generation_fps": 0.7122761692895768,
+    "d1_effective_generation_fps": 0.70482590768302,
+    "source": "results/confirmatory_scoring/statistics.json"
+  }
+}

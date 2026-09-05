@@ -1,0 +1,60 @@
+{
+  "checks": [
+    {
+      "error": null,
+      "name": "static_near_zero",
+      "passed": true
+    },
+    {
+      "error": null,
+      "name": "positive_horizontal_sign",
+      "passed": true
+    },
+    {
+      "error": null,
+      "name": "radial_opposite_signs",
+      "passed": true
+    },
+    {
+      "error": null,
+      "name": "rendered_endpoint_indexing",
+      "passed": true
+    },
+    {
+      "error": null,
+      "name": "view_order",
+      "passed": true
+    },
+    {
+      "error": null,
+      "name": "nonfinite_rejected",
+      "passed": true
+    },
+    {
+      "error": null,
+      "name": "paired_exact_duplicate_zero",
+      "passed": true
+    },
+    {
+      "error": null,
+      "name": "paired_strict_equality_not_crossing",
+      "passed": true
+    },
+    {
+      "error": null,
+      "name": "paired_translation_detectable",
+      "passed": true
+    }
+  ],
+  "config_sha256": "742495a5d00c80ef7ca1b4136dd1594dc4eb050d0c84215e32219cfd41fe80b8",
+  "created_at": "2026-08-18T20:19:24Z",
+  "evidence_sha256": "4318a679cffdff6f78b99985c55e87f92b2ebe702ac7c355d142f65c93cb2b60",
+  "passed": true,
+  "protocol_sha256": "047aebd31aba39e50f7a72b9202a2935f266fda230ba62400e1298f888029e26",
+  "schema_version": "rtwm-v2-synthetic-preflight-1",
+  "source": {
+    "commit": "6a95de85c439d8ea73eae34c88fbfd4e89ea02e2",
+    "diff_sha256": "814691ca7fbb8ca11633d9b5ea41bc3966a95ad1849049995b529e4ebdf8a75c",
+    "dirty": true
+  }
+}

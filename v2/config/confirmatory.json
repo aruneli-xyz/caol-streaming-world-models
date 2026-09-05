@@ -1,0 +1,176 @@
+{
+  "schema_version": "rtwm-v2-confirmatory-1",
+  "experiment": "separately-calibrated-paired-stop-vs-forward",
+  "model": {
+    "source_commit": "6a95de85c439d8ea73eae34c88fbfd4e89ea02e2",
+    "checkpoint": "chijw/Gamma-World/causal-few-step/model.safetensors",
+    "n_frames": 189,
+    "fps": 16,
+    "latent_stride_pixels": 4,
+    "latent_frames_per_block": 3,
+    "guidance": 5.0
+  },
+  "confirmatory": {
+    "change_frame": 96,
+    "scenes": [
+      "buildTower_normal",
+      "buildHouse_flat"
+    ],
+    "calibration": {
+      "seeds": [
+        101,
+        102,
+        103
+      ],
+      "arms": [
+        "null_control_a",
+        "null_control_b"
+      ],
+      "commands": {
+        "null_control_a": {
+          "pre": "forward",
+          "post": "forward"
+        },
+        "null_control_b": {
+          "pre": "forward",
+          "post": "forward"
+        }
+      }
+    },
+    "validation": {
+      "seeds": [
+        104
+      ],
+      "arms": [
+        "null_control_a",
+        "null_control_b"
+      ],
+      "require_zero_strict_crossings": true
+    },
+    "test": {
+      "seeds": [
+        201,
+        202,
+        203,
+        204,
+        205,
+        206
+      ],
+      "arms": {
+        "control": {
+          "pre": "forward",
+          "post": "forward"
+        },
+        "stop": {
+          "pre": "forward",
+          "post": "stay"
+        }
+      },
+      "delays": [
+        {
+          "name": "d0",
+          "delay_blocks": 0,
+          "admission_latent": 27
+        },
+        {
+          "name": "d1",
+          "delay_blocks": 1,
+          "admission_latent": 30
+        }
+      ]
+    }
+  },
+  "detector": {
+    "resize_width": 240,
+    "resize_height": 160,
+    "roi": {
+      "x0": 12,
+      "x1": 228,
+      "y0": 20,
+      "y1": 120
+    },
+    "trim_fraction": 0.1,
+    "radial_center": [
+      119.5,
+      79.5
+    ],
+    "radial_min_radius": 16.0,
+    "farneback": {
+      "pyr_scale": 0.5,
+      "levels": 3,
+      "winsize": 15,
+      "iterations": 3,
+      "poly_n": 5,
+      "poly_sigma": 1.2,
+      "flags": 0
+    },
+    "baseline_before": 24,
+    "baseline_gap": 2,
+    "search_horizon": 40,
+    "persistence": 3,
+    "mad_multiplier": 4.0,
+    "relative_delta": 0.15,
+    "absolute_delta": 0.03,
+    "pair_disagreement_flag_frames": 8,
+    "transitions": {
+      "start": {
+        "signal": "magnitude",
+        "direction": "rise"
+      },
+      "stop": {
+        "signal": "magnitude",
+        "direction": "fall"
+      },
+      "reverse": {
+        "signal": "radial",
+        "direction": "fall",
+        "absolute_target": -0.03
+      },
+      "left": {
+        "signal": "horizontal",
+        "direction": "rise",
+        "absolute_target": 0.03
+      },
+      "right": {
+        "signal": "horizontal",
+        "direction": "fall",
+        "absolute_target": -0.03
+      }
+    }
+  },
+  "paired_detector": {
+    "signal": "flow_field_l2",
+    "direction": "rise",
+    "search_horizon_after_admission": 40,
+    "persistence": 3,
+    "threshold_fit": {
+      "statistic": "maximum",
+      "quantile": 1.0,
+      "anchors": [72, 96, 108, 120],
+      "window": 40
+    },
+    "crossing_operator": "strict_greater_than"
+  },
+  "validation": {
+    "expected_frames": 189,
+    "minimum_finite_flow_fraction": 0.999,
+    "require_exact_manifest_hashes": true,
+    "require_all_scene_view_locks": true,
+    "forbid_intervention_threshold_inputs": true,
+    "require_synthetic_tests": true,
+    "require_receptive_field_gate": true,
+    "required_artifacts": [
+      "latent",
+      "decoded_u8",
+      "detector_frames"
+    ],
+    "allow_one_bundle_rerun": true
+  },
+  "receptive_field": {
+    "temporal_stride": 4,
+    "probe_latent_indices": [24, 27, 30],
+    "require_raw_prefix_exact": true,
+    "require_monotone_support": true,
+    "mp4_is_diagnostic_only": true
+  }
+}

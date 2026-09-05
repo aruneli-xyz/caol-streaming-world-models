@@ -1,0 +1,96 @@
+diff --git a/gamma_world/_src/gamma_world/inference/inference_i2v.py b/gamma_world/_src/gamma_world/inference/inference_i2v.py
+index e6f32d9..7adc105 100644
+--- a/gamma_world/_src/gamma_world/inference/inference_i2v.py
++++ b/gamma_world/_src/gamma_world/inference/inference_i2v.py
+@@ -402,6 +402,16 @@ class I2VInference:
+             _sample_peak_alloc = torch.cuda.max_memory_allocated() / (1024 ** 3)
+             _sample_peak_reserved = torch.cuda.max_memory_reserved() / (1024 ** 3)
+ 
++            # SafeSWM instrumentation (local patch): expose the pre-decode
++            # generated latent so external probes can score hazards without
++            # paying the VAE decode cost.
++            import os as _os
++            if _os.environ.get("SAFESWM_DUMP_LATENTS"):
++                # Preserve the sampler dtype for exact matched-prefix and
++                # decoder receptive-field measurements. Callers that need a
++                # smaller artifact can downcast explicitly after validation.
++                self.last_sample_latent = sample.detach().to("cpu")
++
+             torch.cuda.reset_peak_memory_stats()
+             _dec_t0 = time.perf_counter()
+             with sync_timer("decode"):
+@@ -446,6 +456,41 @@ class I2VInference:
+ 
+         return video
+ 
++    # ------------------------------------------------------------------
++    # SafeSWM / hazloc instrumentation (local patch): pooled per-block DiT
++    # activations for layerwise hazard-emergence probing. Enable with
++    # SAFESWM_DUMP_ACTS="0,7,14,21,27" (block indices). Each hooked block
++    # appends a (mean, std) token-pooled vector per forward call; the
++    # caller resets/collects via reset_act_records()/act_records.
++    def setup_activation_hooks(self) -> None:
++        import os as _os
++
++        spec = _os.environ.get("SAFESWM_DUMP_ACTS")
++        if not spec:
++            return
++        blocks = self.model.net.blocks
++        self.act_hook_indices = [int(s) for s in spec.split(",") if s.strip() != ""]
++        self.act_records = {i: [] for i in self.act_hook_indices}
++
++        def make_hook(idx: int):
++            def hook(_module, _inp, out):
++                t = out[0] if isinstance(out, tuple) else out
++                t = t.detach().float()
++                flat = t.reshape(-1, t.shape[-1])  # tokens x channels
++                pooled = torch.cat([flat.mean(0), flat.std(0)]).to("cpu", dtype=torch.float16)
++                self.act_records[idx].append(pooled)
++            return hook
++
++        for i in self.act_hook_indices:
++            blocks[i].register_forward_hook(make_hook(i))
++        log.info(f"[hazloc] activation hooks on blocks {self.act_hook_indices} "
++                 f"(of {len(blocks)})")
++
++    def reset_act_records(self) -> None:
++        if hasattr(self, "act_records"):
++            for k in self.act_records:
++                self.act_records[k] = []
++
+     def cleanup(self) -> None:
+ 
+         if "RANK" in os.environ:
+diff --git a/scripts/inference.py b/scripts/inference.py
+index 10c33cb..c9774ec 100644
+--- a/scripts/inference.py
++++ b/scripts/inference.py
+@@ -129,6 +129,11 @@ def generate_sample(engine, spec, images, prompt, actions, output_dir, args, num
+         images, prompt, actions, num_frames=args.num_frames, num_conditional_frames=args.num_conditional_frames
+     )
+     engine.clear_cache()
++    # SafeSWM/hazloc instrumentation (local patch).
++    if os.environ.get("SAFESWM_DUMP_ACTS"):
++        if not hasattr(engine, "act_records"):
++            engine.setup_activation_hooks()
++        engine.reset_act_records()
+ 
+     if spec.sampler == "bidirectional":
+         video = engine.generate_single_shot(batch, guidance=args.guidance, seed=args.seed, num_steps=num_steps, shift=args.shift)
+@@ -140,6 +145,16 @@ def generate_sample(engine, spec, images, prompt, actions, output_dir, args, num
+         os.makedirs(output_dir, exist_ok=True)
+         save_img_or_video(video[0], os.path.join(output_dir, "generated"), fps=args.fps)
+         log.info(f"Saved {tuple(video.shape)} to {output_dir}/generated")
++        # SafeSWM instrumentation (local patch): persist pre-decode latents.
++        if os.environ.get("SAFESWM_DUMP_LATENTS") and hasattr(engine, "last_sample_latent"):
++            torch.save(engine.last_sample_latent, os.path.join(output_dir, "latent.pt"))
++            log.info(f"Saved latent {tuple(engine.last_sample_latent.shape)} to {output_dir}/latent.pt")
++        # hazloc: persist pooled per-block activations (calls x 2*channels).
++        if os.environ.get("SAFESWM_DUMP_ACTS") and hasattr(engine, "act_records"):
++            acts = {k: torch.stack(v) for k, v in engine.act_records.items() if v}
++            torch.save(acts, os.path.join(output_dir, "block_acts.pt"))
++            shapes = {k: tuple(t.shape) for k, t in acts.items()}
++            log.info(f"Saved block activations {shapes} to {output_dir}/block_acts.pt")
+ 
+ def main() -> None:
+     os.environ.setdefault("NVTE_FUSED_ATTN", "0")

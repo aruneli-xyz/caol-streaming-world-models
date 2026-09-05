@@ -1,0 +1,97 @@
+{
+  "allowed": true,
+  "block_reasons": [],
+  "calibration_payload_sha256": "c7cb1d5ee721a93973b1224694f090df4abec10b46dfcb398f1b6cb8a8c11492",
+  "checks": {
+    "calibration_locked": true,
+    "decoder_deterministic": true,
+    "full_pair_no_raw_effect_before_support": true,
+    "mp4_diagnostic_complete": true,
+    "no_raw_effect_before_expected_support": true,
+    "raw_artifacts_required": true,
+    "receptive_field_passed": true,
+    "required_indices_present": true,
+    "rf_config_matches": true,
+    "rf_manifest_complete": true,
+    "support_monotone": true,
+    "synthetic_tests_passed": true,
+    "validation_zero_crossings": true
+  },
+  "config_sha256": "742495a5d00c80ef7ca1b4136dd1594dc4eb050d0c84215e32219cfd41fe80b8",
+  "evidence_artifacts": [
+    {
+      "bytes": 1442,
+      "path": "/home/arunkumareli/code/research/rtwm/v2/results/confirmatory_preflight.json",
+      "required": true,
+      "sha256": "be19c0390e3a2ecb18866a1d58d92f4ace561067ba74f0222bdb96a4d564a84d"
+    },
+    {
+      "bytes": 3392,
+      "path": "/home/arunkumareli/code/research/rtwm/v2/results/paired_calibration_confirmatory/gate_report.json",
+      "required": true,
+      "sha256": "2b766a7a01687d41055d02b460e391a0233016afec0dccfc61ca64314d26609b"
+    },
+    {
+      "bytes": 6116,
+      "path": "/home/arunkumareli/code/research/rtwm/v2/results/paired_calibration_confirmatory/locks/buildHouse_flat__view0.json",
+      "required": true,
+      "sha256": "5eed51c506c49b2aaaa4a6c34ce0971253fa5f08278aabd35ecd979dfbde93f7"
+    },
+    {
+      "bytes": 6116,
+      "path": "/home/arunkumareli/code/research/rtwm/v2/results/paired_calibration_confirmatory/locks/buildHouse_flat__view1.json",
+      "required": true,
+      "sha256": "d77297ed91cef9729906ada9afa328df64b5637e258a09a8ffc0673c514926a5"
+    },
+    {
+      "bytes": 6168,
+      "path": "/home/arunkumareli/code/research/rtwm/v2/results/paired_calibration_confirmatory/locks/buildTower_normal__view0.json",
+      "required": true,
+      "sha256": "b89b1e65489fc213e29533fba738b19858fcdb4ce6e10e884f71dcfd32143fcd"
+    },
+    {
+      "bytes": 6168,
+      "path": "/home/arunkumareli/code/research/rtwm/v2/results/paired_calibration_confirmatory/locks/buildTower_normal__view1.json",
+      "required": true,
+      "sha256": "96c37fc292d4a72fbbad8ff479d13909241a5764e4d924d50c448569ba7d638d"
+    },
+    {
+      "bytes": 6760,
+      "path": "/home/arunkumareli/code/research/rtwm/v2/results/decoder_rf_confirmatory/buildTower_normal__seed1__d0/manifest.json",
+      "required": true,
+      "sha256": "ef8ae6b28aa58d9164c820056b3463db4dc66549a2e0323c86c8693f5b6df2b0"
+    },
+    {
+      "bytes": 4397,
+      "path": "/home/arunkumareli/code/research/rtwm/v2/results/decoder_rf_confirmatory/buildTower_normal__seed1__d0/full_stop_control.json",
+      "required": true,
+      "sha256": "f108991f3eab024f7ac0f79fffcc281d768b1876afaef4fbaf6215d93744c6bb"
+    },
+    {
+      "bytes": 2034,
+      "path": "/home/arunkumareli/code/research/rtwm/v2/results/decoder_rf_confirmatory/buildTower_normal__seed1__d0/determinism.json",
+      "required": true,
+      "sha256": "6f7e1b75ade2f6d388d119b2daa6bea3af4df4d8b6c7c21431aed15b5b6a292e"
+    },
+    {
+      "bytes": 56103,
+      "path": "/home/arunkumareli/code/research/rtwm/v2/results/decoder_rf_confirmatory/buildTower_normal__seed1__d0/hybrid_results.jsonl",
+      "required": true,
+      "sha256": "49657f90fab82a8b850bf0fdf2622e10a00d1bfb4ada6778c00ceca230eb7ba2"
+    },
+    {
+      "bytes": 9336,
+      "path": "/home/arunkumareli/code/research/rtwm/v2/results/decoder_rf_confirmatory/buildTower_normal__seed1__d0/mp4_diagnostic.json",
+      "required": true,
+      "sha256": "7e5e1e8ca732b89558a4dbe3de0ca5784802e1b2e4c5ac167151e243533be3f1"
+    }
+  ],
+  "gate_sha256": "ee24ad90dde8b0c1151fdf4383ccba308c8e001e9a18403d27a87dc3058f3c2c",
+  "protocol_sha256": "047aebd31aba39e50f7a72b9202a2935f266fda230ba62400e1298f888029e26",
+  "required_rf_indices": [
+    24,
+    27,
+    30
+  ],
+  "schema_version": "rtwm-v2-confirmatory-generation-gate-1"
+}

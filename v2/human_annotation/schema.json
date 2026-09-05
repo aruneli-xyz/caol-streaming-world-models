@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "rtwm-human-response-1",
+  "title": "RTWM human onset annotation response",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["response", "confidence", "plays", "replays", "steps", "decision_ms", "hidden_ms", "visibility_changes", "preload_failures", "events"],
+  "properties": {
+    "response": {"enum": ["onset", "none", "uncertain", "technical_failure"]},
+    "onset_index": {"type": ["integer", "null"], "minimum": 0, "maximum": 88},
+    "confidence": {"type": "integer", "minimum": 1, "maximum": 5},
+    "plays": {"type": "integer", "minimum": 1},
+    "replays": {"type": "integer", "minimum": 0},
+    "steps": {"type": "integer", "minimum": 0},
+    "decision_ms": {"type": "integer", "minimum": 0},
+    "hidden_ms": {"type": "integer", "minimum": 0},
+    "visibility_changes": {"type": "integer", "minimum": 0},
+    "preload_failures": {"type": "integer", "minimum": 0},
+    "events": {"type": "array", "items": {"type": "object"}}
+  },
+  "allOf": [
+    {
+      "if": {"properties": {"response": {"const": "onset"}}},
+      "then": {"required": ["onset_index"], "properties": {"onset_index": {"type": "integer"}}},
+      "else": {"properties": {"onset_index": {"type": "null"}}}
+    }
+  ]
+}

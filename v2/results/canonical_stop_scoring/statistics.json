@@ -1,0 +1,358 @@
+{
+  "bootstrap": {
+    "interval": "percentile 95%",
+    "missing_onsets": "seed onset is reported only when both views detect in every planned scene; reliability is reported separately",
+    "samples": 20000
+  },
+  "by_delay": {
+    "d0": {
+      "metrics": {
+        "any_view_detection_fraction": {
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "mean": 1.0,
+          "n_seeds": 6
+        },
+        "both_view_detection_fraction": {
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "mean": 1.0,
+          "n_seeds": 6
+        },
+        "causal_onset_lag_frames": {
+          "ci95": [
+            9.0,
+            9.0
+          ],
+          "mean": 9.0,
+          "n_seeds": 6
+        },
+        "effective_generation_fps": {
+          "ci95": [
+            0.8312338370347284,
+            0.8375570687196577
+          ],
+          "mean": 0.8343091948012851,
+          "n_seeds": 6
+        },
+        "flow_divergence_peak": {
+          "ci95": [
+            0.017029318486398118,
+            0.01745449136905403
+          ],
+          "mean": 0.017228766073485478,
+          "n_seeds": 6
+        }
+      },
+      "scene_pair_count": 12,
+      "seed_count": 6
+    },
+    "d1": {
+      "metrics": {
+        "any_view_detection_fraction": {
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "mean": 1.0,
+          "n_seeds": 6
+        },
+        "both_view_detection_fraction": {
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "mean": 1.0,
+          "n_seeds": 6
+        },
+        "causal_onset_lag_frames": {
+          "ci95": [
+            21.0,
+            21.0
+          ],
+          "mean": 21.0,
+          "n_seeds": 6
+        },
+        "effective_generation_fps": {
+          "ci95": [
+            0.8317624442238124,
+            0.8383347106628986
+          ],
+          "mean": 0.8350260829026278,
+          "n_seeds": 6
+        },
+        "flow_divergence_peak": {
+          "ci95": [
+            0.01680516828273483,
+            0.017457278166451616
+          ],
+          "mean": 0.01715673139564988,
+          "n_seeds": 6
+        }
+      },
+      "scene_pair_count": 12,
+      "seed_count": 6
+    }
+  },
+  "by_scene": {
+    "d0": {
+      "buildHouse_flat": {
+        "any_detected": 6,
+        "any_view_detection_fraction": {
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "mean": 1.0,
+          "n_seeds": 6
+        },
+        "both_detected": 6,
+        "both_view_detection_fraction": {
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "mean": 1.0,
+          "n_seeds": 6
+        },
+        "effective_generation_fps": {
+          "ci95": [
+            0.8268497449548184,
+            0.8395189958733772
+          ],
+          "mean": 0.8333153043985639,
+          "n_seeds": 6
+        },
+        "flow_divergence_peak": {
+          "ci95": [
+            0.02122531452213715,
+            0.021967897487376584
+          ],
+          "mean": 0.021534859845520754,
+          "n_seeds": 6
+        },
+        "onset_lag_frames": {
+          "ci95": [
+            9.0,
+            9.0
+          ],
+          "mean": 9.0,
+          "n_seeds": 6
+        },
+        "valid_pairs": 6
+      },
+      "buildTower_normal": {
+        "any_detected": 6,
+        "any_view_detection_fraction": {
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "mean": 1.0,
+          "n_seeds": 6
+        },
+        "both_detected": 6,
+        "both_view_detection_fraction": {
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "mean": 1.0,
+          "n_seeds": 6
+        },
+        "effective_generation_fps": {
+          "ci95": [
+            0.8302546216728826,
+            0.8383914147035109
+          ],
+          "mean": 0.8353030852040061,
+          "n_seeds": 6
+        },
+        "flow_divergence_peak": {
+          "ci95": [
+            0.012767367181677513,
+            0.013121453916946175
+          ],
+          "mean": 0.012922672301450196,
+          "n_seeds": 6
+        },
+        "onset_lag_frames": {
+          "ci95": [
+            9.0,
+            9.0
+          ],
+          "mean": 9.0,
+          "n_seeds": 6
+        },
+        "valid_pairs": 6
+      }
+    },
+    "d1": {
+      "buildHouse_flat": {
+        "any_detected": 6,
+        "any_view_detection_fraction": {
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "mean": 1.0,
+          "n_seeds": 6
+        },
+        "both_detected": 6,
+        "both_view_detection_fraction": {
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "mean": 1.0,
+          "n_seeds": 6
+        },
+        "effective_generation_fps": {
+          "ci95": [
+            0.8307104718094309,
+            0.8403462787350703
+          ],
+          "mean": 0.836406741257694,
+          "n_seeds": 6
+        },
+        "flow_divergence_peak": {
+          "ci95": [
+            0.02086092724131824,
+            0.021779054538979204
+          ],
+          "mean": 0.02131143573145061,
+          "n_seeds": 6
+        },
+        "onset_lag_frames": {
+          "ci95": [
+            21.0,
+            21.0
+          ],
+          "mean": 21.0,
+          "n_seeds": 6
+        },
+        "valid_pairs": 6
+      },
+      "buildTower_normal": {
+        "any_detected": 6,
+        "any_view_detection_fraction": {
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "mean": 1.0,
+          "n_seeds": 6
+        },
+        "both_detected": 6,
+        "both_view_detection_fraction": {
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "mean": 1.0,
+          "n_seeds": 6
+        },
+        "effective_generation_fps": {
+          "ci95": [
+            0.8263655718803632,
+            0.8399572900087477
+          ],
+          "mean": 0.8336454245475614,
+          "n_seeds": 6
+        },
+        "flow_divergence_peak": {
+          "ci95": [
+            0.012695090014535766,
+            0.013285984890704462
+          ],
+          "mean": 0.013002027059849158,
+          "n_seeds": 6
+        },
+        "onset_lag_frames": {
+          "ci95": [
+            21.0,
+            21.0
+          ],
+          "mean": 21.0,
+          "n_seeds": 6
+        },
+        "valid_pairs": 6
+      }
+    }
+  },
+  "canonical_minus_legacy": {
+    "d0": {
+      "causal_onset_lag_frames": 0.0,
+      "effective_generation_fps": 0.12203302551170825,
+      "flow_divergence_peak": -0.0006151552554470446
+    },
+    "d1": {
+      "causal_onset_lag_frames": 0.0,
+      "effective_generation_fps": 0.1302001752196078,
+      "flow_divergence_peak": -0.00027369887064977033
+    }
+  },
+  "config_sha256": "135fda5c1bc63fe13fe6c5f3ed40732f3459895aa332060ffc9d94a9b300399f",
+  "legacy_comparison": {
+    "d0_effective_generation_fps": 0.7122761692895768,
+    "d0_flow_divergence_peak": 0.017843921328932522,
+    "d0_onset_lag_frames": 9.0,
+    "d1_effective_generation_fps": 0.70482590768302,
+    "d1_flow_divergence_peak": 0.01743043026629965,
+    "d1_onset_lag_frames": 21.0,
+    "source": "results/confirmatory_scoring/statistics.json"
+  },
+  "paired_delay_comparison": {
+    "d1_minus_d0_any_view_detection_fraction": {
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "mean": 0.0,
+      "n_seeds": 6
+    },
+    "d1_minus_d0_both_view_detection_fraction": {
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "mean": 0.0,
+      "n_seeds": 6
+    },
+    "d1_minus_d0_causal_onset_lag_frames": {
+      "ci95": [
+        12.0,
+        12.0
+      ],
+      "mean": 12.0,
+      "n_seeds": 6
+    },
+    "d1_minus_d0_effective_generation_fps": {
+      "ci95": [
+        -0.0021490307530557438,
+        0.0029116580324296906
+      ],
+      "mean": 0.0007168881013426646,
+      "n_seeds": 6
+    },
+    "d1_minus_d0_flow_divergence_peak": {
+      "ci95": [
+        -0.00026806910556483623,
+        0.00013643537940430327
+      ],
+      "mean": -7.203467783559354e-05,
+      "n_seeds": 6
+    },
+    "relative_throughput_difference": 0.0008588904948187308,
+    "similar_throughput": true,
+    "throughput_tolerance_fraction": 0.05
+  },
+  "protocol_sha256": "82c64c2ac6c9eb5bfe0cafbee4d45dd57a201ddb064d6b3f4a1708ccde263e8d",
+  "schema_version": "rtwm-v2-canonical-stop-statistics-1",
+  "statistical_unit": "seed; scenes and views are repeated observations",
+  "statistics_sha256": "c72a30d572e59b9a82388ee0a462b2ef502d92526931437cf07064a7d7b488cd"
+}

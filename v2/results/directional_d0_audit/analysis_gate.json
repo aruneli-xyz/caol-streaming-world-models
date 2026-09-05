@@ -1,0 +1,50 @@
+{
+  "claims": {
+    "back": {
+      "causal_divergence_pass": true,
+      "directional_obedience_pass": false,
+      "failed_claim": "directional obedience explicitly failed",
+      "scenes": {
+        "buildHouse_flat": {
+          "causal_divergence_pass": true,
+          "claim": "causal_divergence_only",
+          "directional_obedience_pass": false
+        },
+        "buildTower_normal": {
+          "causal_divergence_pass": true,
+          "claim": "causal_divergence_only",
+          "directional_obedience_pass": false
+        }
+      }
+    },
+    "yaw_positive": {
+      "causal_divergence_pass": true,
+      "directional_obedience_pass": false,
+      "failed_claim": "directional obedience explicitly failed",
+      "scenes": {
+        "buildHouse_flat": {
+          "causal_divergence_pass": true,
+          "claim": "causal_divergence_only",
+          "directional_obedience_pass": false
+        },
+        "buildTower_normal": {
+          "causal_divergence_pass": true,
+          "claim": "causal_divergence_only",
+          "directional_obedience_pass": false
+        }
+      }
+    }
+  },
+  "complete": true,
+  "config_sha256": "4bc3d7fd782a573c5d1f7c022dd80c112f25c72993d9d4cf4a1325735d5e3fd0",
+  "expected_views": 16,
+  "gate_sha256": "2e688cdab16aba983d1dc343c3eed1680d291d8e1d57105ad199b127a7dd4d22",
+  "observed_views": 16,
+  "outputs": {
+    "statistics.json": "985142cf89e7d515a44946ff0e92d3ac6981ba9d5e6772dc5968086e2dda2b0d",
+    "view_results.jsonl": "069a48c75672a341fbb6d99428b5e0acf6985f50eef99187cc6e72dd37661460"
+  },
+  "partition": "audit",
+  "protocol_sha256": "0b7f8574b9811ebf475491c1d0aed40d41bb96bb3225af30a7ae92908fd6f0b8",
+  "schema_version": "rtwm-v2-directional-analysis-gate-1"
+}

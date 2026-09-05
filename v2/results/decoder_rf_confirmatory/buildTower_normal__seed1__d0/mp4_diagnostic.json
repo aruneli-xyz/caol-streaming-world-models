@@ -1,0 +1,385 @@
+{
+  "control_raw_vs_mp4": {
+    "comparison_domain": "raw_uint8_pre_mp4",
+    "exact": false,
+    "first": "control_raw",
+    "first_raw_sha256": "3ae9cfdb0f8f0a3b640dfa0da6f765c46b00c1d0c7b2f243d12d844eb02a29a2",
+    "frame_metrics": {
+      "arrays": {
+        "changed_pixels": {
+          "dtype": "uint64",
+          "shape": [
+            2,
+            189
+          ]
+        },
+        "changed_values": {
+          "dtype": "uint64",
+          "shape": [
+            2,
+            189
+          ]
+        },
+        "max_abs": {
+          "dtype": "uint8",
+          "shape": [
+            2,
+            189
+          ]
+        },
+        "mean_abs": {
+          "dtype": "float64",
+          "shape": [
+            2,
+            189
+          ]
+        },
+        "sum_abs": {
+          "dtype": "uint64",
+          "shape": [
+            2,
+            189
+          ]
+        }
+      },
+      "path": "metrics/mp4_diag_control.npz",
+      "schema_version": "rtwm-v2-decoder-rf-frame-metrics-1",
+      "sha256": "7febb8343b44054f1b43ed75c40fa4a3e68304e11672a590138095cfb8616f95"
+    },
+    "raw_dtype": "uint8",
+    "raw_shape_vthwc": [
+      2,
+      189,
+      720,
+      1280,
+      3
+    ],
+    "second": "control_mp4_decode",
+    "second_raw_sha256": "e6c82515a621f6ed3ba49a8c4fd3a33e0987d59acb253df1db7422ae2b6be80a",
+    "views": [
+      {
+        "changed_frame_count": 189,
+        "changed_frame_spans": [
+          [
+            0,
+            188
+          ]
+        ],
+        "earliest_changed_frame": 0,
+        "frame_count": 189,
+        "latest_changed_frame": 188,
+        "maximum_absolute_error": 123,
+        "total_absolute_error": 972963651,
+        "total_changed_pixels": 171889760,
+        "total_changed_values": 423772814,
+        "view_index": 0
+      },
+      {
+        "changed_frame_count": 189,
+        "changed_frame_spans": [
+          [
+            0,
+            188
+          ]
+        ],
+        "earliest_changed_frame": 0,
+        "frame_count": 189,
+        "latest_changed_frame": 188,
+        "maximum_absolute_error": 107,
+        "total_absolute_error": 937519774,
+        "total_changed_pixels": 171965862,
+        "total_changed_values": 423537508,
+        "view_index": 1
+      }
+    ]
+  },
+  "earliest_pair_difference_shift_by_view": [
+    -39,
+    -39
+  ],
+  "mp4_stop_control": {
+    "comparison_domain": "raw_uint8_pre_mp4",
+    "exact": false,
+    "first": "control_mp4_decode",
+    "first_raw_sha256": "e6c82515a621f6ed3ba49a8c4fd3a33e0987d59acb253df1db7422ae2b6be80a",
+    "frame_metrics": {
+      "arrays": {
+        "changed_pixels": {
+          "dtype": "uint64",
+          "shape": [
+            2,
+            189
+          ]
+        },
+        "changed_values": {
+          "dtype": "uint64",
+          "shape": [
+            2,
+            189
+          ]
+        },
+        "max_abs": {
+          "dtype": "uint8",
+          "shape": [
+            2,
+            189
+          ]
+        },
+        "mean_abs": {
+          "dtype": "float64",
+          "shape": [
+            2,
+            189
+          ]
+        },
+        "sum_abs": {
+          "dtype": "uint64",
+          "shape": [
+            2,
+            189
+          ]
+        }
+      },
+      "path": "metrics/mp4_diag_encoded_pair.npz",
+      "schema_version": "rtwm-v2-decoder-rf-frame-metrics-1",
+      "sha256": "c92da3dd88d41c3e0065664f9c6769d980ef31447402f0e12893f6adc8d836e4"
+    },
+    "raw_dtype": "uint8",
+    "raw_shape_vthwc": [
+      2,
+      189,
+      720,
+      1280,
+      3
+    ],
+    "second": "stop_mp4_decode",
+    "second_raw_sha256": "949c12b32bb91895d150e26a5535ef5e07ce02f005cb6de2d9e39048dbaa5f61",
+    "views": [
+      {
+        "changed_frame_count": 135,
+        "changed_frame_spans": [
+          [
+            54,
+            188
+          ]
+        ],
+        "earliest_changed_frame": 54,
+        "frame_count": 189,
+        "latest_changed_frame": 188,
+        "maximum_absolute_error": 208,
+        "total_absolute_error": 399107837,
+        "total_changed_pixels": 74730752,
+        "total_changed_values": 187321023,
+        "view_index": 0
+      },
+      {
+        "changed_frame_count": 135,
+        "changed_frame_spans": [
+          [
+            54,
+            188
+          ]
+        ],
+        "earliest_changed_frame": 54,
+        "frame_count": 189,
+        "latest_changed_frame": 188,
+        "maximum_absolute_error": 209,
+        "total_absolute_error": 408202929,
+        "total_changed_pixels": 75690134,
+        "total_changed_values": 188715906,
+        "view_index": 1
+      }
+    ]
+  },
+  "note": "Raw-to-MP4 differences include both the saved FP16 latent downcast (generation decoded the unsaved sampler tensor) and lossy MP4 encoding; they are not a codec-only estimate.",
+  "raw_stop_control": {
+    "comparison_domain": "raw_uint8_pre_mp4",
+    "exact": false,
+    "first": "control_raw",
+    "first_raw_sha256": "3ae9cfdb0f8f0a3b640dfa0da6f765c46b00c1d0c7b2f243d12d844eb02a29a2",
+    "frame_metrics": {
+      "arrays": {
+        "changed_pixels": {
+          "dtype": "uint64",
+          "shape": [
+            2,
+            189
+          ]
+        },
+        "changed_values": {
+          "dtype": "uint64",
+          "shape": [
+            2,
+            189
+          ]
+        },
+        "max_abs": {
+          "dtype": "uint8",
+          "shape": [
+            2,
+            189
+          ]
+        },
+        "mean_abs": {
+          "dtype": "float64",
+          "shape": [
+            2,
+            189
+          ]
+        },
+        "sum_abs": {
+          "dtype": "uint64",
+          "shape": [
+            2,
+            189
+          ]
+        }
+      },
+      "path": "metrics/mp4_diag_raw_pair.npz",
+      "schema_version": "rtwm-v2-decoder-rf-frame-metrics-1",
+      "sha256": "b21e1919300fefe6becb8b8ee17efbb7ee1659db086aac61b5e744cc21c7c67e"
+    },
+    "raw_dtype": "uint8",
+    "raw_shape_vthwc": [
+      2,
+      189,
+      720,
+      1280,
+      3
+    ],
+    "second": "stop_raw",
+    "second_raw_sha256": "0d2d4c2858c377a178573c5348e6a800e88a47d49c8909fbec393f37edbf2cde",
+    "views": [
+      {
+        "changed_frame_count": 96,
+        "changed_frame_spans": [
+          [
+            93,
+            188
+          ]
+        ],
+        "earliest_changed_frame": 93,
+        "frame_count": 189,
+        "latest_changed_frame": 188,
+        "maximum_absolute_error": 215,
+        "total_absolute_error": 128444231,
+        "total_changed_pixels": 52528042,
+        "total_changed_values": 87856329,
+        "view_index": 0
+      },
+      {
+        "changed_frame_count": 96,
+        "changed_frame_spans": [
+          [
+            93,
+            188
+          ]
+        ],
+        "earliest_changed_frame": 93,
+        "frame_count": 189,
+        "latest_changed_frame": 188,
+        "maximum_absolute_error": 224,
+        "total_absolute_error": 156956941,
+        "total_changed_pixels": 53263335,
+        "total_changed_values": 90904620,
+        "view_index": 1
+      }
+    ]
+  },
+  "schema_version": "rtwm-v2-decoder-rf-mp4-diagnostic-1",
+  "status": "ok",
+  "stop_raw_vs_mp4": {
+    "comparison_domain": "raw_uint8_pre_mp4",
+    "exact": false,
+    "first": "stop_raw",
+    "first_raw_sha256": "0d2d4c2858c377a178573c5348e6a800e88a47d49c8909fbec393f37edbf2cde",
+    "frame_metrics": {
+      "arrays": {
+        "changed_pixels": {
+          "dtype": "uint64",
+          "shape": [
+            2,
+            189
+          ]
+        },
+        "changed_values": {
+          "dtype": "uint64",
+          "shape": [
+            2,
+            189
+          ]
+        },
+        "max_abs": {
+          "dtype": "uint8",
+          "shape": [
+            2,
+            189
+          ]
+        },
+        "mean_abs": {
+          "dtype": "float64",
+          "shape": [
+            2,
+            189
+          ]
+        },
+        "sum_abs": {
+          "dtype": "uint64",
+          "shape": [
+            2,
+            189
+          ]
+        }
+      },
+      "path": "metrics/mp4_diag_stop.npz",
+      "schema_version": "rtwm-v2-decoder-rf-frame-metrics-1",
+      "sha256": "3848c913989aff198be2d7015c49b28eaaf21f2386488e0deab22f010f6c237f"
+    },
+    "raw_dtype": "uint8",
+    "raw_shape_vthwc": [
+      2,
+      189,
+      720,
+      1280,
+      3
+    ],
+    "second": "stop_mp4_decode",
+    "second_raw_sha256": "949c12b32bb91895d150e26a5535ef5e07ce02f005cb6de2d9e39048dbaa5f61",
+    "views": [
+      {
+        "changed_frame_count": 189,
+        "changed_frame_spans": [
+          [
+            0,
+            188
+          ]
+        ],
+        "earliest_changed_frame": 0,
+        "frame_count": 189,
+        "latest_changed_frame": 188,
+        "maximum_absolute_error": 123,
+        "total_absolute_error": 974056207,
+        "total_changed_pixels": 171878123,
+        "total_changed_values": 423891905,
+        "view_index": 0
+      },
+      {
+        "changed_frame_count": 189,
+        "changed_frame_spans": [
+          [
+            0,
+            188
+          ]
+        ],
+        "earliest_changed_frame": 0,
+        "frame_count": 189,
+        "latest_changed_frame": 188,
+        "maximum_absolute_error": 107,
+        "total_absolute_error": 938274278,
+        "total_changed_pixels": 171940519,
+        "total_changed_values": 423483346,
+        "view_index": 1
+      }
+    ]
+  }
+}

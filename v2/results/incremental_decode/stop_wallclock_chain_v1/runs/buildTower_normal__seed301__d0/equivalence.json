@@ -1,0 +1,35 @@
+{
+  "incremental_vs_matching_full_prefix": {
+    "domain": "raw_uint8_pre_encoding",
+    "exact": true,
+    "first_sha256": "7503deb3e444c906fdd4cd70f9223769d29950fa1cb047f7ef35d3d3eccd9f27",
+    "max_error": 0,
+    "second_sha256": "7503deb3e444c906fdd4cd70f9223769d29950fa1cb047f7ef35d3d3eccd9f27",
+    "shape_vthwc": [
+      2,
+      117,
+      720,
+      1280,
+      3
+    ],
+    "views": [
+      {
+        "changed_frames": [],
+        "exact": true,
+        "frames": 117,
+        "max_error": 0,
+        "view": 0
+      },
+      {
+        "changed_frames": [],
+        "exact": true,
+        "frames": 117,
+        "max_error": 0,
+        "view": 1
+      }
+    ]
+  },
+  "run_id": "buildTower_normal__seed301__d0",
+  "schema_version": "rtwm-v2-incremental-stop-wallclock-1",
+  "timing_claimable": true
+}

@@ -1,0 +1,12 @@
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+*.pyc
+
+# Generated source actions and large derived arrays.
+raw/
+arrays/
+blocks/
+*.part
+*.part.meta.json
+

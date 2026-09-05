@@ -1,0 +1,1528 @@
+{
+  "action_protocol_sha256": "90e8c77467e1361f04b99740097c5fd96aab8b0d3ae6a9b902879de0a5983e15",
+  "config_sha256": "135fda5c1bc63fe13fe6c5f3ed40732f3459895aa332060ffc9d94a9b300399f",
+  "control_manifest_sha256": "9fb091215b5949660899d05efe26d516254666f3a860eee1cbae9a0a4421478f",
+  "determinism": {
+    "cublas_workspace_config": ":4096:8",
+    "cudnn_benchmark": false,
+    "cudnn_deterministic": true,
+    "cudnn_tf32": false,
+    "deterministic_algorithms_warn_only": true,
+    "matmul_tf32": false
+  },
+  "model_artifacts": {
+    "checkpoint_sha256": "33a7cda5f5d701ea98bf88d73aa4d498f4757b73e651f4abf2a3c76b0d09bb61",
+    "tokenizer_sha256": "38071ab59bd94681c686fa51d75a1968f64e470262043be31f7a094e442fd981"
+  },
+  "null_gate_sha256": "86fee3129d7a9be3572f6b0f7525b5cef350f641a150f636f4d4dbe703adbdd0",
+  "planned_interventions": 24,
+  "planned_rollout_ids": [
+    "buildTower_normal__seed201__stop_d0",
+    "buildTower_normal__seed201__stop_d1",
+    "buildTower_normal__seed202__stop_d0",
+    "buildTower_normal__seed202__stop_d1",
+    "buildTower_normal__seed203__stop_d0",
+    "buildTower_normal__seed203__stop_d1",
+    "buildTower_normal__seed204__stop_d0",
+    "buildTower_normal__seed204__stop_d1",
+    "buildTower_normal__seed205__stop_d0",
+    "buildTower_normal__seed205__stop_d1",
+    "buildTower_normal__seed206__stop_d0",
+    "buildTower_normal__seed206__stop_d1",
+    "buildHouse_flat__seed201__stop_d0",
+    "buildHouse_flat__seed201__stop_d1",
+    "buildHouse_flat__seed202__stop_d0",
+    "buildHouse_flat__seed202__stop_d1",
+    "buildHouse_flat__seed203__stop_d0",
+    "buildHouse_flat__seed203__stop_d1",
+    "buildHouse_flat__seed204__stop_d0",
+    "buildHouse_flat__seed204__stop_d1",
+    "buildHouse_flat__seed205__stop_d0",
+    "buildHouse_flat__seed205__stop_d1",
+    "buildHouse_flat__seed206__stop_d0",
+    "buildHouse_flat__seed206__stop_d1"
+  ],
+  "protocol_sha256": "82c64c2ac6c9eb5bfe0cafbee4d45dd57a201ddb064d6b3f4a1708ccde263e8d",
+  "rf_support": {
+    "27:v0": 105,
+    "27:v1": 105,
+    "30:v0": 117,
+    "30:v1": 117
+  },
+  "rollouts": [
+    {
+      "action_protocol_sha256": "90e8c77467e1361f04b99740097c5fd96aab8b0d3ae6a9b902879de0a5983e15",
+      "action_tensor_hashes": {
+        "generation_camera_sha256": "ce74475c230513d255bf8e9c6dfafae15f6c650efa6e4117ef58aadfccc22c1e",
+        "generation_keyboard_sha256": "87bf38d9b70dca3327a800f4c9ac521298f6d1b8d2283c86b034ea92f853a494",
+        "post_camera_sha256": "ce74475c230513d255bf8e9c6dfafae15f6c650efa6e4117ef58aadfccc22c1e",
+        "post_keyboard_sha256": "86e08343befec86464043b59f9aba133f2bb4812569e80303485b7fa1417af68"
+      },
+      "admission_latent": 27,
+      "arm": "stop_d0",
+      "artifacts": {
+        "action_tensors": {
+          "bytes": 1058,
+          "path": "buildTower_normal/seed201/stop_d0/action_tensors.npz",
+          "required": true,
+          "sha256": "4a7f01848cde96d34fc666476e97bff0ef81664e2d05bcf1ae532d7aedfb9f46"
+        },
+        "decoded_u8": {
+          "bytes": 1045094528,
+          "path": "buildTower_normal/seed201/stop_d0/decoded_u8.npy",
+          "required": true,
+          "sha256": "025166459700c8b80ccd0547fd1bc8ba189220093e61d3046bc0307c20dd03bf"
+        },
+        "detector_frames": {
+          "bytes": 7098322,
+          "path": "buildTower_normal/seed201/stop_d0/detector_frames.npz",
+          "required": true,
+          "sha256": "2d6ff8250085f2436569d45dccd8bcb25d9ffdc1d247e43e8fae3dd314ebe4b7"
+        },
+        "latent": {
+          "bytes": 88475332,
+          "path": "buildTower_normal/seed201/stop_d0/latent.pt",
+          "required": true,
+          "sha256": "f60733e06bd78dd6dcf626542fae7ea3976f4dfe2d450afcebcc98f678d6cb44"
+        },
+        "video": {
+          "bytes": 1615890,
+          "path": "buildTower_normal/seed201/stop_d0/generated.mp4",
+          "required": true,
+          "sha256": "c2e7ff1815a9c514ca86ea34afeb4bdfcb5a56c67d6c749679f0797c642f53a7"
+        }
+      },
+      "completed_at": "2026-08-21T09:18:33Z",
+      "control_rollout_id": "buildTower_normal__seed201__control",
+      "delay": "d0",
+      "effect_start_frames": [
+        105,
+        105
+      ],
+      "latent_prefix_max_error": 0.0,
+      "raw_prefix_max_errors": [
+        0.0,
+        0.0
+      ],
+      "rollout_id": "buildTower_normal__seed201__stop_d0",
+      "run_index": 1,
+      "scene": "buildTower_normal",
+      "seed": 201,
+      "status": "complete",
+      "total_s": 225.64141088999168
+    },
+    {
+      "action_protocol_sha256": "90e8c77467e1361f04b99740097c5fd96aab8b0d3ae6a9b902879de0a5983e15",
+      "action_tensor_hashes": {
+        "generation_camera_sha256": "ce74475c230513d255bf8e9c6dfafae15f6c650efa6e4117ef58aadfccc22c1e",
+        "generation_keyboard_sha256": "87bf38d9b70dca3327a800f4c9ac521298f6d1b8d2283c86b034ea92f853a494",
+        "post_camera_sha256": "ce74475c230513d255bf8e9c6dfafae15f6c650efa6e4117ef58aadfccc22c1e",
+        "post_keyboard_sha256": "86e08343befec86464043b59f9aba133f2bb4812569e80303485b7fa1417af68"
+      },
+      "admission_latent": 30,
+      "arm": "stop_d1",
+      "artifacts": {
+        "action_tensors": {
+          "bytes": 1058,
+          "path": "buildTower_normal/seed201/stop_d1/action_tensors.npz",
+          "required": true,
+          "sha256": "4a7f01848cde96d34fc666476e97bff0ef81664e2d05bcf1ae532d7aedfb9f46"
+        },
+        "decoded_u8": {
+          "bytes": 1045094528,
+          "path": "buildTower_normal/seed201/stop_d1/decoded_u8.npy",
+          "required": true,
+          "sha256": "b7e361456a5ee47cabf8f96413f9763b5d5440320c3c95baac102ea8aab726ef"
+        },
+        "detector_frames": {
+          "bytes": 7100337,
+          "path": "buildTower_normal/seed201/stop_d1/detector_frames.npz",
+          "required": true,
+          "sha256": "42ee5caf839315b85aa03c6c377110d69ba085d20740f6c9fe756895c6ffee85"
+        },
+        "latent": {
+          "bytes": 88475332,
+          "path": "buildTower_normal/seed201/stop_d1/latent.pt",
+          "required": true,
+          "sha256": "bc6c0c4c2c5fd88fafc47e229ccc9806592665d56cabf9b0b359aecc24286f80"
+        },
+        "video": {
+          "bytes": 1610345,
+          "path": "buildTower_normal/seed201/stop_d1/generated.mp4",
+          "required": true,
+          "sha256": "82e36cbfd8c701c7a56f0f8ff8d60d72dbb3db08ea2bdeb92f8e2bfc6c1e7548"
+        }
+      },
+      "completed_at": "2026-08-21T09:22:57Z",
+      "control_rollout_id": "buildTower_normal__seed201__control",
+      "delay": "d1",
+      "effect_start_frames": [
+        117,
+        117
+      ],
+      "latent_prefix_max_error": 0.0,
+      "raw_prefix_max_errors": [
+        0.0,
+        0.0
+      ],
+      "rollout_id": "buildTower_normal__seed201__stop_d1",
+      "run_index": 2,
+      "scene": "buildTower_normal",
+      "seed": 201,
+      "status": "complete",
+      "total_s": 224.71322564600268
+    },
+    {
+      "action_protocol_sha256": "90e8c77467e1361f04b99740097c5fd96aab8b0d3ae6a9b902879de0a5983e15",
+      "action_tensor_hashes": {
+        "generation_camera_sha256": "ce74475c230513d255bf8e9c6dfafae15f6c650efa6e4117ef58aadfccc22c1e",
+        "generation_keyboard_sha256": "87bf38d9b70dca3327a800f4c9ac521298f6d1b8d2283c86b034ea92f853a494",
+        "post_camera_sha256": "ce74475c230513d255bf8e9c6dfafae15f6c650efa6e4117ef58aadfccc22c1e",
+        "post_keyboard_sha256": "86e08343befec86464043b59f9aba133f2bb4812569e80303485b7fa1417af68"
+      },
+      "admission_latent": 27,
+      "arm": "stop_d0",
+      "artifacts": {
+        "action_tensors": {
+          "bytes": 1058,
+          "path": "buildTower_normal/seed202/stop_d0/action_tensors.npz",
+          "required": true,
+          "sha256": "4a7f01848cde96d34fc666476e97bff0ef81664e2d05bcf1ae532d7aedfb9f46"
+        },
+        "decoded_u8": {
+          "bytes": 1045094528,
+          "path": "buildTower_normal/seed202/stop_d0/decoded_u8.npy",
+          "required": true,
+          "sha256": "95972e370628bdecfb6a48a0a1e22c6c1aa507b494fba9ff9d2d82d5b5dd579e"
+        },
+        "detector_frames": {
+          "bytes": 7086400,
+          "path": "buildTower_normal/seed202/stop_d0/detector_frames.npz",
+          "required": true,
+          "sha256": "64d405361a4da5adaa3f580203e2b8fa4ad124227f3cf8a0a834e9f77164c559"
+        },
+        "latent": {
+          "bytes": 88475332,
+          "path": "buildTower_normal/seed202/stop_d0/latent.pt",
+          "required": true,
+          "sha256": "31b8c6504a6abcf61b41f458a7e3f01e9c387676a0d0cb6d769f9e0fe870fb08"
+        },
+        "video": {
+          "bytes": 1609005,
+          "path": "buildTower_normal/seed202/stop_d0/generated.mp4",
+          "required": true,
+          "sha256": "bc475b498304d3393e2114947712c4350ff2636a993ff5cbb157163486b1bedb"
+        }
+      },
+      "completed_at": "2026-08-21T09:27:21Z",
+      "control_rollout_id": "buildTower_normal__seed202__control",
+      "delay": "d0",
+      "effect_start_frames": [
+        105,
+        105
+      ],
+      "latent_prefix_max_error": 0.0,
+      "raw_prefix_max_errors": [
+        0.0,
+        0.0
+      ],
+      "rollout_id": "buildTower_normal__seed202__stop_d0",
+      "run_index": 3,
+      "scene": "buildTower_normal",
+      "seed": 202,
+      "status": "complete",
+      "total_s": 225.2689765410032
+    },
+    {
+      "action_protocol_sha256": "90e8c77467e1361f04b99740097c5fd96aab8b0d3ae6a9b902879de0a5983e15",
+      "action_tensor_hashes": {
+        "generation_camera_sha256": "ce74475c230513d255bf8e9c6dfafae15f6c650efa6e4117ef58aadfccc22c1e",
+        "generation_keyboard_sha256": "87bf38d9b70dca3327a800f4c9ac521298f6d1b8d2283c86b034ea92f853a494",
+        "post_camera_sha256": "ce74475c230513d255bf8e9c6dfafae15f6c650efa6e4117ef58aadfccc22c1e",
+        "post_keyboard_sha256": "86e08343befec86464043b59f9aba133f2bb4812569e80303485b7fa1417af68"
+      },
+      "admission_latent": 30,
+      "arm": "stop_d1",
+      "artifacts": {
+        "action_tensors": {
+          "bytes": 1058,
+          "path": "buildTower_normal/seed202/stop_d1/action_tensors.npz",
+          "required": true,
+          "sha256": "4a7f01848cde96d34fc666476e97bff0ef81664e2d05bcf1ae532d7aedfb9f46"
+        },
+        "decoded_u8": {
+          "bytes": 1045094528,
+          "path": "buildTower_normal/seed202/stop_d1/decoded_u8.npy",
+          "required": true,
+          "sha256": "89b3fdbe9f6ace5c4bdbb533fdc8c2e8db1d9082feadec5d8074ef5e6ff92dbc"
+        },
+        "detector_frames": {
+          "bytes": 7088401,
+          "path": "buildTower_normal/seed202/stop_d1/detector_frames.npz",
+          "required": true,
+          "sha256": "43710d0174ac7c11138c6a3d86f8e571e8c246b9f56610087d04276c54827ee3"
+        },
+        "latent": {
+          "bytes": 88475332,
+          "path": "buildTower_normal/seed202/stop_d1/latent.pt",
+          "required": true,
+          "sha256": "771f98266ad2f3baae0bca64b15e4c41fcb5696a98010d044b794c225dcd513c"
+        },
+        "video": {
+          "bytes": 1598659,
+          "path": "buildTower_normal/seed202/stop_d1/generated.mp4",
+          "required": true,
+          "sha256": "b9c45b900ee95a0ad927f53200657aa93c77511dc1109382aa8e8d00a6a39155"
+        }
+      },
+      "completed_at": "2026-08-21T09:31:44Z",
+      "control_rollout_id": "buildTower_normal__seed202__control",
+      "delay": "d1",
+      "effect_start_frames": [
+        117,
+        117
+      ],
+      "latent_prefix_max_error": 0.0,
+      "raw_prefix_max_errors": [
+        0.0,
+        0.0
+      ],
+      "rollout_id": "buildTower_normal__seed202__stop_d1",
+      "run_index": 4,
+      "scene": "buildTower_normal",
+      "seed": 202,
+      "status": "complete",
+      "total_s": 224.2939154909982
+    },
+    {
+      "action_protocol_sha256": "90e8c77467e1361f04b99740097c5fd96aab8b0d3ae6a9b902879de0a5983e15",
+      "action_tensor_hashes": {
+        "generation_camera_sha256": "ce74475c230513d255bf8e9c6dfafae15f6c650efa6e4117ef58aadfccc22c1e",
+        "generation_keyboard_sha256": "87bf38d9b70dca3327a800f4c9ac521298f6d1b8d2283c86b034ea92f853a494",
+        "post_camera_sha256": "ce74475c230513d255bf8e9c6dfafae15f6c650efa6e4117ef58aadfccc22c1e",
+        "post_keyboard_sha256": "86e08343befec86464043b59f9aba133f2bb4812569e80303485b7fa1417af68"
+      },
+      "admission_latent": 27,
+      "arm": "stop_d0",
+      "artifacts": {
+        "action_tensors": {
+          "bytes": 1058,
+          "path": "buildTower_normal/seed203/stop_d0/action_tensors.npz",
+          "required": true,
+          "sha256": "4a7f01848cde96d34fc666476e97bff0ef81664e2d05bcf1ae532d7aedfb9f46"
+        },
+        "decoded_u8": {
+          "bytes": 1045094528,
+          "path": "buildTower_normal/seed203/stop_d0/decoded_u8.npy",
+          "required": true,
+          "sha256": "f90337a7c50e9dee8547a36d5240d851bfe62f16cc5d8542b46428982f31c256"
+        },
+        "detector_frames": {
+          "bytes": 7070568,
+          "path": "buildTower_normal/seed203/stop_d0/detector_frames.npz",
+          "required": true,
+          "sha256": "530192e806bbee146240e95b55d4e2b0644b97a3887d7b28e599188612a89b03"
+        },
+        "latent": {
+          "bytes": 88475332,
+          "path": "buildTower_normal/seed203/stop_d0/latent.pt",
+          "required": true,
+          "sha256": "98f9817ada801c87301aa918538c506d22212f9b2cb4a591cdd7259295f0cc2f"
+        },
+        "video": {
+          "bytes": 1595070,
+          "path": "buildTower_normal/seed203/stop_d0/generated.mp4",
+          "required": true,
+          "sha256": "a265e0f56390f1bf6ced21b15c635e8dea83ace018d226637c9a0276704533c6"
+        }
+      },
+      "completed_at": "2026-08-21T09:36:12Z",
+      "control_rollout_id": "buildTower_normal__seed203__control",
+      "delay": "d0",
+      "effect_start_frames": [
+        105,
+        105
+      ],
+      "latent_prefix_max_error": 0.0,
+      "raw_prefix_max_errors": [
+        0.0,
+        0.0
+      ],
+      "rollout_id": "buildTower_normal__seed203__stop_d0",
+      "run_index": 5,
+      "scene": "buildTower_normal",
+      "seed": 203,
+      "status": "complete",
+      "total_s": 229.64582376800536
+    },
+    {
+      "action_protocol_sha256": "90e8c77467e1361f04b99740097c5fd96aab8b0d3ae6a9b902879de0a5983e15",
+      "action_tensor_hashes": {
+        "generation_camera_sha256": "ce74475c230513d255bf8e9c6dfafae15f6c650efa6e4117ef58aadfccc22c1e",
+        "generation_keyboard_sha256": "87bf38d9b70dca3327a800f4c9ac521298f6d1b8d2283c86b034ea92f853a494",
+        "post_camera_sha256": "ce74475c230513d255bf8e9c6dfafae15f6c650efa6e4117ef58aadfccc22c1e",
+        "post_keyboard_sha256": "86e08343befec86464043b59f9aba133f2bb4812569e80303485b7fa1417af68"
+      },
+      "admission_latent": 30,
+      "arm": "stop_d1",
+      "artifacts": {
+        "action_tensors": {
+          "bytes": 1058,
+          "path": "buildTower_normal/seed203/stop_d1/action_tensors.npz",
+          "required": true,
+          "sha256": "4a7f01848cde96d34fc666476e97bff0ef81664e2d05bcf1ae532d7aedfb9f46"
+        },
+        "decoded_u8": {
+          "bytes": 1045094528,
+          "path": "buildTower_normal/seed203/stop_d1/decoded_u8.npy",
+          "required": true,
+          "sha256": "61a6810c802d8d5f8b8dd5550a0cf0ab7e9d081e20ecc953049cd2a0352ea1a5"
+        },
+        "detector_frames": {
+          "bytes": 7070472,
+          "path": "buildTower_normal/seed203/stop_d1/detector_frames.npz",
+          "required": true,
+          "sha256": "68fea296c540b632cdbea2001ddc93f4dc741bc9dc6d0ae7915bd23dfc80aad5"
+        },
+        "latent": {
+          "bytes": 88475332,
+          "path": "buildTower_normal/seed203/stop_d1/latent.pt",
+          "required": true,
+          "sha256": "468febebf2e202472b8fa0d0484270a2cc32b4cecac89f46dd4bf11e42c5c102"
+        },
+        "video": {
+          "bytes": 1590449,
+          "path": "buildTower_normal/seed203/stop_d1/generated.mp4",
+          "required": true,
+          "sha256": "2b8d2b68a56608d0e584bb2e0371c61a3e31ba4a1c6add18b6be224eff9555c8"
+        }
+      },
+      "completed_at": "2026-08-21T09:40:41Z",
+      "control_rollout_id": "buildTower_normal__seed203__control",
+      "delay": "d1",
+      "effect_start_frames": [
+        117,
+        117
+      ],
+      "latent_prefix_max_error": 0.0,
+      "raw_prefix_max_errors": [
+        0.0,
+        0.0
+      ],
+      "rollout_id": "buildTower_normal__seed203__stop_d1",
+      "run_index": 6,
+      "scene": "buildTower_normal",
+      "seed": 203,
+      "status": "complete",
+      "total_s": 229.62842679700407
+    },
+    {
+      "action_protocol_sha256": "90e8c77467e1361f04b99740097c5fd96aab8b0d3ae6a9b902879de0a5983e15",
+      "action_tensor_hashes": {
+        "generation_camera_sha256": "ce74475c230513d255bf8e9c6dfafae15f6c650efa6e4117ef58aadfccc22c1e",
+        "generation_keyboard_sha256": "87bf38d9b70dca3327a800f4c9ac521298f6d1b8d2283c86b034ea92f853a494",
+        "post_camera_sha256": "ce74475c230513d255bf8e9c6dfafae15f6c650efa6e4117ef58aadfccc22c1e",
+        "post_keyboard_sha256": "86e08343befec86464043b59f9aba133f2bb4812569e80303485b7fa1417af68"
+      },
+      "admission_latent": 27,
+      "arm": "stop_d0",
+      "artifacts": {
+        "action_tensors": {
+          "bytes": 1058,
+          "path": "buildTower_normal/seed204/stop_d0/action_tensors.npz",
+          "required": true,
+          "sha256": "4a7f01848cde96d34fc666476e97bff0ef81664e2d05bcf1ae532d7aedfb9f46"
+        },
+        "decoded_u8": {
+          "bytes": 1045094528,
+          "path": "buildTower_normal/seed204/stop_d0/decoded_u8.npy",
+          "required": true,
+          "sha256": "bd4bb6b0e0eeb11dd16e3cf48b0994cbd321af52e23eda91d4c83e4489b6e711"
+        },
+        "detector_frames": {
+          "bytes": 7095031,
+          "path": "buildTower_normal/seed204/stop_d0/detector_frames.npz",
+          "required": true,
+          "sha256": "2057740d14b00209ff42e4f99ce16b4cf637117dbbb368bc715381fbd2069c87"
+        },
+        "latent": {
+          "bytes": 88475332,
+          "path": "buildTower_normal/seed204/stop_d0/latent.pt",
+          "required": true,
+          "sha256": "7b0352d991c50721f69ffd82c60f3bf249020d82ee64ea97556ee19218f7f879"
+        },
+        "video": {
+          "bytes": 1642497,
+          "path": "buildTower_normal/seed204/stop_d0/generated.mp4",
+          "required": true,
+          "sha256": "99adec267af0d6a555e68fa76e9932aff1d93ccfe37e98911be9bc6ec5fd314b"
+        }
+      },
+      "completed_at": "2026-08-21T09:45:05Z",
+      "control_rollout_id": "buildTower_normal__seed204__control",
+      "delay": "d0",
+      "effect_start_frames": [
+        105,
+        105
+      ],
+      "latent_prefix_max_error": 0.0,
+      "raw_prefix_max_errors": [
+        0.0,
+        0.0
+      ],
+      "rollout_id": "buildTower_normal__seed204__stop_d0",
+      "run_index": 7,
+      "scene": "buildTower_normal",
+      "seed": 204,
+      "status": "complete",
+      "total_s": 225.3850279479957
+    },
+    {
+      "action_protocol_sha256": "90e8c77467e1361f04b99740097c5fd96aab8b0d3ae6a9b902879de0a5983e15",
+      "action_tensor_hashes": {
+        "generation_camera_sha256": "ce74475c230513d255bf8e9c6dfafae15f6c650efa6e4117ef58aadfccc22c1e",
+        "generation_keyboard_sha256": "87bf38d9b70dca3327a800f4c9ac521298f6d1b8d2283c86b034ea92f853a494",
+        "post_camera_sha256": "ce74475c230513d255bf8e9c6dfafae15f6c650efa6e4117ef58aadfccc22c1e",
+        "post_keyboard_sha256": "86e08343befec86464043b59f9aba133f2bb4812569e80303485b7fa1417af68"
+      },
+      "admission_latent": 30,
+      "arm": "stop_d1",
+      "artifacts": {
+        "action_tensors": {
+          "bytes": 1058,
+          "path": "buildTower_normal/seed204/stop_d1/action_tensors.npz",
+          "required": true,
+          "sha256": "4a7f01848cde96d34fc666476e97bff0ef81664e2d05bcf1ae532d7aedfb9f46"
+        },
+        "decoded_u8": {
+          "bytes": 1045094528,
+          "path": "buildTower_normal/seed204/stop_d1/decoded_u8.npy",
+          "required": true,
+          "sha256": "5302722d7635f32fec13e0d18dac0f22183d6998ac69337981359709f2b7e948"
+        },
+        "detector_frames": {
+          "bytes": 7095194,
+          "path": "buildTower_normal/seed204/stop_d1/detector_frames.npz",
+          "required": true,
+          "sha256": "f40be53e6f2c97642ea1e4932bbede2b2be44f775af242ce724896dfb1d63779"
+        },
+        "latent": {
+          "bytes": 88475332,
+          "path": "buildTower_normal/seed204/stop_d1/latent.pt",
+          "required": true,
+          "sha256": "24976a995ba5a4eead6e20c1021eeab4f79474ef7d1c955172b76f022ffa2bad"
+        },
+        "video": {
+          "bytes": 1630091,
+          "path": "buildTower_normal/seed204/stop_d1/generated.mp4",
+          "required": true,
+          "sha256": "22caaf9aeeb1137f4e95135305cd0b79142118b22c492b91b387b59836937a80"
+        }
+      },
+      "completed_at": "2026-08-21T09:49:33Z",
+      "control_rollout_id": "buildTower_normal__seed204__control",
+      "delay": "d1",
+      "effect_start_frames": [
+        117,
+        117
+      ],
+      "latent_prefix_max_error": 0.0,
+      "raw_prefix_max_errors": [
+        0.0,
+        0.0
+      ],
+      "rollout_id": "buildTower_normal__seed204__stop_d1",
+      "run_index": 8,
+      "scene": "buildTower_normal",
+      "seed": 204,
+      "status": "complete",
+      "total_s": 229.61413313999947
+    },
+    {
+      "action_protocol_sha256": "90e8c77467e1361f04b99740097c5fd96aab8b0d3ae6a9b902879de0a5983e15",
+      "action_tensor_hashes": {
+        "generation_camera_sha256": "ce74475c230513d255bf8e9c6dfafae15f6c650efa6e4117ef58aadfccc22c1e",
+        "generation_keyboard_sha256": "87bf38d9b70dca3327a800f4c9ac521298f6d1b8d2283c86b034ea92f853a494",
+        "post_camera_sha256": "ce74475c230513d255bf8e9c6dfafae15f6c650efa6e4117ef58aadfccc22c1e",
+        "post_keyboard_sha256": "86e08343befec86464043b59f9aba133f2bb4812569e80303485b7fa1417af68"
+      },
+      "admission_latent": 27,
+      "arm": "stop_d0",
+      "artifacts": {
+        "action_tensors": {
+          "bytes": 1058,
+          "path": "buildTower_normal/seed205/stop_d0/action_tensors.npz",
+          "required": true,
+          "sha256": "4a7f01848cde96d34fc666476e97bff0ef81664e2d05bcf1ae532d7aedfb9f46"
+        },
+        "decoded_u8": {
+          "bytes": 1045094528,
+          "path": "buildTower_normal/seed205/stop_d0/decoded_u8.npy",
+          "required": true,
+          "sha256": "21ac8083a4548b565a4127aca1c72f55fd2cefeaf7409e4d197c71872617b05c"
+        },
+        "detector_frames": {
+          "bytes": 7092809,
+          "path": "buildTower_normal/seed205/stop_d0/detector_frames.npz",
+          "required": true,
+          "sha256": "e1468ac82c3dfa234a153505b4ef947ee3a4cc34af7d21b5a3b12907481af705"
+        },
+        "latent": {
+          "bytes": 88475332,
+          "path": "buildTower_normal/seed205/stop_d0/latent.pt",
+          "required": true,
+          "sha256": "12c559bacd0990651c9c035a3ab703b04c5e9ed53d33bc0ba244dfd8f5120af1"
+        },
+        "video": {
+          "bytes": 1628344,
+          "path": "buildTower_normal/seed205/stop_d0/generated.mp4",
+          "required": true,
+          "sha256": "1c62d8d53473011bb60ae2f8460759faa248633ee927be1508841af908e29e4c"
+        }
+      },
+      "completed_at": "2026-08-21T09:53:58Z",
+      "control_rollout_id": "buildTower_normal__seed205__control",
+      "delay": "d0",
+      "effect_start_frames": [
+        105,
+        105
+      ],
+      "latent_prefix_max_error": 0.0,
+      "raw_prefix_max_errors": [
+        0.0,
+        0.0
+      ],
+      "rollout_id": "buildTower_normal__seed205__stop_d0",
+      "run_index": 9,
+      "scene": "buildTower_normal",
+      "seed": 205,
+      "status": "complete",
+      "total_s": 226.10385036400112
+    },
+    {
+      "action_protocol_sha256": "90e8c77467e1361f04b99740097c5fd96aab8b0d3ae6a9b902879de0a5983e15",
+      "action_tensor_hashes": {
+        "generation_camera_sha256": "ce74475c230513d255bf8e9c6dfafae15f6c650efa6e4117ef58aadfccc22c1e",
+        "generation_keyboard_sha256": "87bf38d9b70dca3327a800f4c9ac521298f6d1b8d2283c86b034ea92f853a494",
+        "post_camera_sha256": "ce74475c230513d255bf8e9c6dfafae15f6c650efa6e4117ef58aadfccc22c1e",
+        "post_keyboard_sha256": "86e08343befec86464043b59f9aba133f2bb4812569e80303485b7fa1417af68"
+      },
+      "admission_latent": 30,
+      "arm": "stop_d1",
+      "artifacts": {
+        "action_tensors": {
+          "bytes": 1058,
+          "path": "buildTower_normal/seed205/stop_d1/action_tensors.npz",
+          "required": true,
+          "sha256": "4a7f01848cde96d34fc666476e97bff0ef81664e2d05bcf1ae532d7aedfb9f46"
+        },
+        "decoded_u8": {
+          "bytes": 1045094528,
+          "path": "buildTower_normal/seed205/stop_d1/decoded_u8.npy",
+          "required": true,
+          "sha256": "430c4d1b42d8fd33e72c25af84a5b402d8ecff1ec3c9c011e9a8865dd8971ae2"
+        },
+        "detector_frames": {
+          "bytes": 7092127,
+          "path": "buildTower_normal/seed205/stop_d1/detector_frames.npz",
+          "required": true,
+          "sha256": "1e3a08b90c09eddde35ebf2d8ef329225b5f4d6d38a22c82b4d0d97e967f9b25"
+        },
+        "latent": {
+          "bytes": 88475332,
+          "path": "buildTower_normal/seed205/stop_d1/latent.pt",
+          "required": true,
+          "sha256": "c1b41f8f2e7e446c5d5b87abdbf00a29ff86bde7ef4288d9a686e232e4502c5b"
+        },
+        "video": {
+          "bytes": 1612947,
+          "path": "buildTower_normal/seed205/stop_d1/generated.mp4",
+          "required": true,
+          "sha256": "461fb46d4a1c92264991f7fe3565d3a73ed3d7c91bcdf5dbeb96e3a46f23b4f3"
+        }
+      },
+      "completed_at": "2026-08-21T09:58:25Z",
+      "control_rollout_id": "buildTower_normal__seed205__control",
+      "delay": "d1",
+      "effect_start_frames": [
+        117,
+        117
+      ],
+      "latent_prefix_max_error": 0.0,
+      "raw_prefix_max_errors": [
+        0.0,
+        0.0
+      ],
+      "rollout_id": "buildTower_normal__seed205__stop_d1",
+      "run_index": 10,
+      "scene": "buildTower_normal",
+      "seed": 205,
+      "status": "complete",
+      "total_s": 227.55961748000118
+    },
+    {
+      "action_protocol_sha256": "90e8c77467e1361f04b99740097c5fd96aab8b0d3ae6a9b902879de0a5983e15",
+      "action_tensor_hashes": {
+        "generation_camera_sha256": "ce74475c230513d255bf8e9c6dfafae15f6c650efa6e4117ef58aadfccc22c1e",
+        "generation_keyboard_sha256": "87bf38d9b70dca3327a800f4c9ac521298f6d1b8d2283c86b034ea92f853a494",
+        "post_camera_sha256": "ce74475c230513d255bf8e9c6dfafae15f6c650efa6e4117ef58aadfccc22c1e",
+        "post_keyboard_sha256": "86e08343befec86464043b59f9aba133f2bb4812569e80303485b7fa1417af68"
+      },
+      "admission_latent": 27,
+      "arm": "stop_d0",
+      "artifacts": {
+        "action_tensors": {
+          "bytes": 1058,
+          "path": "buildTower_normal/seed206/stop_d0/action_tensors.npz",
+          "required": true,
+          "sha256": "4a7f01848cde96d34fc666476e97bff0ef81664e2d05bcf1ae532d7aedfb9f46"
+        },
+        "decoded_u8": {
+          "bytes": 1045094528,
+          "path": "buildTower_normal/seed206/stop_d0/decoded_u8.npy",
+          "required": true,
+          "sha256": "331f0b826e46c59038ae68a24121380a54bb667077c42d7ba303b505b6ab7b20"
+        },
+        "detector_frames": {
+          "bytes": 7097551,
+          "path": "buildTower_normal/seed206/stop_d0/detector_frames.npz",
+          "required": true,
+          "sha256": "887f40421b78250fa53fea10a7b066b4e06822aa23c2d6e83c72817c172c6fd7"
+        },
+        "latent": {
+          "bytes": 88475332,
+          "path": "buildTower_normal/seed206/stop_d0/latent.pt",
+          "required": true,
+          "sha256": "cd2ba15e56857ff00e263ffa0edf476a410e58687b1f47809504f18d91c3ce9a"
+        },
+        "video": {
+          "bytes": 1605273,
+          "path": "buildTower_normal/seed206/stop_d0/generated.mp4",
+          "required": true,
+          "sha256": "dc0293faf356becdf8a54ed2d6497f1cfeced781586c9d82248cdc9b9e3f9165"
+        }
+      },
+      "completed_at": "2026-08-21T10:02:49Z",
+      "control_rollout_id": "buildTower_normal__seed206__control",
+      "delay": "d0",
+      "effect_start_frames": [
+        105,
+        105
+      ],
+      "latent_prefix_max_error": 0.0,
+      "raw_prefix_max_errors": [
+        0.0,
+        0.0
+      ],
+      "rollout_id": "buildTower_normal__seed206__stop_d0",
+      "run_index": 11,
+      "scene": "buildTower_normal",
+      "seed": 206,
+      "status": "complete",
+      "total_s": 225.60733656599768
+    },
+    {
+      "action_protocol_sha256": "90e8c77467e1361f04b99740097c5fd96aab8b0d3ae6a9b902879de0a5983e15",
+      "action_tensor_hashes": {
+        "generation_camera_sha256": "ce74475c230513d255bf8e9c6dfafae15f6c650efa6e4117ef58aadfccc22c1e",
+        "generation_keyboard_sha256": "87bf38d9b70dca3327a800f4c9ac521298f6d1b8d2283c86b034ea92f853a494",
+        "post_camera_sha256": "ce74475c230513d255bf8e9c6dfafae15f6c650efa6e4117ef58aadfccc22c1e",
+        "post_keyboard_sha256": "86e08343befec86464043b59f9aba133f2bb4812569e80303485b7fa1417af68"
+      },
+      "admission_latent": 30,
+      "arm": "stop_d1",
+      "artifacts": {
+        "action_tensors": {
+          "bytes": 1058,
+          "path": "buildTower_normal/seed206/stop_d1/action_tensors.npz",
+          "required": true,
+          "sha256": "4a7f01848cde96d34fc666476e97bff0ef81664e2d05bcf1ae532d7aedfb9f46"
+        },
+        "decoded_u8": {
+          "bytes": 1045094528,
+          "path": "buildTower_normal/seed206/stop_d1/decoded_u8.npy",
+          "required": true,
+          "sha256": "630b0aa2a4d45e8db308258823b39bab3a6e5f251c4cb5b41da8566150f8c1f6"
+        },
+        "detector_frames": {
+          "bytes": 7096987,
+          "path": "buildTower_normal/seed206/stop_d1/detector_frames.npz",
+          "required": true,
+          "sha256": "2ac400c023560eb2420cdf796a060c9c325acb5c7d1436016d94c8e04a53e562"
+        },
+        "latent": {
+          "bytes": 88475332,
+          "path": "buildTower_normal/seed206/stop_d1/latent.pt",
+          "required": true,
+          "sha256": "8902c5e6ac4c43452bad1067a4b3658f2b40295e8d6617da802b9979f1d3f032"
+        },
+        "video": {
+          "bytes": 1596819,
+          "path": "buildTower_normal/seed206/stop_d1/generated.mp4",
+          "required": true,
+          "sha256": "b25c3faf0433c7517dd4f3d77eb917b3cb161658d3a105b56355a27fb90375a1"
+        }
+      },
+      "completed_at": "2026-08-21T10:07:13Z",
+      "control_rollout_id": "buildTower_normal__seed206__control",
+      "delay": "d1",
+      "effect_start_frames": [
+        117,
+        117
+      ],
+      "latent_prefix_max_error": 0.0,
+      "raw_prefix_max_errors": [
+        0.0,
+        0.0
+      ],
+      "rollout_id": "buildTower_normal__seed206__stop_d1",
+      "run_index": 12,
+      "scene": "buildTower_normal",
+      "seed": 206,
+      "status": "complete",
+      "total_s": 224.62142273399513
+    },
+    {
+      "action_protocol_sha256": "90e8c77467e1361f04b99740097c5fd96aab8b0d3ae6a9b902879de0a5983e15",
+      "action_tensor_hashes": {
+        "generation_camera_sha256": "ce74475c230513d255bf8e9c6dfafae15f6c650efa6e4117ef58aadfccc22c1e",
+        "generation_keyboard_sha256": "87bf38d9b70dca3327a800f4c9ac521298f6d1b8d2283c86b034ea92f853a494",
+        "post_camera_sha256": "ce74475c230513d255bf8e9c6dfafae15f6c650efa6e4117ef58aadfccc22c1e",
+        "post_keyboard_sha256": "86e08343befec86464043b59f9aba133f2bb4812569e80303485b7fa1417af68"
+      },
+      "admission_latent": 27,
+      "arm": "stop_d0",
+      "artifacts": {
+        "action_tensors": {
+          "bytes": 1058,
+          "path": "buildHouse_flat/seed201/stop_d0/action_tensors.npz",
+          "required": true,
+          "sha256": "4a7f01848cde96d34fc666476e97bff0ef81664e2d05bcf1ae532d7aedfb9f46"
+        },
+        "decoded_u8": {
+          "bytes": 1045094528,
+          "path": "buildHouse_flat/seed201/stop_d0/decoded_u8.npy",
+          "required": true,
+          "sha256": "6e07f28da0fb6fcca6c5f54efdf82c5fb3ade5999e5153e9a70d5586736f5ef9"
+        },
+        "detector_frames": {
+          "bytes": 9848532,
+          "path": "buildHouse_flat/seed201/stop_d0/detector_frames.npz",
+          "required": true,
+          "sha256": "7eb1c401b9279b0ce5c11ab53d28630149c60018e2a4f930b35071657957ec6b"
+        },
+        "latent": {
+          "bytes": 88475332,
+          "path": "buildHouse_flat/seed201/stop_d0/latent.pt",
+          "required": true,
+          "sha256": "5609d438df0b52ed66f4c9c1966ab1afc69cf685442839e1bc718b85ee8d623d"
+        },
+        "video": {
+          "bytes": 1765799,
+          "path": "buildHouse_flat/seed201/stop_d0/generated.mp4",
+          "required": true,
+          "sha256": "6d8a6fd16c7da4185ce52fc110f1cb7fce91069822355a8e327ea7b3599644c0"
+        }
+      },
+      "completed_at": "2026-08-21T10:11:35Z",
+      "control_rollout_id": "buildHouse_flat__seed201__control",
+      "delay": "d0",
+      "effect_start_frames": [
+        105,
+        105
+      ],
+      "latent_prefix_max_error": 0.0,
+      "raw_prefix_max_errors": [
+        0.0,
+        0.0
+      ],
+      "rollout_id": "buildHouse_flat__seed201__stop_d0",
+      "run_index": 13,
+      "scene": "buildHouse_flat",
+      "seed": 201,
+      "status": "complete",
+      "total_s": 224.47970242799784
+    },
+    {
+      "action_protocol_sha256": "90e8c77467e1361f04b99740097c5fd96aab8b0d3ae6a9b902879de0a5983e15",
+      "action_tensor_hashes": {
+        "generation_camera_sha256": "ce74475c230513d255bf8e9c6dfafae15f6c650efa6e4117ef58aadfccc22c1e",
+        "generation_keyboard_sha256": "87bf38d9b70dca3327a800f4c9ac521298f6d1b8d2283c86b034ea92f853a494",
+        "post_camera_sha256": "ce74475c230513d255bf8e9c6dfafae15f6c650efa6e4117ef58aadfccc22c1e",
+        "post_keyboard_sha256": "86e08343befec86464043b59f9aba133f2bb4812569e80303485b7fa1417af68"
+      },
+      "admission_latent": 30,
+      "arm": "stop_d1",
+      "artifacts": {
+        "action_tensors": {
+          "bytes": 1058,
+          "path": "buildHouse_flat/seed201/stop_d1/action_tensors.npz",
+          "required": true,
+          "sha256": "4a7f01848cde96d34fc666476e97bff0ef81664e2d05bcf1ae532d7aedfb9f46"
+        },
+        "decoded_u8": {
+          "bytes": 1045094528,
+          "path": "buildHouse_flat/seed201/stop_d1/decoded_u8.npy",
+          "required": true,
+          "sha256": "f9ea01bfa8375a4a62cd779903651f4714fde5aa79d8462f8a66c37dad367c57"
+        },
+        "detector_frames": {
+          "bytes": 9846246,
+          "path": "buildHouse_flat/seed201/stop_d1/detector_frames.npz",
+          "required": true,
+          "sha256": "6faf279d19116647f422ac14ac89ffce9c6114155d5689b9b50186d1779ce0fa"
+        },
+        "latent": {
+          "bytes": 88475332,
+          "path": "buildHouse_flat/seed201/stop_d1/latent.pt",
+          "required": true,
+          "sha256": "df482389ef2ace5fbcecd083db08cca9c5efd943fcad96d4b65259fefad10ed2"
+        },
+        "video": {
+          "bytes": 1765379,
+          "path": "buildHouse_flat/seed201/stop_d1/generated.mp4",
+          "required": true,
+          "sha256": "282339c31c573eb2467e170c3a6ca473a9074387f7b00d01060ee617d8006b63"
+        }
+      },
+      "completed_at": "2026-08-21T10:15:58Z",
+      "control_rollout_id": "buildHouse_flat__seed201__control",
+      "delay": "d1",
+      "effect_start_frames": [
+        117,
+        117
+      ],
+      "latent_prefix_max_error": 0.0,
+      "raw_prefix_max_errors": [
+        0.0,
+        0.0
+      ],
+      "rollout_id": "buildHouse_flat__seed201__stop_d1",
+      "run_index": 14,
+      "scene": "buildHouse_flat",
+      "seed": 201,
+      "status": "complete",
+      "total_s": 224.68676606699592
+    },
+    {
+      "action_protocol_sha256": "90e8c77467e1361f04b99740097c5fd96aab8b0d3ae6a9b902879de0a5983e15",
+      "action_tensor_hashes": {
+        "generation_camera_sha256": "ce74475c230513d255bf8e9c6dfafae15f6c650efa6e4117ef58aadfccc22c1e",
+        "generation_keyboard_sha256": "87bf38d9b70dca3327a800f4c9ac521298f6d1b8d2283c86b034ea92f853a494",
+        "post_camera_sha256": "ce74475c230513d255bf8e9c6dfafae15f6c650efa6e4117ef58aadfccc22c1e",
+        "post_keyboard_sha256": "86e08343befec86464043b59f9aba133f2bb4812569e80303485b7fa1417af68"
+      },
+      "admission_latent": 27,
+      "arm": "stop_d0",
+      "artifacts": {
+        "action_tensors": {
+          "bytes": 1058,
+          "path": "buildHouse_flat/seed202/stop_d0/action_tensors.npz",
+          "required": true,
+          "sha256": "4a7f01848cde96d34fc666476e97bff0ef81664e2d05bcf1ae532d7aedfb9f46"
+        },
+        "decoded_u8": {
+          "bytes": 1045094528,
+          "path": "buildHouse_flat/seed202/stop_d0/decoded_u8.npy",
+          "required": true,
+          "sha256": "bc9d17284f1a03e8af7c5935bacf7a1f04bbbd38320e3867cb12c496a93eac1d"
+        },
+        "detector_frames": {
+          "bytes": 9830972,
+          "path": "buildHouse_flat/seed202/stop_d0/detector_frames.npz",
+          "required": true,
+          "sha256": "e91d43d1b8e2549929a39e7eef55765ca483605d9fc0f6a1e83a5637e34e6744"
+        },
+        "latent": {
+          "bytes": 88475332,
+          "path": "buildHouse_flat/seed202/stop_d0/latent.pt",
+          "required": true,
+          "sha256": "400f234b4bd5f089d3246286a9573a313fec5a8d7be96602f4181b2fc066e96a"
+        },
+        "video": {
+          "bytes": 1783393,
+          "path": "buildHouse_flat/seed202/stop_d0/generated.mp4",
+          "required": true,
+          "sha256": "29613b1b33d5ed861d405dc479ee8816f64695c16fa81b9517ea7e471f84ce43"
+        }
+      },
+      "completed_at": "2026-08-21T10:20:27Z",
+      "control_rollout_id": "buildHouse_flat__seed202__control",
+      "delay": "d0",
+      "effect_start_frames": [
+        105,
+        105
+      ],
+      "latent_prefix_max_error": 0.0,
+      "raw_prefix_max_errors": [
+        0.0,
+        0.0
+      ],
+      "rollout_id": "buildHouse_flat__seed202__stop_d0",
+      "run_index": 15,
+      "scene": "buildHouse_flat",
+      "seed": 202,
+      "status": "complete",
+      "total_s": 229.83346363199234
+    },
+    {
+      "action_protocol_sha256": "90e8c77467e1361f04b99740097c5fd96aab8b0d3ae6a9b902879de0a5983e15",
+      "action_tensor_hashes": {
+        "generation_camera_sha256": "ce74475c230513d255bf8e9c6dfafae15f6c650efa6e4117ef58aadfccc22c1e",
+        "generation_keyboard_sha256": "87bf38d9b70dca3327a800f4c9ac521298f6d1b8d2283c86b034ea92f853a494",
+        "post_camera_sha256": "ce74475c230513d255bf8e9c6dfafae15f6c650efa6e4117ef58aadfccc22c1e",
+        "post_keyboard_sha256": "86e08343befec86464043b59f9aba133f2bb4812569e80303485b7fa1417af68"
+      },
+      "admission_latent": 30,
+      "arm": "stop_d1",
+      "artifacts": {
+        "action_tensors": {
+          "bytes": 1058,
+          "path": "buildHouse_flat/seed202/stop_d1/action_tensors.npz",
+          "required": true,
+          "sha256": "4a7f01848cde96d34fc666476e97bff0ef81664e2d05bcf1ae532d7aedfb9f46"
+        },
+        "decoded_u8": {
+          "bytes": 1045094528,
+          "path": "buildHouse_flat/seed202/stop_d1/decoded_u8.npy",
+          "required": true,
+          "sha256": "968eaaf594b48f378a124dc7774c262ae0ea9a0258f5ab1046d3f26fbedcaa8d"
+        },
+        "detector_frames": {
+          "bytes": 9827908,
+          "path": "buildHouse_flat/seed202/stop_d1/detector_frames.npz",
+          "required": true,
+          "sha256": "be92c42fcf1cccf184065ef3c2255deece7744d21e662b9a265bbdc352115427"
+        },
+        "latent": {
+          "bytes": 88475332,
+          "path": "buildHouse_flat/seed202/stop_d1/latent.pt",
+          "required": true,
+          "sha256": "d22f9cd54accd415d18d296dbdf677a212480b4fa857f8a10b4e7a1a2768b42e"
+        },
+        "video": {
+          "bytes": 1772591,
+          "path": "buildHouse_flat/seed202/stop_d1/generated.mp4",
+          "required": true,
+          "sha256": "98a0c35a50c55a1ea93d93e84df19f37ae2d7497e34c250f0515b7c2db2126da"
+        }
+      },
+      "completed_at": "2026-08-21T10:24:55Z",
+      "control_rollout_id": "buildHouse_flat__seed202__control",
+      "delay": "d1",
+      "effect_start_frames": [
+        117,
+        117
+      ],
+      "latent_prefix_max_error": 0.0,
+      "raw_prefix_max_errors": [
+        0.0,
+        0.0
+      ],
+      "rollout_id": "buildHouse_flat__seed202__stop_d1",
+      "run_index": 16,
+      "scene": "buildHouse_flat",
+      "seed": 202,
+      "status": "complete",
+      "total_s": 229.69440279400442
+    },
+    {
+      "action_protocol_sha256": "90e8c77467e1361f04b99740097c5fd96aab8b0d3ae6a9b902879de0a5983e15",
+      "action_tensor_hashes": {
+        "generation_camera_sha256": "ce74475c230513d255bf8e9c6dfafae15f6c650efa6e4117ef58aadfccc22c1e",
+        "generation_keyboard_sha256": "87bf38d9b70dca3327a800f4c9ac521298f6d1b8d2283c86b034ea92f853a494",
+        "post_camera_sha256": "ce74475c230513d255bf8e9c6dfafae15f6c650efa6e4117ef58aadfccc22c1e",
+        "post_keyboard_sha256": "86e08343befec86464043b59f9aba133f2bb4812569e80303485b7fa1417af68"
+      },
+      "admission_latent": 27,
+      "arm": "stop_d0",
+      "artifacts": {
+        "action_tensors": {
+          "bytes": 1058,
+          "path": "buildHouse_flat/seed203/stop_d0/action_tensors.npz",
+          "required": true,
+          "sha256": "4a7f01848cde96d34fc666476e97bff0ef81664e2d05bcf1ae532d7aedfb9f46"
+        },
+        "decoded_u8": {
+          "bytes": 1045094528,
+          "path": "buildHouse_flat/seed203/stop_d0/decoded_u8.npy",
+          "required": true,
+          "sha256": "8ca7d81d92c2be7ca80411382861798147214add752ee075a10c14d0a41931b7"
+        },
+        "detector_frames": {
+          "bytes": 9833243,
+          "path": "buildHouse_flat/seed203/stop_d0/detector_frames.npz",
+          "required": true,
+          "sha256": "00efc653690fb72178b81add2bf66fdda18b7daf830731a56820ba28f9bbce09"
+        },
+        "latent": {
+          "bytes": 88475332,
+          "path": "buildHouse_flat/seed203/stop_d0/latent.pt",
+          "required": true,
+          "sha256": "bc84c5c4c5d5eaaa142674f89096725fb8dac4931487f67b6d7f624dce6a7147"
+        },
+        "video": {
+          "bytes": 1771921,
+          "path": "buildHouse_flat/seed203/stop_d0/generated.mp4",
+          "required": true,
+          "sha256": "dadfed2f043e43b179fe04c0086e190cfdb73e76557d3c18837ce5b8c66741ff"
+        }
+      },
+      "completed_at": "2026-08-21T10:29:20Z",
+      "control_rollout_id": "buildHouse_flat__seed203__control",
+      "delay": "d0",
+      "effect_start_frames": [
+        105,
+        105
+      ],
+      "latent_prefix_max_error": 0.0,
+      "raw_prefix_max_errors": [
+        0.0,
+        0.0
+      ],
+      "rollout_id": "buildHouse_flat__seed203__stop_d0",
+      "run_index": 17,
+      "scene": "buildHouse_flat",
+      "seed": 203,
+      "status": "complete",
+      "total_s": 226.12909380601195
+    },
+    {
+      "action_protocol_sha256": "90e8c77467e1361f04b99740097c5fd96aab8b0d3ae6a9b902879de0a5983e15",
+      "action_tensor_hashes": {
+        "generation_camera_sha256": "ce74475c230513d255bf8e9c6dfafae15f6c650efa6e4117ef58aadfccc22c1e",
+        "generation_keyboard_sha256": "87bf38d9b70dca3327a800f4c9ac521298f6d1b8d2283c86b034ea92f853a494",
+        "post_camera_sha256": "ce74475c230513d255bf8e9c6dfafae15f6c650efa6e4117ef58aadfccc22c1e",
+        "post_keyboard_sha256": "86e08343befec86464043b59f9aba133f2bb4812569e80303485b7fa1417af68"
+      },
+      "admission_latent": 30,
+      "arm": "stop_d1",
+      "artifacts": {
+        "action_tensors": {
+          "bytes": 1058,
+          "path": "buildHouse_flat/seed203/stop_d1/action_tensors.npz",
+          "required": true,
+          "sha256": "4a7f01848cde96d34fc666476e97bff0ef81664e2d05bcf1ae532d7aedfb9f46"
+        },
+        "decoded_u8": {
+          "bytes": 1045094528,
+          "path": "buildHouse_flat/seed203/stop_d1/decoded_u8.npy",
+          "required": true,
+          "sha256": "c5e21677d93d26c4043b86bc4cb32217f2a427b840b879db28262e4eef1b4c17"
+        },
+        "detector_frames": {
+          "bytes": 9831888,
+          "path": "buildHouse_flat/seed203/stop_d1/detector_frames.npz",
+          "required": true,
+          "sha256": "ee23257521dbfaf2c992d3e2888df14ee040de7d67af0b3328cc141f4e1a1e4b"
+        },
+        "latent": {
+          "bytes": 88475332,
+          "path": "buildHouse_flat/seed203/stop_d1/latent.pt",
+          "required": true,
+          "sha256": "798212f5fbb71fcbfc7316efb6704d8be2ef784fb565f4c8c4f9abfb698aeffa"
+        },
+        "video": {
+          "bytes": 1770251,
+          "path": "buildHouse_flat/seed203/stop_d1/generated.mp4",
+          "required": true,
+          "sha256": "ea2ef7079fa7a5b2350652e4cc47aecfdbb372a4719b7a837641709ebe9c905c"
+        }
+      },
+      "completed_at": "2026-08-21T10:33:43Z",
+      "control_rollout_id": "buildHouse_flat__seed203__control",
+      "delay": "d1",
+      "effect_start_frames": [
+        117,
+        117
+      ],
+      "latent_prefix_max_error": 0.0,
+      "raw_prefix_max_errors": [
+        0.0,
+        0.0
+      ],
+      "rollout_id": "buildHouse_flat__seed203__stop_d1",
+      "run_index": 18,
+      "scene": "buildHouse_flat",
+      "seed": 203,
+      "status": "complete",
+      "total_s": 224.77133612400212
+    },
+    {
+      "action_protocol_sha256": "90e8c77467e1361f04b99740097c5fd96aab8b0d3ae6a9b902879de0a5983e15",
+      "action_tensor_hashes": {
+        "generation_camera_sha256": "ce74475c230513d255bf8e9c6dfafae15f6c650efa6e4117ef58aadfccc22c1e",
+        "generation_keyboard_sha256": "87bf38d9b70dca3327a800f4c9ac521298f6d1b8d2283c86b034ea92f853a494",
+        "post_camera_sha256": "ce74475c230513d255bf8e9c6dfafae15f6c650efa6e4117ef58aadfccc22c1e",
+        "post_keyboard_sha256": "86e08343befec86464043b59f9aba133f2bb4812569e80303485b7fa1417af68"
+      },
+      "admission_latent": 27,
+      "arm": "stop_d0",
+      "artifacts": {
+        "action_tensors": {
+          "bytes": 1058,
+          "path": "buildHouse_flat/seed204/stop_d0/action_tensors.npz",
+          "required": true,
+          "sha256": "4a7f01848cde96d34fc666476e97bff0ef81664e2d05bcf1ae532d7aedfb9f46"
+        },
+        "decoded_u8": {
+          "bytes": 1045094528,
+          "path": "buildHouse_flat/seed204/stop_d0/decoded_u8.npy",
+          "required": true,
+          "sha256": "a10a2a560f61fef99f5162f904a4190ba37186ab5114f5f4e65ac2d4ea1218ac"
+        },
+        "detector_frames": {
+          "bytes": 9855631,
+          "path": "buildHouse_flat/seed204/stop_d0/detector_frames.npz",
+          "required": true,
+          "sha256": "763946b891a04ac907b671bca195b7708c45a34e3b5ff991581fd40bdae30ce8"
+        },
+        "latent": {
+          "bytes": 88475332,
+          "path": "buildHouse_flat/seed204/stop_d0/latent.pt",
+          "required": true,
+          "sha256": "5502af82dff92696740f4465138bf68b809d3bebd66d049df06b594c7ac81c39"
+        },
+        "video": {
+          "bytes": 1741465,
+          "path": "buildHouse_flat/seed204/stop_d0/generated.mp4",
+          "required": true,
+          "sha256": "3f6059b3ecb55fe39c46a03c8f160eaf886c3f8453d66b467911840243d74571"
+        }
+      },
+      "completed_at": "2026-08-21T10:38:11Z",
+      "control_rollout_id": "buildHouse_flat__seed204__control",
+      "delay": "d0",
+      "effect_start_frames": [
+        105,
+        105
+      ],
+      "latent_prefix_max_error": 0.0,
+      "raw_prefix_max_errors": [
+        0.0,
+        0.0
+      ],
+      "rollout_id": "buildHouse_flat__seed204__stop_d0",
+      "run_index": 19,
+      "scene": "buildHouse_flat",
+      "seed": 204,
+      "status": "complete",
+      "total_s": 229.593366340996
+    },
+    {
+      "action_protocol_sha256": "90e8c77467e1361f04b99740097c5fd96aab8b0d3ae6a9b902879de0a5983e15",
+      "action_tensor_hashes": {
+        "generation_camera_sha256": "ce74475c230513d255bf8e9c6dfafae15f6c650efa6e4117ef58aadfccc22c1e",
+        "generation_keyboard_sha256": "87bf38d9b70dca3327a800f4c9ac521298f6d1b8d2283c86b034ea92f853a494",
+        "post_camera_sha256": "ce74475c230513d255bf8e9c6dfafae15f6c650efa6e4117ef58aadfccc22c1e",
+        "post_keyboard_sha256": "86e08343befec86464043b59f9aba133f2bb4812569e80303485b7fa1417af68"
+      },
+      "admission_latent": 30,
+      "arm": "stop_d1",
+      "artifacts": {
+        "action_tensors": {
+          "bytes": 1058,
+          "path": "buildHouse_flat/seed204/stop_d1/action_tensors.npz",
+          "required": true,
+          "sha256": "4a7f01848cde96d34fc666476e97bff0ef81664e2d05bcf1ae532d7aedfb9f46"
+        },
+        "decoded_u8": {
+          "bytes": 1045094528,
+          "path": "buildHouse_flat/seed204/stop_d1/decoded_u8.npy",
+          "required": true,
+          "sha256": "ef9623e83020711bce0b6328882afa39182383caeadb648d5e4faed9e268d399"
+        },
+        "detector_frames": {
+          "bytes": 9853058,
+          "path": "buildHouse_flat/seed204/stop_d1/detector_frames.npz",
+          "required": true,
+          "sha256": "52fd94053b0fa434966ebc89883ec26b1440b043908caf4deef656cda0760bcc"
+        },
+        "latent": {
+          "bytes": 88475332,
+          "path": "buildHouse_flat/seed204/stop_d1/latent.pt",
+          "required": true,
+          "sha256": "455c93e43704de30ffa039a47c78eba131dc19ceae9f3dce577d0adc1ceb6cdb"
+        },
+        "video": {
+          "bytes": 1757943,
+          "path": "buildHouse_flat/seed204/stop_d1/generated.mp4",
+          "required": true,
+          "sha256": "1b51981e5146e17da461d06f88da3f069b36b2854c4070eedfbbb19724d2e1fa"
+        }
+      },
+      "completed_at": "2026-08-21T10:42:35Z",
+      "control_rollout_id": "buildHouse_flat__seed204__control",
+      "delay": "d1",
+      "effect_start_frames": [
+        117,
+        117
+      ],
+      "latent_prefix_max_error": 0.0,
+      "raw_prefix_max_errors": [
+        0.0,
+        0.0
+      ],
+      "rollout_id": "buildHouse_flat__seed204__stop_d1",
+      "run_index": 20,
+      "scene": "buildHouse_flat",
+      "seed": 204,
+      "status": "complete",
+      "total_s": 225.60723710000457
+    },
+    {
+      "action_protocol_sha256": "90e8c77467e1361f04b99740097c5fd96aab8b0d3ae6a9b902879de0a5983e15",
+      "action_tensor_hashes": {
+        "generation_camera_sha256": "ce74475c230513d255bf8e9c6dfafae15f6c650efa6e4117ef58aadfccc22c1e",
+        "generation_keyboard_sha256": "87bf38d9b70dca3327a800f4c9ac521298f6d1b8d2283c86b034ea92f853a494",
+        "post_camera_sha256": "ce74475c230513d255bf8e9c6dfafae15f6c650efa6e4117ef58aadfccc22c1e",
+        "post_keyboard_sha256": "86e08343befec86464043b59f9aba133f2bb4812569e80303485b7fa1417af68"
+      },
+      "admission_latent": 27,
+      "arm": "stop_d0",
+      "artifacts": {
+        "action_tensors": {
+          "bytes": 1058,
+          "path": "buildHouse_flat/seed205/stop_d0/action_tensors.npz",
+          "required": true,
+          "sha256": "4a7f01848cde96d34fc666476e97bff0ef81664e2d05bcf1ae532d7aedfb9f46"
+        },
+        "decoded_u8": {
+          "bytes": 1045094528,
+          "path": "buildHouse_flat/seed205/stop_d0/decoded_u8.npy",
+          "required": true,
+          "sha256": "db8088a3e34ce9d8b239b73bdff7ad22c007f851603fd2d6392923bc3c14e602"
+        },
+        "detector_frames": {
+          "bytes": 9848341,
+          "path": "buildHouse_flat/seed205/stop_d0/detector_frames.npz",
+          "required": true,
+          "sha256": "56f2f07865116ebc753d7b9da1f14b5e78ad37b1e78ab28af05a917eaf45312d"
+        },
+        "latent": {
+          "bytes": 88475332,
+          "path": "buildHouse_flat/seed205/stop_d0/latent.pt",
+          "required": true,
+          "sha256": "0e91b05ca742db2eb9d04c9773fd96a5289bd2a3d80527a3a0569cfbee4455c2"
+        },
+        "video": {
+          "bytes": 1729302,
+          "path": "buildHouse_flat/seed205/stop_d0/generated.mp4",
+          "required": true,
+          "sha256": "92b06e96fff13c49cd343ca7db3ce9111dd69001fa9a16748392eeaa5f340a36"
+        }
+      },
+      "completed_at": "2026-08-21T10:46:58Z",
+      "control_rollout_id": "buildHouse_flat__seed205__control",
+      "delay": "d0",
+      "effect_start_frames": [
+        105,
+        105
+      ],
+      "latent_prefix_max_error": 0.0,
+      "raw_prefix_max_errors": [
+        0.0,
+        0.0
+      ],
+      "rollout_id": "buildHouse_flat__seed205__stop_d0",
+      "run_index": 21,
+      "scene": "buildHouse_flat",
+      "seed": 205,
+      "status": "complete",
+      "total_s": 224.57494349600165
+    },
+    {
+      "action_protocol_sha256": "90e8c77467e1361f04b99740097c5fd96aab8b0d3ae6a9b902879de0a5983e15",
+      "action_tensor_hashes": {
+        "generation_camera_sha256": "ce74475c230513d255bf8e9c6dfafae15f6c650efa6e4117ef58aadfccc22c1e",
+        "generation_keyboard_sha256": "87bf38d9b70dca3327a800f4c9ac521298f6d1b8d2283c86b034ea92f853a494",
+        "post_camera_sha256": "ce74475c230513d255bf8e9c6dfafae15f6c650efa6e4117ef58aadfccc22c1e",
+        "post_keyboard_sha256": "86e08343befec86464043b59f9aba133f2bb4812569e80303485b7fa1417af68"
+      },
+      "admission_latent": 30,
+      "arm": "stop_d1",
+      "artifacts": {
+        "action_tensors": {
+          "bytes": 1058,
+          "path": "buildHouse_flat/seed205/stop_d1/action_tensors.npz",
+          "required": true,
+          "sha256": "4a7f01848cde96d34fc666476e97bff0ef81664e2d05bcf1ae532d7aedfb9f46"
+        },
+        "decoded_u8": {
+          "bytes": 1045094528,
+          "path": "buildHouse_flat/seed205/stop_d1/decoded_u8.npy",
+          "required": true,
+          "sha256": "d465482982bae6bd56e34970d1745185c2c352e7f7a0757be6617b76bbbef616"
+        },
+        "detector_frames": {
+          "bytes": 9846630,
+          "path": "buildHouse_flat/seed205/stop_d1/detector_frames.npz",
+          "required": true,
+          "sha256": "d110593bb3db94f1a679570b3593f80f9f38a48fe1a3ee76a3e91b3cb4fd028f"
+        },
+        "latent": {
+          "bytes": 88475332,
+          "path": "buildHouse_flat/seed205/stop_d1/latent.pt",
+          "required": true,
+          "sha256": "951fc204501cc8b63d153c0ed50d6946add0e77687c6c5b0657c90d44a60f88a"
+        },
+        "video": {
+          "bytes": 1738743,
+          "path": "buildHouse_flat/seed205/stop_d1/generated.mp4",
+          "required": true,
+          "sha256": "74993e860cbafbd2203de0cf2af87d59f1150f06d060384ef89a5e15412d766f"
+        }
+      },
+      "completed_at": "2026-08-21T10:51:22Z",
+      "control_rollout_id": "buildHouse_flat__seed205__control",
+      "delay": "d1",
+      "effect_start_frames": [
+        117,
+        117
+      ],
+      "latent_prefix_max_error": 0.0,
+      "raw_prefix_max_errors": [
+        0.0,
+        0.0
+      ],
+      "rollout_id": "buildHouse_flat__seed205__stop_d1",
+      "run_index": 22,
+      "scene": "buildHouse_flat",
+      "seed": 205,
+      "status": "complete",
+      "total_s": 226.19670315799885
+    },
+    {
+      "action_protocol_sha256": "90e8c77467e1361f04b99740097c5fd96aab8b0d3ae6a9b902879de0a5983e15",
+      "action_tensor_hashes": {
+        "generation_camera_sha256": "ce74475c230513d255bf8e9c6dfafae15f6c650efa6e4117ef58aadfccc22c1e",
+        "generation_keyboard_sha256": "87bf38d9b70dca3327a800f4c9ac521298f6d1b8d2283c86b034ea92f853a494",
+        "post_camera_sha256": "ce74475c230513d255bf8e9c6dfafae15f6c650efa6e4117ef58aadfccc22c1e",
+        "post_keyboard_sha256": "86e08343befec86464043b59f9aba133f2bb4812569e80303485b7fa1417af68"
+      },
+      "admission_latent": 27,
+      "arm": "stop_d0",
+      "artifacts": {
+        "action_tensors": {
+          "bytes": 1058,
+          "path": "buildHouse_flat/seed206/stop_d0/action_tensors.npz",
+          "required": true,
+          "sha256": "4a7f01848cde96d34fc666476e97bff0ef81664e2d05bcf1ae532d7aedfb9f46"
+        },
+        "decoded_u8": {
+          "bytes": 1045094528,
+          "path": "buildHouse_flat/seed206/stop_d0/decoded_u8.npy",
+          "required": true,
+          "sha256": "87f77e416952f8de516282ad5f333e66713c573d72133503d8e4cedf32a0a93b"
+        },
+        "detector_frames": {
+          "bytes": 9841678,
+          "path": "buildHouse_flat/seed206/stop_d0/detector_frames.npz",
+          "required": true,
+          "sha256": "5713d0806052f6692ef1d2f90c23260f01d88da0c6b2d6ccaba9a0a8b7b46114"
+        },
+        "latent": {
+          "bytes": 88475332,
+          "path": "buildHouse_flat/seed206/stop_d0/latent.pt",
+          "required": true,
+          "sha256": "184cf0e2422ab432b68c1e185aa9c9b5da8f3d8020dd461214df5977e9c2d3a7"
+        },
+        "video": {
+          "bytes": 1741219,
+          "path": "buildHouse_flat/seed206/stop_d0/generated.mp4",
+          "required": true,
+          "sha256": "4575d8dfa03e2b3812c8698fe59cb412ce915b7b4509dc9326d489d9ac7fa6d7"
+        }
+      },
+      "completed_at": "2026-08-21T10:55:47Z",
+      "control_rollout_id": "buildHouse_flat__seed206__control",
+      "delay": "d0",
+      "effect_start_frames": [
+        105,
+        105
+      ],
+      "latent_prefix_max_error": 0.0,
+      "raw_prefix_max_errors": [
+        0.0,
+        0.0
+      ],
+      "rollout_id": "buildHouse_flat__seed206__stop_d0",
+      "run_index": 23,
+      "scene": "buildHouse_flat",
+      "seed": 206,
+      "status": "complete",
+      "total_s": 226.34184064499277
+    },
+    {
+      "action_protocol_sha256": "90e8c77467e1361f04b99740097c5fd96aab8b0d3ae6a9b902879de0a5983e15",
+      "action_tensor_hashes": {
+        "generation_camera_sha256": "ce74475c230513d255bf8e9c6dfafae15f6c650efa6e4117ef58aadfccc22c1e",
+        "generation_keyboard_sha256": "87bf38d9b70dca3327a800f4c9ac521298f6d1b8d2283c86b034ea92f853a494",
+        "post_camera_sha256": "ce74475c230513d255bf8e9c6dfafae15f6c650efa6e4117ef58aadfccc22c1e",
+        "post_keyboard_sha256": "86e08343befec86464043b59f9aba133f2bb4812569e80303485b7fa1417af68"
+      },
+      "admission_latent": 30,
+      "arm": "stop_d1",
+      "artifacts": {
+        "action_tensors": {
+          "bytes": 1058,
+          "path": "buildHouse_flat/seed206/stop_d1/action_tensors.npz",
+          "required": true,
+          "sha256": "4a7f01848cde96d34fc666476e97bff0ef81664e2d05bcf1ae532d7aedfb9f46"
+        },
+        "decoded_u8": {
+          "bytes": 1045094528,
+          "path": "buildHouse_flat/seed206/stop_d1/decoded_u8.npy",
+          "required": true,
+          "sha256": "b37f1f3c688e787ddbf8f235d59569cd77148852e807740c2bfe18cff819bacc"
+        },
+        "detector_frames": {
+          "bytes": 9839370,
+          "path": "buildHouse_flat/seed206/stop_d1/detector_frames.npz",
+          "required": true,
+          "sha256": "1dec097fdf2498b10e65cd2c3a7184821d418d474be606ef2d2a4ef2bb24faca"
+        },
+        "latent": {
+          "bytes": 88475332,
+          "path": "buildHouse_flat/seed206/stop_d1/latent.pt",
+          "required": true,
+          "sha256": "e652edb166fce7c8a363a53fac6845a82784db18b2aff005a0e0e567c5c8ed89"
+        },
+        "video": {
+          "bytes": 1745314,
+          "path": "buildHouse_flat/seed206/stop_d1/generated.mp4",
+          "required": true,
+          "sha256": "ee325a4947b4f4c1644ca7bbf9c13ec8f1fe9f3828fadb507e6e2aa54cf7d970"
+        }
+      },
+      "completed_at": "2026-08-21T11:00:12Z",
+      "control_rollout_id": "buildHouse_flat__seed206__control",
+      "delay": "d1",
+      "effect_start_frames": [
+        117,
+        117
+      ],
+      "latent_prefix_max_error": 0.0,
+      "raw_prefix_max_errors": [
+        0.0,
+        0.0
+      ],
+      "rollout_id": "buildHouse_flat__seed206__stop_d1",
+      "run_index": 24,
+      "scene": "buildHouse_flat",
+      "seed": 206,
+      "status": "complete",
+      "total_s": 224.92303847700532
+    }
+  ],
+  "scene_hashes": {
+    "buildHouse_flat": "f56e1f14461c790ae1d53432f72ac2f8f9795560933acc540857e870d799d8ec",
+    "buildTower_normal": "b7301a19a0c5741b4d1cccc5ea5b5f642ebe89f1952b885dd9ed3a1f706257c2"
+  },
+  "schema_version": "rtwm-v2-canonical-stop-rollouts-1",
+  "source": {
+    "commit": "6a95de85c439d8ea73eae34c88fbfd4e89ea02e2",
+    "diff_sha256": "814691ca7fbb8ca11633d9b5ea41bc3966a95ad1849049995b529e4ebdf8a75c",
+    "dirty": true
+  }
+}

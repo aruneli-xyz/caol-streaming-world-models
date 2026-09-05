@@ -1,0 +1,246 @@
+{
+  "aggregates": {
+    "d0": {
+      "action_receipt_to_admission_ms": {
+        "mean_ms": 10757.360921,
+        "n": 2,
+        "sample_sd_ms": 16.40863913160319,
+        "uncertainty_label": "descriptive sample SD only; n=2 seeds, no population inference",
+        "values_ms": [
+          10745.758261,
+          10768.963581
+        ]
+      },
+      "action_receipt_to_context_commit_ms": {
+        "mean_ms": 18837.7479465,
+        "n": 2,
+        "sample_sd_ms": 30.125760446327806,
+        "uncertainty_label": "descriptive sample SD only; n=2 seeds, no population inference",
+        "values_ms": [
+          18816.445817,
+          18859.050076
+        ]
+      },
+      "action_receipt_to_denoise_complete_ms": {
+        "mean_ms": 17238.8573475,
+        "n": 2,
+        "sample_sd_ms": 28.789105184141746,
+        "uncertainty_label": "descriptive sample SD only; n=2 seeds, no population inference",
+        "values_ms": [
+          17218.500376,
+          17259.214319
+        ]
+      },
+      "action_receipt_to_device_ready_ms": {
+        "mean_ms": 21465.74757,
+        "n": 2,
+        "sample_sd_ms": 29.227785038801038,
+        "uncertainty_label": "descriptive sample SD only; n=2 seeds, no population inference",
+        "values_ms": [
+          21445.080405,
+          21486.414735
+        ]
+      },
+      "action_receipt_to_host_ready_ms": {
+        "mean_ms": 21476.243674999998,
+        "n": 2,
+        "sample_sd_ms": 29.220138386071064,
+        "uncertainty_label": "descriptive sample SD only; n=2 seeds, no population inference",
+        "values_ms": [
+          21455.581917,
+          21496.905433
+        ]
+      },
+      "action_receipt_to_sink_consumed_ms": {
+        "mean_ms": 21519.665789500003,
+        "n": 2,
+        "sample_sd_ms": 29.909162325543043,
+        "uncertainty_label": "descriptive sample SD only; n=2 seeds, no population inference",
+        "values_ms": [
+          21498.516818,
+          21540.814761
+        ]
+      }
+    },
+    "d1": {
+      "action_receipt_to_admission_ms": {
+        "mean_ms": 21524.3941945,
+        "n": 2,
+        "sample_sd_ms": 0.19945148844901472,
+        "uncertainty_label": "descriptive sample SD only; n=2 seeds, no population inference",
+        "values_ms": [
+          21524.253161,
+          21524.535228
+        ]
+      },
+      "action_receipt_to_context_commit_ms": {
+        "mean_ms": 30290.7583335,
+        "n": 2,
+        "sample_sd_ms": 957.8975997987302,
+        "uncertainty_label": "descriptive sample SD only; n=2 seeds, no population inference",
+        "values_ms": [
+          30968.094222,
+          29613.422445
+        ]
+      },
+      "action_receipt_to_denoise_complete_ms": {
+        "mean_ms": 28008.800011,
+        "n": 2,
+        "sample_sd_ms": 8.60856402732521,
+        "uncertainty_label": "descriptive sample SD only; n=2 seeds, no population inference",
+        "values_ms": [
+          28002.712837,
+          28014.887185
+        ]
+      },
+      "action_receipt_to_device_ready_ms": {
+        "mean_ms": 32919.9404505,
+        "n": 2,
+        "sample_sd_ms": 958.2150893292693,
+        "uncertainty_label": "descriptive sample SD only; n=2 seeds, no population inference",
+        "values_ms": [
+          33597.500838,
+          32242.380063
+        ]
+      },
+      "action_receipt_to_host_ready_ms": {
+        "mean_ms": 32930.3265175,
+        "n": 2,
+        "sample_sd_ms": 958.3427673581064,
+        "uncertainty_label": "descriptive sample SD only; n=2 seeds, no population inference",
+        "values_ms": [
+          33607.977187,
+          32252.675848
+        ]
+      },
+      "action_receipt_to_sink_consumed_ms": {
+        "mean_ms": 32973.508426500004,
+        "n": 2,
+        "sample_sd_ms": 958.3939152200195,
+        "uncertainty_label": "descriptive sample SD only; n=2 seeds, no population inference",
+        "values_ms": [
+          33651.195263,
+          32295.82159
+        ]
+      }
+    }
+  },
+  "claim_scope": {
+    "excludes": [
+      "physical display presentation",
+      "input device latency",
+      "network transport",
+      "display compositor and scanout"
+    ],
+    "includes": [
+      "synthetic action receipt",
+      "blockwise denoise",
+      "context-cache commit",
+      "cached incremental VAE decode",
+      "CUDA device readiness",
+      "synchronous host transfer"
+    ],
+    "physical_presentation_measured": false,
+    "sink_callback_semantics": "synchronous host callback consumption only"
+  },
+  "exact_run_count": 4,
+  "run_count": 4,
+  "runs": [
+    {
+      "action_receipt_to_admission_ms": 10745.758261,
+      "action_receipt_to_context_commit_ms": 18816.445817,
+      "action_receipt_to_denoise_complete_ms": 17218.500376,
+      "action_receipt_to_device_ready_ms": 21445.080405,
+      "action_receipt_to_host_ready_ms": 21455.581917,
+      "action_receipt_to_sink_consumed_ms": 21498.516818,
+      "admission_latent": 27,
+      "admission_to_denoise_complete_ms": 6472.742115,
+      "context_commit_to_device_ready_ms": 2628.634588,
+      "delay": "d0",
+      "denoise_complete_to_context_commit_ms": 1597.945441,
+      "device_ready_to_host_ready_ms": 10.501512,
+      "exact": true,
+      "incremental_decode_gpu_total_ms": 26212.6083984375,
+      "max_error": 0,
+      "row_type": "run",
+      "run_id": "buildTower_normal__seed301__d0",
+      "run_index": 1,
+      "seed": 301,
+      "support_frame": 105
+    },
+    {
+      "action_receipt_to_admission_ms": 21524.253161,
+      "action_receipt_to_context_commit_ms": 30968.094222,
+      "action_receipt_to_denoise_complete_ms": 28002.712837,
+      "action_receipt_to_device_ready_ms": 33597.500838,
+      "action_receipt_to_host_ready_ms": 33607.977187,
+      "action_receipt_to_sink_consumed_ms": 33651.195263,
+      "admission_latent": 30,
+      "admission_to_denoise_complete_ms": 6478.459676,
+      "context_commit_to_device_ready_ms": 2629.406616,
+      "delay": "d1",
+      "denoise_complete_to_context_commit_ms": 2965.381385,
+      "device_ready_to_host_ready_ms": 10.476349,
+      "exact": true,
+      "incremental_decode_gpu_total_ms": 28303.489135742188,
+      "max_error": 0,
+      "row_type": "run",
+      "run_id": "buildTower_normal__seed301__d1",
+      "run_index": 2,
+      "seed": 301,
+      "support_frame": 117
+    },
+    {
+      "action_receipt_to_admission_ms": 21524.535228,
+      "action_receipt_to_context_commit_ms": 29613.422445,
+      "action_receipt_to_denoise_complete_ms": 28014.887185,
+      "action_receipt_to_device_ready_ms": 32242.380063,
+      "action_receipt_to_host_ready_ms": 32252.675848,
+      "action_receipt_to_sink_consumed_ms": 32295.82159,
+      "admission_latent": 30,
+      "admission_to_denoise_complete_ms": 6490.351957,
+      "context_commit_to_device_ready_ms": 2628.957618,
+      "delay": "d1",
+      "denoise_complete_to_context_commit_ms": 1598.53526,
+      "device_ready_to_host_ready_ms": 10.295785,
+      "exact": true,
+      "incremental_decode_gpu_total_ms": 28296.931884765625,
+      "max_error": 0,
+      "row_type": "run",
+      "run_id": "buildTower_normal__seed302__d1",
+      "run_index": 3,
+      "seed": 302,
+      "support_frame": 117
+    },
+    {
+      "action_receipt_to_admission_ms": 10768.963581,
+      "action_receipt_to_context_commit_ms": 18859.050076,
+      "action_receipt_to_denoise_complete_ms": 17259.214319,
+      "action_receipt_to_device_ready_ms": 21486.414735,
+      "action_receipt_to_host_ready_ms": 21496.905433,
+      "action_receipt_to_sink_consumed_ms": 21540.814761,
+      "admission_latent": 27,
+      "admission_to_denoise_complete_ms": 6490.250738,
+      "context_commit_to_device_ready_ms": 2627.364659,
+      "delay": "d0",
+      "denoise_complete_to_context_commit_ms": 1599.835757,
+      "device_ready_to_host_ready_ms": 10.490698,
+      "exact": true,
+      "incremental_decode_gpu_total_ms": 25664.811889648438,
+      "max_error": 0,
+      "row_type": "run",
+      "run_id": "buildTower_normal__seed302__d0",
+      "run_index": 4,
+      "seed": 302,
+      "support_frame": 105
+    }
+  ],
+  "schema_version": "rtwm-v2-incremental-stop-wallclock-1",
+  "timing_claimable": true,
+  "uncertainty": {
+    "ddof": 1,
+    "label": "descriptive sample SD only; n=2 seeds, no population inference",
+    "method": "sample_standard_deviation",
+    "n_per_delay": 2
+  }
+}

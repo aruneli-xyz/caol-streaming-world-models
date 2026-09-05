@@ -1,0 +1,205 @@
+{
+  "artifacts": {
+    "smoke": {
+      "path": "smoke.json",
+      "schema_version": "rtwm-v2-decoder-rf-smoke-1",
+      "sha256": "9a922d8032dc2ac13c03b8519789af8b9f3ec8c0f424477fcec4a66736c0de00"
+    }
+  },
+  "completed_at": "2026-08-18T19:52:18Z",
+  "created_at": "2026-08-18T19:51:28Z",
+  "decoder": {
+    "analysis_layout": "V,T,H,W,C",
+    "comparison_domain": "raw_uint8_pre_mp4",
+    "entrypoint": "gamma_world._src.predict2.tokenizers.wan2pt1.Wan2pt1VAEInterface.decode",
+    "equivalence": "Gamma-World model.decode splits V*T into independent views and calls this tokenizer decoder",
+    "expected_first_support": "4*t-3 for t>0; 0 for t=0",
+    "expected_pixel_frames": 189,
+    "input_layout": "B,C,V*T,H,W",
+    "latent_frames_per_view": 48,
+    "n_views": 2,
+    "saved_latent_precision_warning": "matched latents were persisted as FP16; generation decoded the sampler tensor before this downcast",
+    "temporal_stride": 4,
+    "uint8_conversion": "clamp((decode_float + 1) * 127.5, 0, 255).to(uint8)"
+  },
+  "determinism_settings": {
+    "cublas_workspace_config": ":4096:8",
+    "cudnn_benchmark": false,
+    "cudnn_deterministic": true,
+    "cudnn_tf32": false,
+    "deterministic_algorithms_warn_only": true,
+    "matmul_tf32": false
+  },
+  "experiment": "raw_decoder_receptive_field",
+  "latent_stop_control": {
+    "differing_indices_union": [
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47
+    ],
+    "shape_bvcthw": [
+      1,
+      2,
+      16,
+      48,
+      90,
+      160
+    ],
+    "views": [
+      {
+        "differing_indices": [
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47
+        ],
+        "first_differing_index": 24,
+        "last_differing_index": 47,
+        "maximum_absolute_error": 1.62451171875,
+        "view_index": 0
+      },
+      {
+        "differing_indices": [
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47
+        ],
+        "first_differing_index": 24,
+        "last_differing_index": 47,
+        "maximum_absolute_error": 1.79736328125,
+        "view_index": 1
+      }
+    ]
+  },
+  "pair": {
+    "control_rollout_id": "buildTower_normal__seed1__control",
+    "delay_blocks": 0,
+    "scene": "buildTower_normal",
+    "seed": 1,
+    "stop_rollout_id": "buildTower_normal__seed1__stop_d0"
+  },
+  "requested_hybrid_indices": [],
+  "schema_version": "rtwm-v2-decoder-rf-manifest-1",
+  "source": {
+    "config": {
+      "path": "/home/arunkumareli/code/research/rtwm/v2/config/pilot.json",
+      "sha256": "24f2fa8b087e8e62d42707ed91abea01068cac7bcc3a028c4e60e88de381ad45"
+    },
+    "control": {
+      "arm": "control",
+      "latent_dtype": "torch.float16",
+      "latent_path": "/home/arunkumareli/code/research/rtwm/v2/results/matched/buildTower_normal/seed1/control/latent.pt",
+      "latent_sha256": "e4f834a50df471adf18ab731bc1bc344ada0acd92c35143341d35304482f9c2d",
+      "latent_shape": [
+        1,
+        16,
+        96,
+        90,
+        160
+      ],
+      "recorded_latent_sha256": "e4f834a50df471adf18ab731bc1bc344ada0acd92c35143341d35304482f9c2d",
+      "recorded_video_sha256": "51c9d23debbb55b9962599bd533d65271cce2c8e377022c7b79554a4e8ea2ea2",
+      "rollout_id": "buildTower_normal__seed1__control",
+      "video_path": "/home/arunkumareli/code/research/rtwm/v2/results/matched/buildTower_normal/seed1/control/generated.mp4",
+      "video_sha256": "51c9d23debbb55b9962599bd533d65271cce2c8e377022c7b79554a4e8ea2ea2"
+    },
+    "gamma_world": {
+      "commit": "6a95de85c439d8ea73eae34c88fbfd4e89ea02e2",
+      "dirty": true
+    },
+    "matched_manifest": {
+      "path": "/home/arunkumareli/code/research/rtwm/v2/results/matched/manifest.json",
+      "schema_version": "rtwm-v2-pilot-1",
+      "sha256": "b7f0ec3006fcdc74cf1f036468e0a150eed144568fca64d0c12efe76d8c7080c"
+    },
+    "script": {
+      "path": "/home/arunkumareli/code/research/rtwm/v2/measure_decoder_rf.py",
+      "sha256": "67f142e6ef60abc0f7d12fc3a6f928f92d195f240fdb619c33fe56c2f1076acc"
+    },
+    "stop": {
+      "arm": "stop_d0",
+      "latent_dtype": "torch.float16",
+      "latent_path": "/home/arunkumareli/code/research/rtwm/v2/results/matched/buildTower_normal/seed1/stop_d0/latent.pt",
+      "latent_sha256": "ffa0bfec7d6c6425957c0d22c9eca824bf3008ccaca1e58329feb80d9b6de6ae",
+      "latent_shape": [
+        1,
+        16,
+        96,
+        90,
+        160
+      ],
+      "recorded_latent_sha256": "ffa0bfec7d6c6425957c0d22c9eca824bf3008ccaca1e58329feb80d9b6de6ae",
+      "recorded_video_sha256": "39e61626fd0bd21eefb7d1a3d12e6475761958a5e7081e5e4f0e6ea507da2591",
+      "rollout_id": "buildTower_normal__seed1__stop_d0",
+      "video_path": "/home/arunkumareli/code/research/rtwm/v2/results/matched/buildTower_normal/seed1/stop_d0/generated.mp4",
+      "video_sha256": "39e61626fd0bd21eefb7d1a3d12e6475761958a5e7081e5e4f0e6ea507da2591"
+    },
+    "tokenizer_checkpoint": {
+      "path": "/home/arunkumareli/code/research/safeswm/models/gamma-world/tokenizer.pth",
+      "sha256": "38071ab59bd94681c686fa51d75a1968f64e470262043be31f7a094e442fd981"
+    }
+  },
+  "status": "smoke_complete"
+}

@@ -1,0 +1,221 @@
+{
+  "claim_scope": "Restrict confirmatory causal claims to forward-to-stop unless a directional transition passes the held-out rule.",
+  "config_sha256": "742495a5d00c80ef7ca1b4136dd1594dc4eb050d0c84215e32219cfd41fe80b8",
+  "decision_rule": {
+    "minimum_detection_fraction": 0.75,
+    "minimum_expected_sign_fraction": 0.75,
+    "minimum_held_out_views": 4,
+    "no_outcome_based_retuning": true
+  },
+  "protocol_sha256": "047aebd31aba39e50f7a72b9202a2935f266fda230ba62400e1298f888029e26",
+  "protocol_status": "retrospective bounded validation; split and decision rule were fixed before this rerun but were not preregistered",
+  "report_sha256": "01abda5030c1554e255252c2da26bc7844bdd688873d085c56f329746e65ed53",
+  "schema_version": "rtwm-v2-directional-validation-1",
+  "source_manifest": {
+    "path": "/home/arunkumareli/code/research/rtwm/results/a2e/manifest.json",
+    "sha256": "eada52049ef4e106e84f0168c975cf5b9da9956a15e9e00388cb4ad51b46131a"
+  },
+  "split": {
+    "calibration_change_frames": [
+      48,
+      96
+    ],
+    "held_out_change_frames": [
+      144
+    ],
+    "unit": "view; paired views are not independent seeds"
+  },
+  "synthetic_checks": {
+    "contraction_has_negative_radial_flow": true,
+    "expansion_has_positive_radial_flow": true,
+    "positive_translation_has_positive_horizontal_flow": true
+  },
+  "transitions": {
+    "left": {
+      "calibration_audit": {
+        "change_frames": [
+          48,
+          96
+        ],
+        "detection_fraction": 0.0,
+        "expected_direction": "rise",
+        "expected_sign_fraction": 0.375,
+        "finite_directional_deltas": 8,
+        "median_post_minus_pre": -0.006757076182753168,
+        "n_detected": 0,
+        "n_views": 8,
+        "signal": "horizontal",
+        "transition": "left"
+      },
+      "held_out_validation": {
+        "change_frames": [
+          144
+        ],
+        "detection_fraction": 0.0,
+        "expected_direction": "rise",
+        "expected_sign_fraction": 0.25,
+        "finite_directional_deltas": 4,
+        "median_post_minus_pre": -0.0029567741968934014,
+        "n_detected": 0,
+        "n_views": 4,
+        "signal": "horizontal",
+        "transition": "left"
+      },
+      "supported_for_response_claims": false
+    },
+    "reverse": {
+      "calibration_audit": {
+        "change_frames": [
+          48,
+          96
+        ],
+        "detection_fraction": 0.0,
+        "expected_direction": "fall",
+        "expected_sign_fraction": 0.625,
+        "finite_directional_deltas": 8,
+        "median_post_minus_pre": -0.004752107937157685,
+        "n_detected": 0,
+        "n_views": 8,
+        "signal": "radial",
+        "transition": "reverse"
+      },
+      "held_out_validation": {
+        "change_frames": [
+          144
+        ],
+        "detection_fraction": 0.0,
+        "expected_direction": "fall",
+        "expected_sign_fraction": 0.75,
+        "finite_directional_deltas": 4,
+        "median_post_minus_pre": -0.02648841349429951,
+        "n_detected": 0,
+        "n_views": 4,
+        "signal": "radial",
+        "transition": "reverse"
+      },
+      "supported_for_response_claims": false
+    }
+  },
+  "video_artifacts": [
+    {
+      "path": "/home/arunkumareli/code/research/rtwm/results/a2e/out/a2e_flat_stop_cf48/a2e_flat_stop_cf48/generated.mp4",
+      "sample": "a2e_flat_stop_cf48",
+      "sha256": "6568a0bb6ead9cb43faaca80680f3e55948bc25df07b89915a12192d9b9a9a88"
+    },
+    {
+      "path": "/home/arunkumareli/code/research/rtwm/results/a2e/out/a2e_flat_stop_cf96/a2e_flat_stop_cf96/generated.mp4",
+      "sample": "a2e_flat_stop_cf96",
+      "sha256": "ee945341a479bedf509e592589e6df9bb3f85dfdc77da3021b93f5d2102c8d90"
+    },
+    {
+      "path": "/home/arunkumareli/code/research/rtwm/results/a2e/out/a2e_flat_stop_cf144/a2e_flat_stop_cf144/generated.mp4",
+      "sample": "a2e_flat_stop_cf144",
+      "sha256": "a6b4322966aa284440c5af36697dc1dbcaa3f0ab2c6ec637d9c672490d2dc734"
+    },
+    {
+      "path": "/home/arunkumareli/code/research/rtwm/results/a2e/out/a2e_flat_reverse_cf48/a2e_flat_reverse_cf48/generated.mp4",
+      "sample": "a2e_flat_reverse_cf48",
+      "sha256": "bc619fa975078fdeac96690940cd232795a767185c52e176176ded4cac86bc9c"
+    },
+    {
+      "path": "/home/arunkumareli/code/research/rtwm/results/a2e/out/a2e_flat_reverse_cf96/a2e_flat_reverse_cf96/generated.mp4",
+      "sample": "a2e_flat_reverse_cf96",
+      "sha256": "315062919cb559e45b48cc147b4a7b0038a27e9ec420375ea8a217e78e015920"
+    },
+    {
+      "path": "/home/arunkumareli/code/research/rtwm/results/a2e/out/a2e_flat_reverse_cf144/a2e_flat_reverse_cf144/generated.mp4",
+      "sample": "a2e_flat_reverse_cf144",
+      "sha256": "5647c56a340a31a99b4c0a852db5117fc1881e175d67f23993e29637d9e715bb"
+    },
+    {
+      "path": "/home/arunkumareli/code/research/rtwm/results/a2e/out/a2e_flat_turn_cf48/a2e_flat_turn_cf48/generated.mp4",
+      "sample": "a2e_flat_turn_cf48",
+      "sha256": "36ee6ee3a0cfd2b4fced96101a002d9091ab535d4a9af68544c2b9249f520ff8"
+    },
+    {
+      "path": "/home/arunkumareli/code/research/rtwm/results/a2e/out/a2e_flat_turn_cf96/a2e_flat_turn_cf96/generated.mp4",
+      "sample": "a2e_flat_turn_cf96",
+      "sha256": "89407a3fbc11426df61feb86889f9bcb2e470c5c07a786b3e7d8286744bf9d25"
+    },
+    {
+      "path": "/home/arunkumareli/code/research/rtwm/results/a2e/out/a2e_flat_turn_cf144/a2e_flat_turn_cf144/generated.mp4",
+      "sample": "a2e_flat_turn_cf144",
+      "sha256": "71ac5a72a6308fabf1bbd1a08c3845ec87c11a347d4a88d04971e04fb93df179"
+    },
+    {
+      "path": "/home/arunkumareli/code/research/rtwm/results/a2e/out/a2e_flat_start_cf48/a2e_flat_start_cf48/generated.mp4",
+      "sample": "a2e_flat_start_cf48",
+      "sha256": "7efdff272506e37fc747fbb7536ea0dd11852d6b0a85331be65401fef92528a7"
+    },
+    {
+      "path": "/home/arunkumareli/code/research/rtwm/results/a2e/out/a2e_flat_start_cf96/a2e_flat_start_cf96/generated.mp4",
+      "sample": "a2e_flat_start_cf96",
+      "sha256": "fb55623760d1a80d388427f8bc8948c66cca887f98375f741ade7c82a3256724"
+    },
+    {
+      "path": "/home/arunkumareli/code/research/rtwm/results/a2e/out/a2e_flat_start_cf144/a2e_flat_start_cf144/generated.mp4",
+      "sample": "a2e_flat_start_cf144",
+      "sha256": "cb03570fff35b21bc88d3c2c07e7e55a03027224f1d43230960943430d992e4c"
+    },
+    {
+      "path": "/home/arunkumareli/code/research/rtwm/results/a2e/out/a2e_normal_stop_cf48/a2e_normal_stop_cf48/generated.mp4",
+      "sample": "a2e_normal_stop_cf48",
+      "sha256": "b2fc6911d0cc37c817a81f3e6d7029f0563e1674b39222cf7377ccfeb788aedc"
+    },
+    {
+      "path": "/home/arunkumareli/code/research/rtwm/results/a2e/out/a2e_normal_stop_cf96/a2e_normal_stop_cf96/generated.mp4",
+      "sample": "a2e_normal_stop_cf96",
+      "sha256": "3dded8830dcf3c88a146ccc40bfb65898b1b8cd603bafae1645f2a9c53d0f3be"
+    },
+    {
+      "path": "/home/arunkumareli/code/research/rtwm/results/a2e/out/a2e_normal_stop_cf144/a2e_normal_stop_cf144/generated.mp4",
+      "sample": "a2e_normal_stop_cf144",
+      "sha256": "eb99443ae678f03660a92ae1ee9c34bf660a2ae141025cc56d4c321a30b84da4"
+    },
+    {
+      "path": "/home/arunkumareli/code/research/rtwm/results/a2e/out/a2e_normal_reverse_cf48/a2e_normal_reverse_cf48/generated.mp4",
+      "sample": "a2e_normal_reverse_cf48",
+      "sha256": "025cb2bf443a66d17265b326ce8331c0488bdb1049f4d7a121de10578e9063e6"
+    },
+    {
+      "path": "/home/arunkumareli/code/research/rtwm/results/a2e/out/a2e_normal_reverse_cf96/a2e_normal_reverse_cf96/generated.mp4",
+      "sample": "a2e_normal_reverse_cf96",
+      "sha256": "4c8a3644b18535c975888f65e5bf7036626d3a986010a43345fdacf874ecf2ff"
+    },
+    {
+      "path": "/home/arunkumareli/code/research/rtwm/results/a2e/out/a2e_normal_reverse_cf144/a2e_normal_reverse_cf144/generated.mp4",
+      "sample": "a2e_normal_reverse_cf144",
+      "sha256": "4296e3b37ac9d238a3666b71fb85d7bc8fc69dab98f0b6a02bb2627739d04ca7"
+    },
+    {
+      "path": "/home/arunkumareli/code/research/rtwm/results/a2e/out/a2e_normal_turn_cf48/a2e_normal_turn_cf48/generated.mp4",
+      "sample": "a2e_normal_turn_cf48",
+      "sha256": "2c28841347a6a1d314692efa1e1695d1b07b6a6a526563c25905f4e12dd55101"
+    },
+    {
+      "path": "/home/arunkumareli/code/research/rtwm/results/a2e/out/a2e_normal_turn_cf96/a2e_normal_turn_cf96/generated.mp4",
+      "sample": "a2e_normal_turn_cf96",
+      "sha256": "708bb5eca218fe51cf4ebf18d537a5c5d0120bc3123c40fc466b69e0ecf5ea8b"
+    },
+    {
+      "path": "/home/arunkumareli/code/research/rtwm/results/a2e/out/a2e_normal_turn_cf144/a2e_normal_turn_cf144/generated.mp4",
+      "sample": "a2e_normal_turn_cf144",
+      "sha256": "d583d6e30667f2eb463b234f2d1f851d8fb6264e0e4087ccc029f7e9182c1f06"
+    },
+    {
+      "path": "/home/arunkumareli/code/research/rtwm/results/a2e/out/a2e_normal_start_cf48/a2e_normal_start_cf48/generated.mp4",
+      "sample": "a2e_normal_start_cf48",
+      "sha256": "53f6633cc352c88116176b36fca82fc92e1dc59f0605c2ee0ad79cea60af5b7d"
+    },
+    {
+      "path": "/home/arunkumareli/code/research/rtwm/results/a2e/out/a2e_normal_start_cf96/a2e_normal_start_cf96/generated.mp4",
+      "sample": "a2e_normal_start_cf96",
+      "sha256": "fbbfb986a6d50a7340a267daecb28c20696254a5dd0405652f840c2d6ece7bbe"
+    },
+    {
+      "path": "/home/arunkumareli/code/research/rtwm/results/a2e/out/a2e_normal_start_cf144/a2e_normal_start_cf144/generated.mp4",
+      "sample": "a2e_normal_start_cf144",
+      "sha256": "454d020e9cf0367b088b4b0ecfaf642bca5bb889a5f97bd3a9187f8a2361e0d8"
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rtwm.local/schemas/vpt-traces-download-v1.json",
+  "title": "Hash-bound VPT action download manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "protocol_sha256", "files", "summary"],
+  "properties": {
+    "schema_version": { "const": 1 },
+    "protocol_sha256": { "$ref": "#/$defs/hash" },
+    "files": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "split",
+          "episode_id",
+          "source_url",
+          "source_relpath",
+          "local_path",
+          "bytes",
+          "jsonl_records",
+          "sha256"
+        ],
+        "properties": {
+          "split": { "enum": ["train", "test"] },
+          "episode_id": { "type": "integer", "minimum": 0 },
+          "source_url": { "type": "string", "pattern": "\\.jsonl$" },
+          "source_relpath": { "type": "string", "pattern": "\\.jsonl$" },
+          "local_path": { "type": "string" },
+          "bytes": { "type": "integer", "minimum": 1 },
+          "jsonl_records": { "type": "integer", "minimum": 1 },
+          "sha256": { "$ref": "#/$defs/hash" }
+        }
+      }
+    },
+    "summary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["downloaded_file_count", "downloaded_bytes"],
+      "properties": {
+        "downloaded_file_count": { "type": "integer", "minimum": 0 },
+        "downloaded_bytes": { "type": "integer", "minimum": 0 }
+      }
+    }
+  },
+  "$defs": {
+    "hash": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    }
+  }
+}

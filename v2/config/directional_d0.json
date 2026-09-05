@@ -1,0 +1,225 @@
+{
+  "schema_version": "rtwm-v2-directional-d0-1",
+  "experiment": "bounded-forward-to-back-and-camera-yaw",
+  "immutable": true,
+  "model": {
+    "source_commit": "6a95de85c439d8ea73eae34c88fbfd4e89ea02e2",
+    "source_diff_sha256": "814691ca7fbb8ca11633d9b5ea41bc3966a95ad1849049995b529e4ebdf8a75c",
+    "checkpoint": "chijw/Gamma-World/causal-few-step/model.safetensors",
+    "checkpoint_sha256": "33a7cda5f5d701ea98bf88d73aa4d498f4757b73e651f4abf2a3c76b0d09bb61",
+    "tokenizer_sha256": "38071ab59bd94681c686fa51d75a1968f64e470262043be31f7a094e442fd981",
+    "n_frames": 189,
+    "fps": 16,
+    "change_frame": 96,
+    "admission_latent": 27,
+    "latent_stride_pixels": 4,
+    "latent_frames_per_block": 3,
+    "guidance": 5.0
+  },
+  "design": {
+    "delay": "d0",
+    "scenes": [
+      "buildTower_normal",
+      "buildHouse_flat"
+    ],
+    "audit_seeds": [
+      201,
+      202
+    ],
+    "held_out_seeds": [
+      203,
+      204,
+      205,
+      206
+    ],
+    "fresh_grid": {
+      "calibration": {
+        "seeds": [101, 102, 103],
+        "arms": ["null_a", "null_b"]
+      },
+      "validation": {
+        "seeds": [104],
+        "arms": ["null_a", "null_b"]
+      },
+      "test": {
+        "seeds": [201, 202, 203, 204, 205, 206],
+        "control_arm": "control"
+      },
+      "expected_rollouts": {
+        "calibration": 12,
+        "validation": 4,
+        "test_controls": 12,
+        "directional_interventions": 24,
+        "total": 52
+      }
+    },
+    "canonical_forward": {
+      "pre": {
+        "keys": ["forward"],
+        "camera_yaw_degrees": 0.0,
+        "camera_pitch_degrees": 0.0
+      },
+      "post": {
+        "keys": ["forward"],
+        "camera_yaw_degrees": 0.0,
+        "camera_pitch_degrees": 0.0
+      }
+    },
+    "transitions": {
+      "back": {
+        "pre": {
+          "keys": [
+            "forward"
+          ],
+          "camera_yaw_degrees": 0.0,
+          "camera_pitch_degrees": 0.0
+        },
+        "post": {
+          "keys": [
+            "back"
+          ],
+          "camera_yaw_degrees": 0.0,
+          "camera_pitch_degrees": 0.0
+        }
+      },
+      "yaw_positive": {
+        "description": "True camera yaw: positive cameraX/yaw conditioning, never a keyboard strafe.",
+        "pre": {
+          "keys": [
+            "forward"
+          ],
+          "camera_yaw_degrees": 0.0,
+          "camera_pitch_degrees": 0.0
+        },
+        "post": {
+          "keys": [
+            "forward"
+          ],
+          "camera_yaw_degrees": 6.0,
+          "camera_pitch_degrees": 0.0
+        },
+        "expected_scene_horizontal_sign": -1,
+        "sign_convention": "Solaris cameraX is yaw in degrees; positive camera yaw rotates view right, so static scene flow is expected left/negative."
+      }
+    }
+  },
+  "action_protocol": {
+    "ordering": [
+      "inventory",
+      "ESC",
+      "hotbar.1",
+      "hotbar.2",
+      "hotbar.3",
+      "hotbar.4",
+      "hotbar.5",
+      "hotbar.6",
+      "hotbar.7",
+      "hotbar.8",
+      "hotbar.9",
+      "forward",
+      "back",
+      "left",
+      "right",
+      "jump",
+      "sneak",
+      "sprint",
+      "swapHands",
+      "attack",
+      "use",
+      "pickItem",
+      "drop"
+    ],
+    "camera_ordering": [
+      "cameraX_yaw_degrees",
+      "cameraY_pitch_degrees"
+    ],
+    "solaris_source": "research/safeswm/external/solaris/src/data/minecraft.py",
+    "solaris_source_sha256": "3647ac53db53e472c509aa914ebc9f46df2acc9bd311aa9081ecfdcd7cb95364"
+  },
+  "evidence": {
+    "confirmatory_gate": "results/confirmatory_gate/gate_report.json",
+    "confirmatory_gate_sha256": "57680af41805e26cce0753a27938ae8f4aacb9182192afe0586add6e0c5e41d6",
+    "decoder_rf_manifest": "results/decoder_rf_confirmatory/buildTower_normal__seed1__d0/manifest.json",
+    "decoder_rf_manifest_sha256": "ef8ae6b28aa58d9164c820056b3463db4dc66549a2e0323c86c8693f5b6df2b0",
+    "raw_support_latent": 27
+  },
+  "detector": {
+    "resize_width": 240,
+    "resize_height": 160,
+    "roi": {
+      "x0": 12,
+      "x1": 228,
+      "y0": 20,
+      "y1": 120
+    },
+    "trim_fraction": 0.1,
+    "radial_center": [
+      119.5,
+      79.5
+    ],
+    "radial_min_radius": 16.0,
+    "farneback": {
+      "pyr_scale": 0.5,
+      "levels": 3,
+      "winsize": 15,
+      "iterations": 3,
+      "poly_n": 5,
+      "poly_sigma": 1.2,
+      "flags": 0
+    }
+  },
+  "endpoints": {
+    "primary": "paired_flow_field_l2",
+    "measured_raw_support_required": true,
+    "window_frames": 40,
+    "persistence": 3,
+    "back": {
+      "features": [
+        "signed_projection",
+        "cosine_projection",
+        "radial_reversal"
+      ],
+      "expected_signs": {
+        "signed_projection": -1,
+        "cosine_projection": -1,
+        "radial_reversal": -1
+      }
+    },
+    "yaw_positive": {
+      "features": [
+        "global_horizontal"
+      ],
+      "reported_diagnostic": "residual_flow_l2",
+      "expected_signs": {
+        "global_horizontal": -1
+      },
+      "global_model": "RANSAC affine fit to dense flow; homography-compatible horizontal component"
+    }
+  },
+  "audit_gate": {
+    "threshold_rule": "minimum expected-direction persistent effect across audit seeds and scenes",
+    "minimum_primary_detection_seed_fraction": 0.75,
+    "minimum_held_out_seed_fraction": 0.75,
+    "require_each_scene": true,
+    "forbid_held_out_threshold_inputs": true
+  },
+  "null_calibration": {
+    "statistic": "maximum_sustained_min",
+    "anchors": [72, 96, 108, 120],
+    "window_frames": 40,
+    "persistence": 3,
+    "strict_crossing": true,
+    "validation_requires_zero_crossings": true
+  },
+  "bootstrap": {
+    "unit": "seed",
+    "samples": 20000,
+    "seed": 20260820
+  },
+  "execution_estimate": {
+    "fresh_rollouts": 52,
+    "reference_mean_seconds_per_rollout": 267.0637474385803,
+    "estimated_sequential_h200_hours": 3.857587463001715,
+    "basis": "mean total_s of the 12 legacy controls used only for runtime estimation, never as protocol evidence"
+  }
+}

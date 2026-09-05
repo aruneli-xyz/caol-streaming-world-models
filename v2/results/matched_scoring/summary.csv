@@ -1,0 +1,17 @@
+pair_id,scene,seed,delay_blocks,view,paired_status,paired_onset,max_post_admission_contrast,max_to_target_ratio,lag_from_change,offset_from_admission,stop_status,control_status,prefix_pixel_max_error,earliest_pixel_difference_frame,latent_prefix_max_error,qc_flags
+buildTower_normal__seed1__d0,buildTower_normal,1,0,0,undetected,,0.001257691610915033,0.04166785164596826,,,indeterminate_baseline,indeterminate_baseline,10.0,54,0.0,decoded_prefix_mismatch
+buildTower_normal__seed1__d0,buildTower_normal,1,0,1,undetected,,0.0012313637210118692,0.041001863147115555,,,indeterminate_baseline,indeterminate_baseline,26.0,54,0.0,decoded_prefix_mismatch
+buildTower_normal__seed1__d1,buildTower_normal,1,1,0,undetected,,0.002055600829616769,0.0685633588528147,,,indeterminate_baseline,indeterminate_baseline,10.0,66,,decoded_prefix_mismatch
+buildTower_normal__seed1__d1,buildTower_normal,1,1,1,undetected,,0.0013152981818536687,0.04330678263161042,,,indeterminate_baseline,indeterminate_baseline,21.0,70,,decoded_prefix_mismatch
+buildTower_normal__seed2__d0,buildTower_normal,2,0,0,undetected,,0.0019960564472529356,0.06628716952773502,,,indeterminate_baseline,indeterminate_baseline,10.0,54,,decoded_prefix_mismatch
+buildTower_normal__seed2__d0,buildTower_normal,2,0,1,undetected,,0.0025821933509952814,0.08605599976248599,,,indeterminate_baseline,indeterminate_baseline,58.0,54,,decoded_prefix_mismatch
+buildTower_normal__seed2__d1,buildTower_normal,2,1,0,undetected,,0.0012209406618206194,0.04061718550997606,,,indeterminate_baseline,indeterminate_baseline,11.0,66,,decoded_prefix_mismatch
+buildTower_normal__seed2__d1,buildTower_normal,2,1,1,undetected,,0.0019191128742224676,0.0640177717905013,,,indeterminate_baseline,indeterminate_baseline,29.0,66,,decoded_prefix_mismatch
+buildTower_normal__seed3__d0,buildTower_normal,3,0,0,undetected,,0.0017894592016023947,0.059200261976031794,,,indeterminate_baseline,indeterminate_baseline,12.0,54,,decoded_prefix_mismatch
+buildTower_normal__seed3__d0,buildTower_normal,3,0,1,undetected,,0.001631068732226763,0.05422519565790349,,,indeterminate_baseline,indeterminate_baseline,16.0,54,,decoded_prefix_mismatch
+buildTower_normal__seed3__d1,buildTower_normal,3,1,0,undetected,,0.0027611010283483967,0.09132602877687189,,,indeterminate_baseline,indeterminate_baseline,21.0,70,,decoded_prefix_mismatch
+buildTower_normal__seed3__d1,buildTower_normal,3,1,1,undetected,,0.0027270573826913107,0.09055807515870364,,,indeterminate_baseline,indeterminate_baseline,15.0,70,,decoded_prefix_mismatch
+buildTower_normal__seed4__d0,buildTower_normal,4,0,0,undetected,,0.0022351342277000157,0.07414394176884645,,,indeterminate_baseline,indeterminate_baseline,14.0,54,,decoded_prefix_mismatch
+buildTower_normal__seed4__d0,buildTower_normal,4,0,1,undetected,,0.0015436296679817371,0.05137337055323862,,,indeterminate_baseline,indeterminate_baseline,20.0,54,,decoded_prefix_mismatch
+buildTower_normal__seed4__d1,buildTower_normal,4,1,0,undetected,,0.0016521018853920925,0.05471459752562432,,,indeterminate_baseline,indeterminate_baseline,11.0,66,,decoded_prefix_mismatch
+buildTower_normal__seed4__d1,buildTower_normal,4,1,1,undetected,,0.0019894711868902147,0.0659597561199642,,,indeterminate_baseline,indeterminate_baseline,44.0,66,,decoded_prefix_mismatch

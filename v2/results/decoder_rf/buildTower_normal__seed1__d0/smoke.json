@@ -1,0 +1,16 @@
+{
+  "raw_dtype": "uint8",
+  "raw_max": 255,
+  "raw_min": 0,
+  "raw_sha256": "3ae9cfdb0f8f0a3b640dfa0da6f765c46b00c1d0c7b2f243d12d844eb02a29a2",
+  "raw_shape_vthwc": [
+    2,
+    189,
+    720,
+    1280,
+    3
+  ],
+  "schema_version": "rtwm-v2-decoder-rf-smoke-1",
+  "source_latent_sha256": "e4f834a50df471adf18ab731bc1bc344ada0acd92c35143341d35304482f9c2d",
+  "status": "complete"
+}

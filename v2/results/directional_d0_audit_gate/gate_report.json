@@ -1,0 +1,113 @@
+{
+  "allowed": false,
+  "audit_analysis_gate_sha256": "425c42f457259aefd1b7c663a9f041450b5f60f2b000c4532faabbfb3776f19b",
+  "audit_results_sha256": "069a48c75672a341fbb6d99428b5e0acf6985f50eef99187cc6e72dd37661460",
+  "block_reasons": [
+    "back_cosine_projection_audit_expected_direction",
+    "back_radial_reversal_audit_expected_direction",
+    "yaw_positive_global_horizontal_audit_expected_direction"
+  ],
+  "checks": {
+    "audit_analysis_complete": true,
+    "audit_partition_exact": true,
+    "back_cosine_projection_audit_expected_direction": false,
+    "back_radial_reversal_audit_expected_direction": false,
+    "back_signed_projection_audit_expected_direction": true,
+    "held_out_seeds_absent": true,
+    "null_calibration_and_validation_passed": true,
+    "yaw_positive_global_horizontal_audit_expected_direction": false
+  },
+  "config_sha256": "4bc3d7fd782a573c5d1f7c022dd80c112f25c72993d9d4cf4a1325735d5e3fd0",
+  "evidence_artifacts": [
+    {
+      "bytes": 11278,
+      "path": "/home/arunkumareli/code/research/rtwm/v2/results/directional_d0_audit/view_results.jsonl",
+      "required": true,
+      "sha256": "069a48c75672a341fbb6d99428b5e0acf6985f50eef99187cc6e72dd37661460"
+    },
+    {
+      "bytes": 1725,
+      "path": "/home/arunkumareli/code/research/rtwm/v2/results/directional_d0_audit/analysis_gate.json",
+      "required": true,
+      "sha256": "425c42f457259aefd1b7c663a9f041450b5f60f2b000c4532faabbfb3776f19b"
+    },
+    {
+      "bytes": 2166,
+      "path": "/home/arunkumareli/code/research/rtwm/v2/results/directional_d0_calibration/gate_report.json",
+      "required": true,
+      "sha256": "86fee3129d7a9be3572f6b0f7525b5cef350f641a150f636f4d4dbe703adbdd0"
+    }
+  ],
+  "forbidden_inputs": {
+    "held_out_outcomes_used": false,
+    "held_out_seeds": [
+      203,
+      204,
+      205,
+      206
+    ]
+  },
+  "frozen": {
+    "acceptance_rules": {
+      "forbid_held_out_threshold_inputs": true,
+      "minimum_held_out_seed_fraction": 0.75,
+      "minimum_primary_detection_seed_fraction": 0.75,
+      "require_each_scene": true,
+      "threshold_rule": "minimum expected-direction persistent effect across audit seeds and scenes"
+    },
+    "feature_definitions": {
+      "back": {
+        "expected_signs": {
+          "cosine_projection": -1,
+          "radial_reversal": -1,
+          "signed_projection": -1
+        },
+        "features": [
+          "signed_projection",
+          "cosine_projection",
+          "radial_reversal"
+        ]
+      },
+      "measured_raw_support_required": true,
+      "persistence": 3,
+      "primary": "paired_flow_field_l2",
+      "window_frames": 40,
+      "yaw_positive": {
+        "expected_signs": {
+          "global_horizontal": -1
+        },
+        "features": [
+          "global_horizontal"
+        ],
+        "global_model": "RANSAC affine fit to dense flow; homography-compatible horizontal component",
+        "reported_diagnostic": "residual_flow_l2"
+      }
+    },
+    "persistence": 3,
+    "signs": {
+      "back": {
+        "cosine_projection": -1,
+        "radial_reversal": -1,
+        "signed_projection": -1
+      },
+      "yaw_positive": {
+        "global_horizontal": -1
+      }
+    },
+    "threshold_rule": "minimum expected-direction persistent effect across audit seeds and scenes"
+  },
+  "gate_sha256": "55d43c840247fcf1b7cb472a7f511419c087fb27bc58070e71d91b8e0f4aa106",
+  "null_calibration_gate_sha256": "86fee3129d7a9be3572f6b0f7525b5cef350f641a150f636f4d4dbe703adbdd0",
+  "protocol_sha256": "0b7f8574b9811ebf475491c1d0aed40d41bb96bb3225af30a7ae92908fd6f0b8",
+  "schema_version": "rtwm-v2-directional-audit-gate-1",
+  "thresholds": {
+    "back": {
+      "cosine_projection": -0.7225607695956813,
+      "radial_reversal": -0.00011152874933914794,
+      "signed_projection": 0.003062307254293433
+    },
+    "yaw_positive": {
+      "global_horizontal": -4.898705032666676
+    }
+  }
+}

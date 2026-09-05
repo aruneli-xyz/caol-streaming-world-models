@@ -1,0 +1,34 @@
+{
+  "allowed": true,
+  "blockers": [],
+  "checks": {
+    "canonical_back_index_12": true,
+    "canonical_forward_index_11": true,
+    "confirmatory_gate_hash": true,
+    "decoder_rf_manifest_hash": true,
+    "exactly_24_interventions": true,
+    "exactly_52_fresh_rollouts": true,
+    "fresh_root_resume_identity": true,
+    "gamma_source_commit": true,
+    "gamma_source_diff": true,
+    "solaris_action_source": true,
+    "yaw_is_not_keyboard_strafe": true,
+    "yaw_uses_nonzero_camera": true
+  },
+  "config_sha256": "4bc3d7fd782a573c5d1f7c022dd80c112f25c72993d9d4cf4a1325735d5e3fd0",
+  "created_at": "2026-08-21T03:49:12Z",
+  "fresh_root": {
+    "legacy_inputs_allowed": false,
+    "manifest_exists": false,
+    "path": "/home/arunkumareli/code/research/rtwm/v2/results/directional_d0"
+  },
+  "note": "Only the independent 52-rollout canonical root is authorized; legacy action records are forbidden.",
+  "protocol_sha256": "0b7f8574b9811ebf475491c1d0aed40d41bb96bb3225af30a7ae92908fd6f0b8",
+  "report_sha256": "c8e6fd990f7d55f11c5b4ae2f1b9a81a20170a1e37591dab65690b069c380561",
+  "schema_version": "rtwm-v2-directional-preflight-1",
+  "source": {
+    "commit": "6a95de85c439d8ea73eae34c88fbfd4e89ea02e2",
+    "diff_sha256": "814691ca7fbb8ca11633d9b5ea41bc3966a95ad1849049995b529e4ebdf8a75c",
+    "dirty": true
+  }
+}

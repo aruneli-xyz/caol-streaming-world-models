@@ -1,0 +1,262 @@
+[
+ {
+  "arm": "offline",
+  "seed": 1,
+  "switch_px": 96,
+  "view_onsets": [
+   117,
+   null
+  ],
+  "onset": 117.0,
+  "cls": "post_admission",
+  "perceived": 21.0,
+  "post_switch": 21.0
+ },
+ {
+  "arm": "swap+0",
+  "seed": 1,
+  "switch_px": 96,
+  "view_onsets": [
+   null,
+   null
+  ],
+  "onset": null,
+  "cls": "undetected",
+  "perceived": null,
+  "post_switch": null
+ },
+ {
+  "arm": "swap+1",
+  "seed": 1,
+  "switch_px": 108,
+  "view_onsets": [
+   117,
+   117
+  ],
+  "onset": 117.0,
+  "cls": "post_admission",
+  "perceived": 21.0,
+  "post_switch": 9.0
+ },
+ {
+  "arm": "swap+2",
+  "seed": 1,
+  "switch_px": 120,
+  "view_onsets": [
+   null,
+   null
+  ],
+  "onset": null,
+  "cls": "undetected",
+  "perceived": null,
+  "post_switch": null
+ },
+ {
+  "arm": "swap+4",
+  "seed": 1,
+  "switch_px": 144,
+  "view_onsets": [
+   null,
+   null
+  ],
+  "onset": null,
+  "cls": "undetected",
+  "perceived": null,
+  "post_switch": null
+ },
+ {
+  "arm": "offline",
+  "seed": 2,
+  "switch_px": 96,
+  "view_onsets": [
+   105,
+   105
+  ],
+  "onset": 105.0,
+  "cls": "post_admission",
+  "perceived": 9.0,
+  "post_switch": 9.0
+ },
+ {
+  "arm": "swap+0",
+  "seed": 2,
+  "switch_px": 96,
+  "view_onsets": [
+   105,
+   null
+  ],
+  "onset": 105.0,
+  "cls": "post_admission",
+  "perceived": 9.0,
+  "post_switch": 9.0
+ },
+ {
+  "arm": "swap+1",
+  "seed": 2,
+  "switch_px": 108,
+  "view_onsets": [
+   null,
+   117
+  ],
+  "onset": 117.0,
+  "cls": "post_admission",
+  "perceived": 21.0,
+  "post_switch": 9.0
+ },
+ {
+  "arm": "swap+2",
+  "seed": 2,
+  "switch_px": 120,
+  "view_onsets": [
+   117,
+   null
+  ],
+  "onset": 117.0,
+  "cls": "pre_admission",
+  "perceived": null,
+  "post_switch": null
+ },
+ {
+  "arm": "swap+4",
+  "seed": 2,
+  "switch_px": 144,
+  "view_onsets": [
+   117,
+   null
+  ],
+  "onset": 117.0,
+  "cls": "pre_admission",
+  "perceived": null,
+  "post_switch": null
+ },
+ {
+  "arm": "offline",
+  "seed": 3,
+  "switch_px": 96,
+  "view_onsets": [
+   null,
+   117
+  ],
+  "onset": 117.0,
+  "cls": "post_admission",
+  "perceived": 21.0,
+  "post_switch": 21.0
+ },
+ {
+  "arm": "swap+0",
+  "seed": 3,
+  "switch_px": 96,
+  "view_onsets": [
+   null,
+   105
+  ],
+  "onset": 105.0,
+  "cls": "post_admission",
+  "perceived": 9.0,
+  "post_switch": 9.0
+ },
+ {
+  "arm": "swap+1",
+  "seed": 3,
+  "switch_px": 108,
+  "view_onsets": [
+   105,
+   null
+  ],
+  "onset": 105.0,
+  "cls": "pre_admission",
+  "perceived": null,
+  "post_switch": null
+ },
+ {
+  "arm": "swap+2",
+  "seed": 3,
+  "switch_px": 120,
+  "view_onsets": [
+   117,
+   105
+  ],
+  "onset": 111.0,
+  "cls": "pre_admission",
+  "perceived": null,
+  "post_switch": null
+ },
+ {
+  "arm": "swap+4",
+  "seed": 3,
+  "switch_px": 144,
+  "view_onsets": [
+   105,
+   105
+  ],
+  "onset": 105.0,
+  "cls": "pre_admission",
+  "perceived": null,
+  "post_switch": null
+ },
+ {
+  "arm": "offline",
+  "seed": 4,
+  "switch_px": 96,
+  "view_onsets": [
+   105,
+   105
+  ],
+  "onset": 105.0,
+  "cls": "post_admission",
+  "perceived": 9.0,
+  "post_switch": 9.0
+ },
+ {
+  "arm": "swap+0",
+  "seed": 4,
+  "switch_px": 96,
+  "view_onsets": [
+   105,
+   105
+  ],
+  "onset": 105.0,
+  "cls": "post_admission",
+  "perceived": 9.0,
+  "post_switch": 9.0
+ },
+ {
+  "arm": "swap+1",
+  "seed": 4,
+  "switch_px": 108,
+  "view_onsets": [
+   105,
+   105
+  ],
+  "onset": 105.0,
+  "cls": "pre_admission",
+  "perceived": null,
+  "post_switch": null
+ },
+ {
+  "arm": "swap+2",
+  "seed": 4,
+  "switch_px": 120,
+  "view_onsets": [
+   117,
+   117
+  ],
+  "onset": 117.0,
+  "cls": "pre_admission",
+  "perceived": null,
+  "post_switch": null
+ },
+ {
+  "arm": "swap+4",
+  "seed": 4,
+  "switch_px": 144,
+  "view_onsets": [
+   117,
+   null
+  ],
+  "onset": 117.0,
+  "cls": "pre_admission",
+  "perceived": null,
+  "post_switch": null
+ }
+]

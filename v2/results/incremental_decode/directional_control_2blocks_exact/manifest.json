@@ -1,0 +1,280 @@
+{
+  "artifacts": {
+    "block_events": {
+      "bytes": 1366,
+      "path": "block_events.jsonl",
+      "sha256": "b38e880cca536bd5e13d942da6ab80442b8f745b0f4eeb65b0527257b20471a0"
+    },
+    "full_raw_u8": {
+      "bytes": 116121728,
+      "path": "full_raw_u8.npy",
+      "sha256": "e295c35df2a002721bb13641264811299f76dac3fff589065699bedb74356248"
+    },
+    "incremental_raw_u8": {
+      "bytes": 116121728,
+      "path": "incremental_raw_u8.npy",
+      "sha256": "e295c35df2a002721bb13641264811299f76dac3fff589065699bedb74356248"
+    }
+  },
+  "environment": {
+    "cublas_workspace_config": ":4096:8",
+    "cuda_runtime": "13.0",
+    "cudnn": 91300,
+    "cudnn_benchmark": false,
+    "cudnn_deterministic": true,
+    "gpu": "NVIDIA H200",
+    "gpu_total_memory_bytes": 150109880320,
+    "packages": {
+      "einops": "0.8.2",
+      "numpy": "2.2.6",
+      "safetensors": "0.8.0",
+      "torch": "2.9.0+cu130"
+    },
+    "platform": "Linux-6.11.0-1016-nvidia-x86_64-with-glibc2.39",
+    "python": "3.10.20 (main, Jun 23 2026, 15:20:26) [Clang 22.1.3 ]",
+    "tf32": false,
+    "torch": "2.9.0+cu130"
+  },
+  "equivalence": {
+    "canonical_reference_note": "diagnostic comparison to the independently produced full-length directional decode; not part of the identical-input incremental versus one-shot prefix gate",
+    "full_vs_canonical_source_raw": {
+      "domain": "raw_uint8_pre_encoding",
+      "exact": false,
+      "first_sha256": "180de724c399d648d7cb809820f168cc40374e19b217991069358aada18c9a8d",
+      "max_error": 4,
+      "second_sha256": "f3a77b0a3ee832c91afa080f43b16936efffbe8963e95406e06350293390d4d4",
+      "shape_vthwc": [
+        2,
+        21,
+        720,
+        1280,
+        3
+      ],
+      "views": [
+        {
+          "changed_frames": [],
+          "exact": true,
+          "frames": 21,
+          "max_error": 0,
+          "view": 0
+        },
+        {
+          "changed_frames": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "exact": false,
+          "frames": 21,
+          "max_error": 4,
+          "view": 1
+        }
+      ]
+    },
+    "incremental_vs_full": {
+      "domain": "raw_uint8_pre_encoding",
+      "exact": true,
+      "first_sha256": "180de724c399d648d7cb809820f168cc40374e19b217991069358aada18c9a8d",
+      "max_error": 0,
+      "second_sha256": "180de724c399d648d7cb809820f168cc40374e19b217991069358aada18c9a8d",
+      "shape_vthwc": [
+        2,
+        21,
+        720,
+        1280,
+        3
+      ],
+      "views": [
+        {
+          "changed_frames": [],
+          "exact": true,
+          "frames": 21,
+          "max_error": 0,
+          "view": 0
+        },
+        {
+          "changed_frames": [],
+          "exact": true,
+          "frames": 21,
+          "max_error": 0,
+          "view": 1
+        }
+      ]
+    },
+    "passed": true
+  },
+  "identity": {
+    "block_latents": 3,
+    "dependencies": {
+      "core.py": "13fc96ddf1187898f433d6fb2e0f8954bb84c51d37d9fc870fefcca7a5aa07e7",
+      "gpu_probe.py": "3e22332dc017c8c5d6f681bd28435cc4247e68e6fb59f68d494d060526f8f717",
+      "tokenizer.pth": "38071ab59bd94681c686fa51d75a1968f64e470262043be31f7a094e442fd981",
+      "wan2pt1.py": "3bc9443d0c52da9139a016fc45d9c1a9fd1aad46e112c2ad466b70bf8ad42e5f"
+    },
+    "max_blocks": 2,
+    "n_views": 2,
+    "rollout_id": "buildTower_normal__seed201__control",
+    "schema_version": "rtwm-v2-incremental-decode-1",
+    "sink": "hash",
+    "source": {
+      "action_protocol_sha256": "90e8c77467e1361f04b99740097c5fd96aab8b0d3ae6a9b902879de0a5983e15",
+      "config_sha256": "4bc3d7fd782a573c5d1f7c022dd80c112f25c72993d9d4cf4a1325735d5e3fd0",
+      "decoded_u8": {
+        "bytes": 1045094528,
+        "path": "test/buildTower_normal/seed201/control/decoded_u8.npy",
+        "sha256": "02064c655152156c8cc16c2b7656f12597ef1e9e551f80b5958174c9383f93b0"
+      },
+      "gamma_source": {
+        "commit": "6a95de85c439d8ea73eae34c88fbfd4e89ea02e2",
+        "diff_sha256": "814691ca7fbb8ca11633d9b5ea41bc3966a95ad1849049995b529e4ebdf8a75c",
+        "dirty": true
+      },
+      "latent": {
+        "bytes": 88475332,
+        "path": "test/buildTower_normal/seed201/control/latent.pt",
+        "sha256": "b60a0c6c6046bb7a9208ae623c4e8b515490ac6bfeab05d52b8a33fab0985fe1"
+      },
+      "manifest": "results/directional_d0/manifest.json",
+      "manifest_sha256": "9fb091215b5949660899d05efe26d516254666f3a860eee1cbae9a0a4421478f",
+      "model_artifacts": {
+        "checkpoint_sha256": "33a7cda5f5d701ea98bf88d73aa4d498f4757b73e651f4abf2a3c76b0d09bb61",
+        "tokenizer_sha256": "38071ab59bd94681c686fa51d75a1968f64e470262043be31f7a094e442fd981"
+      },
+      "protocol_sha256": "0b7f8574b9811ebf475491c1d0aed40d41bb96bb3225af30a7ae92908fd6f0b8",
+      "record_completed_at": "2026-08-21T05:59:36Z",
+      "root": "results/directional_d0",
+      "schema_version": "rtwm-v2-directional-rollouts-2"
+    }
+  },
+  "immutable": true,
+  "manifest_sha256": "80a822abaa2ad702f8aa6d7152c4c7f6bbc78565090dd45625b8c79002418aad",
+  "path_base": "manifest_directory",
+  "probe": {
+    "block_latents": 3,
+    "blocks": 2,
+    "cache": {
+      "cleared_once_at_session_start": true,
+      "per_chunk_clear_decoder_cache": false
+    },
+    "flat_latent_shape_bvcthw": [
+      2,
+      16,
+      6,
+      90,
+      160
+    ],
+    "global_normalization_slices": [
+      {
+        "end_exclusive": 3,
+        "start": 0
+      },
+      {
+        "end_exclusive": 6,
+        "start": 3
+      }
+    ],
+    "source_latent_shape_bcvthw": [
+      1,
+      16,
+      96,
+      90,
+      160
+    ]
+  },
+  "schema_version": "rtwm-v2-incremental-decode-1",
+  "sink": {
+    "consumed_frames": 21,
+    "dropped_frames": 0,
+    "kind": "hash",
+    "physical_presentation_measured": false,
+    "queued_frames": 21,
+    "semantics": "optional synchronous host callback consumption; this is not physical display presentation"
+  },
+  "status": "complete",
+  "summary": {
+    "canonical_max_error": 4,
+    "equivalence_passed": true,
+    "frames": 21,
+    "max_error": 0,
+    "timing_claimable": true,
+    "views": [
+      {
+        "changed_frames": [],
+        "exact": true,
+        "frames": 21,
+        "max_error": 0,
+        "view": 0
+      },
+      {
+        "changed_frames": [],
+        "exact": true,
+        "frames": 21,
+        "max_error": 0,
+        "view": 1
+      }
+    ]
+  },
+  "timings": {
+    "claimable": true,
+    "full": {
+      "decode_return_ms": 4540.287623,
+      "device_ready_ms": 4887.812899,
+      "gpu_decode_and_quantize_ms": 4887.74365234375,
+      "host_ready_ms": 4904.119817
+    },
+    "incremental": {
+      "decode_return": {
+        "count": 2,
+        "max_ms": 2288.365374,
+        "mean_ms": 1984.8733455000001,
+        "min_ms": 1681.381317,
+        "p50_ms": 1984.8733455000001,
+        "p90_ms": 2227.6669683
+      },
+      "device_ready": {
+        "count": 2,
+        "max_ms": 2635.003663,
+        "mean_ms": 2331.3957245,
+        "min_ms": 2027.787786,
+        "p50_ms": 2331.3957245,
+        "p90_ms": 2574.2820753
+      },
+      "gpu_decode_and_quantize": {
+        "count": 2,
+        "max_ms": 2634.921630859375,
+        "mean_ms": 2331.317138671875,
+        "min_ms": 2027.712646484375,
+        "p50_ms": 2331.317138671875,
+        "p90_ms": 2574.200732421875
+      },
+      "gpu_total_ms": 4662.63427734375,
+      "host_ready": {
+        "count": 2,
+        "max_ms": 2645.367241,
+        "mean_ms": 2340.4339995,
+        "min_ms": 2035.500758,
+        "p50_ms": 2340.4339995,
+        "p90_ms": 2584.3805927
+      }
+    },
+    "withheld_reason": null
+  }
+}

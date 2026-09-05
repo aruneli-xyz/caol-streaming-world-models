@@ -1,0 +1,231 @@
+{
+  "comparison_domain": "raw_uint8_pre_mp4",
+  "exact": false,
+  "first": "control",
+  "first_raw_sha256": "3ae9cfdb0f8f0a3b640dfa0da6f765c46b00c1d0c7b2f243d12d844eb02a29a2",
+  "frame_metrics": {
+    "arrays": {
+      "changed_pixels": {
+        "dtype": "uint64",
+        "shape": [
+          2,
+          189
+        ]
+      },
+      "changed_values": {
+        "dtype": "uint64",
+        "shape": [
+          2,
+          189
+        ]
+      },
+      "max_abs": {
+        "dtype": "uint8",
+        "shape": [
+          2,
+          189
+        ]
+      },
+      "mean_abs": {
+        "dtype": "float64",
+        "shape": [
+          2,
+          189
+        ]
+      },
+      "sum_abs": {
+        "dtype": "uint64",
+        "shape": [
+          2,
+          189
+        ]
+      }
+    },
+    "path": "metrics/full_stop_control.npz",
+    "schema_version": "rtwm-v2-decoder-rf-frame-metrics-1",
+    "sha256": "b21e1919300fefe6becb8b8ee17efbb7ee1659db086aac61b5e744cc21c7c67e"
+  },
+  "latent_stop_control": {
+    "differing_indices_union": [
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47
+    ],
+    "shape_bvcthw": [
+      1,
+      2,
+      16,
+      48,
+      90,
+      160
+    ],
+    "views": [
+      {
+        "differing_indices": [
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47
+        ],
+        "first_differing_index": 24,
+        "last_differing_index": 47,
+        "maximum_absolute_error": 1.62451171875,
+        "view_index": 0
+      },
+      {
+        "differing_indices": [
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47
+        ],
+        "first_differing_index": 24,
+        "last_differing_index": 47,
+        "maximum_absolute_error": 1.79736328125,
+        "view_index": 1
+      }
+    ]
+  },
+  "raw_dtype": "uint8",
+  "raw_shape_vthwc": [
+    2,
+    189,
+    720,
+    1280,
+    3
+  ],
+  "schema_version": "rtwm-v2-decoder-rf-full-1",
+  "second": "stop",
+  "second_raw_sha256": "0d2d4c2858c377a178573c5348e6a800e88a47d49c8909fbec393f37edbf2cde",
+  "views": [
+    {
+      "changed_frame_count": 96,
+      "changed_frame_spans": [
+        [
+          93,
+          188
+        ]
+      ],
+      "earliest_changed_frame": 93,
+      "early_changed_frame_count": 0,
+      "early_changed_frame_spans": [],
+      "expected_first_pixel_formula": "4*t-3",
+      "expected_native_support": {
+        "count": 4,
+        "end": 96,
+        "start": 93
+      },
+      "frame_count": 189,
+      "late_changed_frame_count": 92,
+      "late_changed_frame_spans": [
+        [
+          97,
+          188
+        ]
+      ],
+      "latent_index": 24,
+      "latest_changed_frame": 188,
+      "lookahead_frames": 0,
+      "maximum_absolute_error": 215,
+      "total_absolute_error": 128444231,
+      "total_changed_pixels": 52528042,
+      "total_changed_values": 87856329,
+      "view_index": 0
+    },
+    {
+      "changed_frame_count": 96,
+      "changed_frame_spans": [
+        [
+          93,
+          188
+        ]
+      ],
+      "earliest_changed_frame": 93,
+      "early_changed_frame_count": 0,
+      "early_changed_frame_spans": [],
+      "expected_first_pixel_formula": "4*t-3",
+      "expected_native_support": {
+        "count": 4,
+        "end": 96,
+        "start": 93
+      },
+      "frame_count": 189,
+      "late_changed_frame_count": 92,
+      "late_changed_frame_spans": [
+        [
+          97,
+          188
+        ]
+      ],
+      "latent_index": 24,
+      "latest_changed_frame": 188,
+      "lookahead_frames": 0,
+      "maximum_absolute_error": 224,
+      "total_absolute_error": 156956941,
+      "total_changed_pixels": 53263335,
+      "total_changed_values": 90904620,
+      "view_index": 1
+    }
+  ]
+}

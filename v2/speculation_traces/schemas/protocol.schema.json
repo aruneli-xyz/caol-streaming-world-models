@@ -1,0 +1,79 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rtwm.local/schemas/vpt-traces-protocol-v1.json",
+  "title": "Frozen VPT traces protocol",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "protocol_id",
+    "config_sha256",
+    "selection",
+    "source_metadata",
+    "action_spec",
+    "converter_sha256",
+    "licensing_notes",
+    "episodes",
+    "episodes_sha256"
+  ],
+  "properties": {
+    "schema_version": { "const": 1 },
+    "protocol_id": { "type": "string" },
+    "config_sha256": { "$ref": "#/$defs/hash" },
+    "selection": { "type": "object" },
+    "source_metadata": { "type": "object" },
+    "action_spec": { "type": "object" },
+    "converter_sha256": { "$ref": "#/$defs/hash" },
+    "licensing_notes": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 1
+    },
+    "episodes": {
+      "type": "array",
+      "minItems": 597,
+      "maxItems": 597,
+      "items": { "$ref": "#/$defs/episode" }
+    },
+    "episodes_sha256": { "$ref": "#/$defs/hash" }
+  },
+  "$defs": {
+    "hash": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "episode": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "split",
+        "episode_id",
+        "frame_count",
+        "metadata_actions_path",
+        "metadata_video_path",
+        "source_index_file",
+        "source_index_file_sha256",
+        "source_relpath",
+        "source_url",
+        "selection_rank"
+      ],
+      "properties": {
+        "split": { "enum": ["train", "test"] },
+        "episode_id": { "type": "integer", "minimum": 0 },
+        "frame_count": { "type": "integer", "minimum": 1 },
+        "metadata_actions_path": { "type": "string", "pattern": "\\.jsonl$" },
+        "metadata_video_path": { "type": "string", "pattern": "\\.mp4$" },
+        "source_index_file": { "type": "string" },
+        "source_index_file_sha256": { "$ref": "#/$defs/hash" },
+        "source_relpath": { "type": "string", "pattern": "\\.jsonl$" },
+        "source_url": {
+          "type": "string",
+          "pattern": "^https://openaipublic\\.blob\\.core\\.windows\\.net/.+\\.jsonl$"
+        },
+        "selection_rank": {
+          "oneOf": [{ "$ref": "#/$defs/hash" }, { "type": "null" }]
+        }
+      }
+    }
+  }
+}

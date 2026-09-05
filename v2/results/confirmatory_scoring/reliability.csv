@@ -1,0 +1,5 @@
+scene,delay,planned_pairs,valid_pairs,invalid_pairs,both_views_detected,any_view_detected,admission_lag_frames,mean_effect_peak,mean_effective_generation_fps
+buildHouse_flat,d0,6,6,0,6,6,12,0.022487975623955856,0.6910181070210051
+buildHouse_flat,d1,6,6,0,6,6,24,0.021552420886670056,0.6842625249090388
+buildTower_normal,d0,6,6,0,6,6,12,0.013199867033909183,0.7335342315581487
+buildTower_normal,d1,6,6,0,6,6,24,0.013308439645929251,0.7253892904570013

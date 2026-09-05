@@ -1,0 +1,20 @@
+{
+  "complete": true,
+  "config_sha256": "742495a5d00c80ef7ca1b4136dd1594dc4eb050d0c84215e32219cfd41fe80b8",
+  "expected_pairs": 24,
+  "gate_sha256": "6774a5bc972faf9f849dd9db03c7ed20418cf2e39a5fec0940ce61fce512926e",
+  "invalid_pairs": 0,
+  "observed_pairs": 24,
+  "outputs": {
+    "pair_results.jsonl": "68ea499196e94a2311af0ebe24e253bd6413776b8d2985792a2f9048707f343e",
+    "statistics.json": "311c3cfd5529826429833de36da8ebbf72da99079e806b3d8e4d5c1e417e3a18",
+    "view_results.jsonl": "a531d370a5fc0293e9b1eec0b1e81b5e77388c93f22775baa8264ba8a5f69429"
+  },
+  "protocol_sha256": "047aebd31aba39e50f7a72b9202a2935f266fda230ba62400e1298f888029e26",
+  "schema_version": "rtwm-v2-confirmatory-analysis-gate-1",
+  "source_patch": {
+    "path": "results/provenance/gamma_world_source.patch",
+    "sha256": "814691ca7fbb8ca11633d9b5ea41bc3966a95ad1849049995b529e4ebdf8a75c"
+  },
+  "valid_pairs": 24
+}

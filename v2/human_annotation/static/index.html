@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Response onset annotation</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<main>
+  <h1>First visible commanded response</h1>
+  <section id="login">
+    <p>This local tool is for authorized tool/QC validation only. Enter your assigned code.</p>
+    <label>Annotator code <input id="annotator" autocomplete="off"></label>
+    <button id="start">Continue</button>
+  </section>
+  <section id="task" hidden>
+    <div class="command">Commanded transition: <strong id="command"></strong></div>
+    <img id="frame" alt="Rendered clip frame">
+    <div id="status" role="status">Loading…</div>
+    <div class="controls">
+      <button id="play">Play full clip</button>
+      <button id="prev" disabled>← Previous frame</button>
+      <span id="counter">—</span>
+      <button id="next" disabled>Next frame →</button>
+    </div>
+    <fieldset id="response" disabled>
+      <legend>What did you observe?</legend>
+      <label><input type="radio" name="response" value="onset"> Commanded response becomes visible at this frame</label>
+      <label><input type="radio" name="response" value="none"> No commanded response is visible</label>
+      <label><input type="radio" name="response" value="uncertain"> Uncertain</label>
+      <label><input type="radio" name="response" value="technical_failure"> Technical failure</label>
+    </fieldset>
+    <label>Confidence
+      <select id="confidence" disabled>
+        <option value="">Choose…</option>
+        <option value="1">1 — very low</option><option value="2">2</option>
+        <option value="3">3 — moderate</option><option value="4">4</option>
+        <option value="5">5 — very high</option>
+      </select>
+    </label>
+    <button id="submit" disabled>Submit</button>
+    <p id="error" role="alert"></p>
+  </section>
+</main>
+<script src="/static/app.js"></script>
+</body>
+</html>

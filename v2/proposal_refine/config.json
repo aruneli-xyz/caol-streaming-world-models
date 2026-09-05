@@ -1,0 +1,90 @@
+{
+  "schema_version": "rtwm-v2-proposal-refine-config-1",
+  "immutable": true,
+  "gpu_scope": {
+    "device_count": 1,
+    "target": "NVIDIA H200",
+    "batch_size_first": 1,
+    "allow_batch_size_2_only_after_batch_size_1_pass": true,
+    "multi_gpu_claims": false
+  },
+  "model": {
+    "scene": "buildTower_normal",
+    "prompt": "Two Minecraft players exploring the world",
+    "pixel_frames_per_view": 189,
+    "views": 2,
+    "seed": 44017,
+    "guidance": 5.0,
+    "runtime_denoising_steps": 4
+  },
+  "profiling": {
+    "first_forward_warmups": 10,
+    "first_forward_repetitions": 30,
+    "randomized_arm_order_seed": 20260821,
+    "conditioning_repetitions": 3,
+    "cache_phases": [
+      "pre_roll",
+      "first_roll",
+      "steady_roll"
+    ],
+    "percentiles": [
+      50,
+      90,
+      95,
+      99
+    ]
+  },
+  "correctness": {
+    "cache_phases": [
+      "pre_roll",
+      "first_roll",
+      "steady_roll"
+    ],
+    "continuation_blocks": [
+      1,
+      2,
+      4,
+      8
+    ],
+    "required_max_error": 0,
+    "actions": [
+      "unchanged",
+      "canonical_stop",
+      "canonical_back",
+      "canonical_yaw"
+    ]
+  },
+  "optimization_arms": [
+    "stock_conditioning",
+    "shallow_conditioning",
+    "cross_attention_projection_cache",
+    "preallocated_sparse_hub_workspace",
+    "h200_fused_attention",
+    "torch_compile_fullgraph",
+    "cuda_graph"
+  ],
+  "readiness_gate": {
+    "first_step_proposal_p95_ms": 750.0,
+    "required_boundaries": [
+      "first_roll",
+      "steady_roll"
+    ],
+    "all_exactness_gates_required": true,
+    "do_not_relax": true
+  },
+  "trace_replay": {
+    "split": "frozen_vpt_test",
+    "confidence": "episode_cluster_bootstrap_95",
+    "rank_gating": true,
+    "charge": [
+      "proposal",
+      "abandoned_work",
+      "refinement",
+      "context_commit",
+      "miss_fallback",
+      "decode",
+      "peak_bytes"
+    ],
+    "canonical_stop_only_caol": true
+  }
+}

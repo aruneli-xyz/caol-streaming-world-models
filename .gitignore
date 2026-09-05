@@ -1,0 +1,37 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Model weights, checkpoints, and external reference repos (never commit)
+**/models/
+**/external/
+**/checkpoints/
+*.pt
+*.pth
+*.safetensors
+
+# Large generated data (summary CSV/JSON and plots are kept; raw dumps are not)
+*.npy
+*.npz
+**/generated.mp4
+**/results/raw/
+**/results/**/tmp/
+**/results/**/traces/*.png
+runtime/
+exports/
+frame_cache/
+*.sqlite3
+
+# LaTeX build artifacts
+*.log
+*.aux
+*.bbl
+*.blg
+*.out
+*.toc
+*.fdb_latexmk
+*.fls
+*.synctex.gz

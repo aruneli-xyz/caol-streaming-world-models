@@ -1,0 +1,55 @@
+{
+  "schema_version": "rtwm-v2-pre-roll-b1-config-1",
+  "immutable": true,
+  "scope": {
+    "gpu": "NVIDIA H200",
+    "device_count": 1,
+    "batch_size": 1,
+    "boundary": "pre_roll",
+    "block_index": 0,
+    "synthetic_action_lead_ms": 750.0,
+    "rolling_gate_unchanged": true,
+    "batch_size_2_ready_claim": false,
+    "multi_gpu_claim": false
+  },
+  "benchmark": {
+    "warmups": 10,
+    "measured_repetitions": 30,
+    "randomized_path_order_seed": 20260822,
+    "known_hit_action": "canonical_stop",
+    "miss_proposed_action": "unchanged",
+    "miss_observed_action": "canonical_stop",
+    "continuation_action": "canonical_stop",
+    "continuation_blocks_checked": 1,
+    "decode": "cached Wan decoder, one temporal block, synchronous uint8 host copy",
+    "required_dropped_frames": 0,
+    "required_max_error": 0
+  },
+  "pre_roll_b1_gate": {
+    "proposal_p95_ms": 750.0,
+    "exact_transaction_required": true,
+    "exact_incremental_decode_required": true,
+    "zero_drops_required": true
+  },
+  "confidence": {
+    "target": "strict_hash",
+    "predictor": "markov_history_3",
+    "budget": 1,
+    "fit_split": "train",
+    "calibration": "deterministic five-fold episode cross-fit",
+    "threshold_quantiles": [
+      0.0,
+      0.25,
+      0.5,
+      0.75,
+      0.9,
+      0.95,
+      0.975,
+      0.99,
+      0.995,
+      1.0
+    ],
+    "pre_roll_eligibility": "episode-local action block index 1 through 7; block 8 is first roll",
+    "intent_diagnostic_only": true
+  }
+}

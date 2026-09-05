@@ -1,0 +1,14 @@
+:root { color-scheme: dark; font: 16px/1.45 system-ui, sans-serif; background:#111827; color:#f3f4f6; }
+body { margin:0; }
+main { max-width:1320px; margin:auto; padding:1.5rem; }
+h1 { font-size:1.5rem; }
+.command { background:#1f2937; padding:.8rem; border-radius:.4rem; margin-bottom:.8rem; }
+#frame { width:100%; max-height:720px; object-fit:contain; background:#000; display:block; }
+.controls { display:flex; gap:.7rem; align-items:center; justify-content:center; padding:1rem; }
+button, input, select { font:inherit; padding:.55rem .8rem; }
+button { cursor:pointer; }
+button:disabled { cursor:not-allowed; opacity:.5; }
+fieldset { display:grid; gap:.5rem; margin:1rem 0; }
+#status { min-height:1.5rem; color:#bfdbfe; }
+#error { color:#fca5a5; }
+label { margin-right:.8rem; }

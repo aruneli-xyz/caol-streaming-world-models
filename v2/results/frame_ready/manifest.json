@@ -1,0 +1,134 @@
+{
+  "benchmark_script_sha256": "a353b7864d785b9c3e3c79ff22475898296a45e587fe9981d624be52b4596285",
+  "config_sha256": "742495a5d00c80ef7ca1b4136dd1594dc4eb050d0c84215e32219cfd41fe80b8",
+  "dependencies": {
+    "driver_v2.py": "5791120ab5b500b250aaccabb56d742a608f2433b0340141d44e6519d24f1b08",
+    "tracks.py": "e8cb0d8ef5966b9a191326a12d9ab2ae2d4f57d82d6cb2d241b92eac3e32ba80"
+  },
+  "determinism": {
+    "cublas_workspace_config": ":4096:8",
+    "cudnn_benchmark": false,
+    "cudnn_deterministic": true,
+    "cudnn_tf32": false,
+    "deterministic_algorithms_warn_only": true,
+    "matmul_tf32": false
+  },
+  "environment": {
+    "cuda": "13.0",
+    "gpu": "NVIDIA H200",
+    "gpu_total_memory_mib": 143155,
+    "torch": "2.9.0+cu130"
+  },
+  "event_semantics": {
+    "action_received": "synthetic event injected at the block boundary aligned to change_frame",
+    "frame_ready": "measured raw-support frame copied synchronously to host memory",
+    "presentation": "not measured"
+  },
+  "gamma_source": {
+    "commit": "6a95de85c439d8ea73eae34c88fbfd4e89ea02e2",
+    "diff_sha256": "814691ca7fbb8ca11633d9b5ea41bc3966a95ad1849049995b529e4ebdf8a75c",
+    "dirty": true
+  },
+  "manifest_sha256": "59c4f6828fe9650a5a978a3f3c77f5c0f957f4984c763ef80bd037e72db6177f",
+  "protocol_sha256": "047aebd31aba39e50f7a72b9202a2935f266fda230ba62400e1298f888029e26",
+  "runs": [
+    {
+      "action_to_admission_ms": 10061.802051,
+      "action_to_frame_ready_ms": 75980.236257,
+      "action_to_latent_commit_ms": 20126.545481,
+      "admission_frame": 108,
+      "admission_lag_frames": 12,
+      "change_frame": 96,
+      "decode_ms": 55849.679737,
+      "delay": "d0",
+      "effect_start_frame": 105,
+      "events": {
+        "bytes": 3946,
+        "path": "events/buildTower_normal__seed301__d0.jsonl",
+        "required": true,
+        "sha256": "39d8709dc934cca2efc2a732098934306594c4a37f60edc9232731622e06d55b"
+      },
+      "run_id": "buildTower_normal__seed301__d0",
+      "run_order_within_seed": 0,
+      "scene": "buildTower_normal",
+      "seed": 301,
+      "status": "complete"
+    },
+    {
+      "action_to_admission_ms": 20135.352012,
+      "action_to_frame_ready_ms": 84233.497929,
+      "action_to_latent_commit_ms": 30201.069267,
+      "admission_frame": 120,
+      "admission_lag_frames": 24,
+      "change_frame": 96,
+      "decode_ms": 54028.290063,
+      "delay": "d1",
+      "effect_start_frame": 117,
+      "events": {
+        "bytes": 4282,
+        "path": "events/buildTower_normal__seed301__d1.jsonl",
+        "required": true,
+        "sha256": "a9dd4ab1dce058a9073790f86629feb00ddb55744d2e8e3fb861c0f165aca74d"
+      },
+      "run_id": "buildTower_normal__seed301__d1",
+      "run_order_within_seed": 1,
+      "scene": "buildTower_normal",
+      "seed": 301,
+      "status": "complete"
+    },
+    {
+      "action_to_admission_ms": 16355.996256,
+      "action_to_frame_ready_ms": 75332.950401,
+      "action_to_latent_commit_ms": 26415.134792,
+      "admission_frame": 108,
+      "admission_lag_frames": 12,
+      "change_frame": 96,
+      "decode_ms": 48913.961767,
+      "delay": "d0",
+      "effect_start_frame": 105,
+      "events": {
+        "bytes": 3949,
+        "path": "events/buildTower_normal__seed302__d0.jsonl",
+        "required": true,
+        "sha256": "35e3e7d8b0c739ecc9d8c2ef4c51cb2892ad6772cedf75c1925e1e63fa17b355"
+      },
+      "run_id": "buildTower_normal__seed302__d0",
+      "run_order_within_seed": 1,
+      "scene": "buildTower_normal",
+      "seed": 302,
+      "status": "complete"
+    },
+    {
+      "action_to_admission_ms": 20085.274949,
+      "action_to_frame_ready_ms": 79026.865038,
+      "action_to_latent_commit_ms": 30123.182455,
+      "admission_frame": 120,
+      "admission_lag_frames": 24,
+      "change_frame": 96,
+      "decode_ms": 48899.600834,
+      "delay": "d1",
+      "effect_start_frame": 117,
+      "events": {
+        "bytes": 4285,
+        "path": "events/buildTower_normal__seed302__d1.jsonl",
+        "required": true,
+        "sha256": "79e515db7319acd770c3505339d8b982c6d9d8ba5b87643d15d7d869659263b0"
+      },
+      "run_id": "buildTower_normal__seed302__d1",
+      "run_order_within_seed": 0,
+      "scene": "buildTower_normal",
+      "seed": 302,
+      "status": "complete"
+    }
+  ],
+  "scene": "buildTower_normal",
+  "schema_version": "rtwm-v2-frame-ready-1",
+  "seeds": [
+    301,
+    302
+  ],
+  "source_patch": {
+    "path": "results/provenance/gamma_world_source.patch",
+    "sha256": "814691ca7fbb8ca11633d9b5ea41bc3966a95ad1849049995b529e4ebdf8a75c"
+  }
+}

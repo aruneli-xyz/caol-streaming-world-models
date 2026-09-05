@@ -1,0 +1,113 @@
+{
+  "action_protocol_sha256": "90e8c77467e1361f04b99740097c5fd96aab8b0d3ae6a9b902879de0a5983e15",
+  "anchors": [
+    72,
+    96,
+    108,
+    120
+  ],
+  "bindings": [
+    {
+      "null_a": "buildTower_normal__seed101__null_a",
+      "null_b": "buildTower_normal__seed101__null_b",
+      "scene": "buildTower_normal",
+      "seed": 101,
+      "statistics": [
+        {
+          "anchor": 72,
+          "maximum_sustained_min": 0.0,
+          "search_end": 112
+        },
+        {
+          "anchor": 96,
+          "maximum_sustained_min": 0.0,
+          "search_end": 136
+        },
+        {
+          "anchor": 108,
+          "maximum_sustained_min": 0.0,
+          "search_end": 148
+        },
+        {
+          "anchor": 120,
+          "maximum_sustained_min": 0.0,
+          "search_end": 160
+        }
+      ],
+      "view_index": 0
+    },
+    {
+      "null_a": "buildTower_normal__seed102__null_a",
+      "null_b": "buildTower_normal__seed102__null_b",
+      "scene": "buildTower_normal",
+      "seed": 102,
+      "statistics": [
+        {
+          "anchor": 72,
+          "maximum_sustained_min": 0.0,
+          "search_end": 112
+        },
+        {
+          "anchor": 96,
+          "maximum_sustained_min": 0.0,
+          "search_end": 136
+        },
+        {
+          "anchor": 108,
+          "maximum_sustained_min": 0.0,
+          "search_end": 148
+        },
+        {
+          "anchor": 120,
+          "maximum_sustained_min": 0.0,
+          "search_end": 160
+        }
+      ],
+      "view_index": 0
+    },
+    {
+      "null_a": "buildTower_normal__seed103__null_a",
+      "null_b": "buildTower_normal__seed103__null_b",
+      "scene": "buildTower_normal",
+      "seed": 103,
+      "statistics": [
+        {
+          "anchor": 72,
+          "maximum_sustained_min": 0.0,
+          "search_end": 112
+        },
+        {
+          "anchor": 96,
+          "maximum_sustained_min": 0.0,
+          "search_end": 136
+        },
+        {
+          "anchor": 108,
+          "maximum_sustained_min": 0.0,
+          "search_end": 148
+        },
+        {
+          "anchor": 120,
+          "maximum_sustained_min": 0.0,
+          "search_end": 160
+        }
+      ],
+      "view_index": 0
+    }
+  ],
+  "calibration_seeds": [
+    101,
+    102,
+    103
+  ],
+  "config_sha256": "4bc3d7fd782a573c5d1f7c022dd80c112f25c72993d9d4cf4a1325735d5e3fd0",
+  "payload_sha256": "c26d74ec43ca5eed910b58527daec5bf587a114c775c9cbe87dea88fab4fa636",
+  "persistence": 3,
+  "protocol_sha256": "0b7f8574b9811ebf475491c1d0aed40d41bb96bb3225af30a7ae92908fd6f0b8",
+  "scene": "buildTower_normal",
+  "schema_version": "rtwm-v2-directional-null-lock-1",
+  "statistic": "maximum_sustained_min",
+  "threshold": 0.0,
+  "view_index": 0,
+  "window_frames": 40
+}

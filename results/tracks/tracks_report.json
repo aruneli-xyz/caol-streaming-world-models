@@ -1,0 +1,62 @@
+{
+ "3a": {
+  "block_ms": 4716.6,
+  "fork_ms": 21442.6,
+  "restore_ms": 4237.3,
+  "kv_cache_mb": 37842.0,
+  "branch_ms": [
+   6239.6,
+   6228.0
+  ],
+  "on_demand_latency_ms": 4716.6,
+  "speculative_accept_latency_ms": 4237.3
+ },
+ "3b": [
+  {
+   "D": 1,
+   "repair_ms": 12032.1,
+   "per_block_ms": [
+    6222.4
+   ],
+   "stale_vs_repaired_mse": 0.00068
+  },
+  {
+   "D": 2,
+   "repair_ms": 19784.8,
+   "per_block_ms": [
+    6237.4,
+    6293.3
+   ],
+   "stale_vs_repaired_mse": 0.00083
+  },
+  {
+   "D": 4,
+   "repair_ms": 35277.1,
+   "per_block_ms": [
+    6222.8,
+    6262.8,
+    6267.5,
+    6267.0
+   ],
+   "stale_vs_repaired_mse": 0.00121
+  }
+ ],
+ "3c": {
+  "steps4": {
+   "total_denoise_s": 82.52,
+   "mse_vs_4step": 0.0
+  },
+  "steps2": {
+   "total_denoise_s": 41.87,
+   "mse_vs_4step": 0.02355
+  },
+  "steps1": {
+   "total_denoise_s": 21.51,
+   "mse_vs_4step": 0.07366
+  },
+  "adaptive": {
+   "total_denoise_s": 48.12,
+   "mse_vs_4step": 0.02285
+  }
+ }
+}

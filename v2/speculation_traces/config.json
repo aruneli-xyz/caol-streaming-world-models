@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "protocol_id": "vpt-traces-episode-v1",
+  "selection": {
+    "unit": "episode",
+    "train_count": 512,
+    "train_algorithm": "ascending SHA-256 rank of protocol_id, split, episode_id, actions_path; exclude source-ambiguous mappings",
+    "test_algorithm": "all episodes, ascending episode_id"
+  },
+  "source": {
+    "metadata_dir": "/home/arunkumareli/code/research/safeswm/external/solaris/vpt_dataset",
+    "train_metadata": "episodes_info_train.json",
+    "test_metadata": "episodes_info_test.json",
+    "indices_glob": "vpt_indices/*.json"
+  },
+  "actions": {
+    "source_fps": 20,
+    "target_fps": 16,
+    "block_frames": 12,
+    "camera_quantization_bins": 256
+  }
+}

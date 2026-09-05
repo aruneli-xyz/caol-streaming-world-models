@@ -1,0 +1,39 @@
+{
+  "allowed": true,
+  "artifact_errors": [],
+  "blockers": [],
+  "checks": {
+    "control_action_identity": true,
+    "control_artifacts": true,
+    "decoder_rf_manifest_hash": true,
+    "directional_config_hash": true,
+    "exact_12_controls": true,
+    "exact_24_interventions": true,
+    "fresh_output_root": true,
+    "gamma_source_commit": true,
+    "gamma_source_diff": true,
+    "null_gate_compatible": true,
+    "null_gate_hash": true,
+    "source_manifest_hash": true,
+    "source_manifest_identity": true,
+    "source_validation_hash": true
+  },
+  "config_sha256": "135fda5c1bc63fe13fe6c5f3ed40732f3459895aa332060ffc9d94a9b300399f",
+  "created_at": "2026-08-21T09:13:10Z",
+  "evidence_hashes": {
+    "decoder_rf_manifest": "ef8ae6b28aa58d9164c820056b3463db4dc66549a2e0323c86c8693f5b6df2b0",
+    "directional_config": "4bc3d7fd782a573c5d1f7c022dd80c112f25c72993d9d4cf4a1325735d5e3fd0",
+    "null_gate": "86fee3129d7a9be3572f6b0f7525b5cef350f641a150f636f4d4dbe703adbdd0",
+    "source_manifest": "9fb091215b5949660899d05efe26d516254666f3a860eee1cbae9a0a4421478f",
+    "source_validation": "806eb8f43bdb41673782fb9efd6b84dc08a2f4f5e061d39eb41d2155d5338cde"
+  },
+  "gate_sha256": "f4989c95e4f385d53052650974f8320ba1a09ba03fdd529fe3fbf455a39412aa",
+  "output_root": "/home/arunkumareli/code/research/rtwm/v2/results/canonical_stop",
+  "protocol_sha256": "82c64c2ac6c9eb5bfe0cafbee4d45dd57a201ddb064d6b3f4a1708ccde263e8d",
+  "schema_version": "rtwm-v2-canonical-stop-preflight-1",
+  "source": {
+    "commit": "6a95de85c439d8ea73eae34c88fbfd4e89ea02e2",
+    "diff_sha256": "814691ca7fbb8ca11633d9b5ea41bc3966a95ad1849049995b529e4ebdf8a75c",
+    "dirty": true
+  }
+}

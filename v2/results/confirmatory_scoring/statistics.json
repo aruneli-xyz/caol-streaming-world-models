@@ -1,0 +1,151 @@
+{
+  "bootstrap": {
+    "interval": "percentile 95%",
+    "missing_onsets": "seed onset is reported only when both views detect in every planned scene; reliability is reported separately",
+    "samples": 20000
+  },
+  "by_delay": {
+    "d0": {
+      "metrics": {
+        "any_view_detection_fraction": {
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "mean": 1.0,
+          "n_seeds": 6
+        },
+        "both_view_detection_fraction": {
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "mean": 1.0,
+          "n_seeds": 6
+        },
+        "causal_onset_lag_frames": {
+          "ci95": [
+            9.0,
+            9.0
+          ],
+          "mean": 9.0,
+          "n_seeds": 6
+        },
+        "effective_generation_fps": {
+          "ci95": [
+            0.7058936096179963,
+            0.7180783602933075
+          ],
+          "mean": 0.7122761692895768,
+          "n_seeds": 6
+        },
+        "flow_divergence_peak": {
+          "ci95": [
+            0.017442189017076067,
+            0.018245223692999534
+          ],
+          "mean": 0.017843921328932522,
+          "n_seeds": 6
+        }
+      },
+      "scene_pair_count": 12,
+      "seed_count": 6
+    },
+    "d1": {
+      "metrics": {
+        "any_view_detection_fraction": {
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "mean": 1.0,
+          "n_seeds": 6
+        },
+        "both_view_detection_fraction": {
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "mean": 1.0,
+          "n_seeds": 6
+        },
+        "causal_onset_lag_frames": {
+          "ci95": [
+            21.0,
+            21.0
+          ],
+          "mean": 21.0,
+          "n_seeds": 6
+        },
+        "effective_generation_fps": {
+          "ci95": [
+            0.6931352546245352,
+            0.7135366612117585
+          ],
+          "mean": 0.70482590768302,
+          "n_seeds": 6
+        },
+        "flow_divergence_peak": {
+          "ci95": [
+            0.017359796248424143,
+            0.01750284049614358
+          ],
+          "mean": 0.01743043026629965,
+          "n_seeds": 6
+        }
+      },
+      "scene_pair_count": 12,
+      "seed_count": 6
+    }
+  },
+  "config_sha256": "742495a5d00c80ef7ca1b4136dd1594dc4eb050d0c84215e32219cfd41fe80b8",
+  "paired_delay_comparison": {
+    "d1_minus_d0_any_view_detection_fraction": {
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "mean": 0.0,
+      "n_seeds": 6
+    },
+    "d1_minus_d0_both_view_detection_fraction": {
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "mean": 0.0,
+      "n_seeds": 6
+    },
+    "d1_minus_d0_causal_onset_lag_frames": {
+      "ci95": [
+        12.0,
+        12.0
+      ],
+      "mean": 12.0,
+      "n_seeds": 6
+    },
+    "d1_minus_d0_effective_generation_fps": {
+      "ci95": [
+        -0.02335620417672039,
+        0.003900409704560922
+      ],
+      "mean": -0.0074502616065568366,
+      "n_seeds": 6
+    },
+    "d1_minus_d0_flow_divergence_peak": {
+      "ci95": [
+        -0.0008358470031834946,
+        7.939034390174368e-06
+      ],
+      "mean": -0.0004134910626328713,
+      "n_seeds": 6
+    },
+    "relative_throughput_difference": 0.0105147846829398,
+    "similar_throughput": true,
+    "throughput_tolerance_fraction": 0.05
+  },
+  "protocol_sha256": "047aebd31aba39e50f7a72b9202a2935f266fda230ba62400e1298f888029e26",
+  "schema_version": "rtwm-v2-confirmatory-statistics-1",
+  "statistical_unit": "seed; scenes and views are repeated observations",
+  "statistics_sha256": "404f32cd0bcc66a2ea376a66044cdcb51bfbd77bf0fa0f88d65af3bca26d13ad"
+}

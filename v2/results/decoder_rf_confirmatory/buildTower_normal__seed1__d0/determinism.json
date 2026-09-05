@@ -1,0 +1,86 @@
+{
+  "comparison_domain": "raw_uint8_pre_mp4",
+  "exact": true,
+  "first": "control_decode_1",
+  "first_raw_sha256": "3ae9cfdb0f8f0a3b640dfa0da6f765c46b00c1d0c7b2f243d12d844eb02a29a2",
+  "frame_metrics": {
+    "arrays": {
+      "changed_pixels": {
+        "dtype": "uint64",
+        "shape": [
+          2,
+          189
+        ]
+      },
+      "changed_values": {
+        "dtype": "uint64",
+        "shape": [
+          2,
+          189
+        ]
+      },
+      "max_abs": {
+        "dtype": "uint8",
+        "shape": [
+          2,
+          189
+        ]
+      },
+      "mean_abs": {
+        "dtype": "float64",
+        "shape": [
+          2,
+          189
+        ]
+      },
+      "sum_abs": {
+        "dtype": "uint64",
+        "shape": [
+          2,
+          189
+        ]
+      }
+    },
+    "path": "metrics/determinism.npz",
+    "schema_version": "rtwm-v2-decoder-rf-frame-metrics-1",
+    "sha256": "341cf225a1d633c1142ef09612ba7e1f41d6bfd4de03ce21d046a51247cdd30c"
+  },
+  "raw_dtype": "uint8",
+  "raw_shape_vthwc": [
+    2,
+    189,
+    720,
+    1280,
+    3
+  ],
+  "schema_version": "rtwm-v2-decoder-rf-determinism-1",
+  "second": "control_decode_2",
+  "second_raw_sha256": "3ae9cfdb0f8f0a3b640dfa0da6f765c46b00c1d0c7b2f243d12d844eb02a29a2",
+  "source_latent_sha256": "e4f834a50df471adf18ab731bc1bc344ada0acd92c35143341d35304482f9c2d",
+  "views": [
+    {
+      "changed_frame_count": 0,
+      "changed_frame_spans": [],
+      "earliest_changed_frame": null,
+      "frame_count": 189,
+      "latest_changed_frame": null,
+      "maximum_absolute_error": 0,
+      "total_absolute_error": 0,
+      "total_changed_pixels": 0,
+      "total_changed_values": 0,
+      "view_index": 0
+    },
+    {
+      "changed_frame_count": 0,
+      "changed_frame_spans": [],
+      "earliest_changed_frame": null,
+      "frame_count": 189,
+      "latest_changed_frame": null,
+      "maximum_absolute_error": 0,
+      "total_absolute_error": 0,
+      "total_changed_pixels": 0,
+      "total_changed_values": 0,
+      "view_index": 1
+    }
+  ]
+}

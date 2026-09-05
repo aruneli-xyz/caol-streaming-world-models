@@ -1,0 +1,37 @@
+[
+ {
+  "arm": "offline",
+  "switch_px": 96,
+  "onset": 104,
+  "perceived": 8,
+  "post_switch": 8
+ },
+ {
+  "arm": "swap+0",
+  "switch_px": 96,
+  "onset": 104,
+  "perceived": 8,
+  "post_switch": 8
+ },
+ {
+  "arm": "swap+1",
+  "switch_px": 108,
+  "onset": 116,
+  "perceived": 20,
+  "post_switch": 8
+ },
+ {
+  "arm": "swap+2",
+  "switch_px": 120,
+  "onset": 116,
+  "perceived": 20,
+  "post_switch": -4
+ },
+ {
+  "arm": "swap+4",
+  "switch_px": 144,
+  "onset": null,
+  "perceived": null,
+  "post_switch": null
+ }
+]

@@ -1,0 +1,73 @@
+{
+  "schema_version": "rtwm-v2-intent-pre-roll-config-1",
+  "immutable": true,
+  "scope": {
+    "gpu": "NVIDIA H200",
+    "device_count": 1,
+    "batch_size": 1,
+    "cache_phase": "pre_roll",
+    "eligible_block_indices": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "rolling_gate_unchanged": true,
+    "exact_gate_unchanged": true,
+    "batch_size_2_tested": false
+  },
+  "semantic_gate": {
+    "proposal_steps_with_train_intent_representative": 1,
+    "refinement_steps_with_exact_actual_action": 3,
+    "context_commit_action": "exact_actual",
+    "final_latent_mse_max": 0.024,
+    "raw_uint8_psnr_min_db_per_view": 30.0,
+    "raw_uint8_ssim_min_per_view": 0.95,
+    "ssim_definition": "skimage.metrics.structural_similarity per frame, data_range=255, channel_axis=-1; arithmetic mean by view over frames at or after decoder support",
+    "no_raw_change_before_decoder_support": true,
+    "decoder_support_frame": "0 for block 0, otherwise block_index * 12 - 3",
+    "continuation_blocks": 4,
+    "continuation_final_latent_mse_max": 0.005,
+    "directional_obedience_claim": false,
+    "perceptual_equivalence_claim": false
+  },
+  "held_out_selection": {
+    "split": "test",
+    "sample_count": 12,
+    "predictor": "markov_history_3",
+    "target": "intent",
+    "requirements": [
+      "predicted intent equals actual intent",
+      "predicted representative exact hash differs from actual 12-frame hash",
+      "target plus four continuation blocks exists",
+      "span distinct intent and camera/movement state groups"
+    ],
+    "selection_seed": "rtwm-v2-intent-pre-roll-heldout-1",
+    "selection_order": "greedily maximize new intent token and movement/camera group; SHA256 rank breaks ties, then fills remaining slots"
+  },
+  "confidence_gate": {
+    "fit_split": "train",
+    "calibration": "deterministic five-fold episode cross-fit",
+    "confidence": "top intent transition count divided by context count with deterministic longest-context backoff",
+    "candidate_thresholds": "all unique train cross-fit confidence values plus a reject-all sentinel",
+    "precision_lower_bound": "one-sided 95% Wilson score lower bound, z=1.6448536269514722",
+    "objective": "maximize train cross-fit expected net saved milliseconds among thresholds whose intent precision lower bound exceeds measured break-even precision",
+    "tie_break": "higher threshold, then lower coverage",
+    "bootstrap": {
+      "unit": "whole test episode",
+      "draws": 10000,
+      "seed": 20260823,
+      "interval": "percentile 95%"
+    },
+    "freeze_before_test": true
+  },
+  "positive_serving_claim": {
+    "requires_pre_roll_proposal_p95_ms_max": 750.0,
+    "requires_semantic_gate": true,
+    "requires_held_out_total_charged_work_less_than_all_on_demand": true,
+    "requires_saved_work_ci95_excludes_zero": true
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "canaries": [
+    {
+      "hash_match": true,
+      "max_error": 0.0,
+      "scene": "buildTower_normal",
+      "seed": 1,
+      "view_max_errors": [
+        0.0,
+        0.0
+      ]
+    }
+  ],
+  "checks": {
+    "control_canary_exact": true,
+    "decoded_prefixes_exact": false,
+    "decoder_lookahead_detected": true,
+    "frame_counts_valid": true,
+    "has_stage1_pairs": true,
+    "latent_diagnostic_available": true,
+    "latent_prefixes_exact_when_available": true,
+    "null_false_positives_within_limit": true
+  },
+  "false_positive_control_views": 0,
+  "n_pairs": 8,
+  "n_views": 16,
+  "stage2_allowed": false,
+  "stage2_block_reason": "decoded prefixes diverge before admission; diagnose decoder look-ahead before scene expansion"
+}

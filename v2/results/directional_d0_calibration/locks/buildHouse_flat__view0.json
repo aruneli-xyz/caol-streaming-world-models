@@ -1,0 +1,113 @@
+{
+  "action_protocol_sha256": "90e8c77467e1361f04b99740097c5fd96aab8b0d3ae6a9b902879de0a5983e15",
+  "anchors": [
+    72,
+    96,
+    108,
+    120
+  ],
+  "bindings": [
+    {
+      "null_a": "buildHouse_flat__seed101__null_a",
+      "null_b": "buildHouse_flat__seed101__null_b",
+      "scene": "buildHouse_flat",
+      "seed": 101,
+      "statistics": [
+        {
+          "anchor": 72,
+          "maximum_sustained_min": 0.0,
+          "search_end": 112
+        },
+        {
+          "anchor": 96,
+          "maximum_sustained_min": 0.0,
+          "search_end": 136
+        },
+        {
+          "anchor": 108,
+          "maximum_sustained_min": 0.0,
+          "search_end": 148
+        },
+        {
+          "anchor": 120,
+          "maximum_sustained_min": 0.0,
+          "search_end": 160
+        }
+      ],
+      "view_index": 0
+    },
+    {
+      "null_a": "buildHouse_flat__seed102__null_a",
+      "null_b": "buildHouse_flat__seed102__null_b",
+      "scene": "buildHouse_flat",
+      "seed": 102,
+      "statistics": [
+        {
+          "anchor": 72,
+          "maximum_sustained_min": 0.0,
+          "search_end": 112
+        },
+        {
+          "anchor": 96,
+          "maximum_sustained_min": 0.0,
+          "search_end": 136
+        },
+        {
+          "anchor": 108,
+          "maximum_sustained_min": 0.0,
+          "search_end": 148
+        },
+        {
+          "anchor": 120,
+          "maximum_sustained_min": 0.0,
+          "search_end": 160
+        }
+      ],
+      "view_index": 0
+    },
+    {
+      "null_a": "buildHouse_flat__seed103__null_a",
+      "null_b": "buildHouse_flat__seed103__null_b",
+      "scene": "buildHouse_flat",
+      "seed": 103,
+      "statistics": [
+        {
+          "anchor": 72,
+          "maximum_sustained_min": 0.0,
+          "search_end": 112
+        },
+        {
+          "anchor": 96,
+          "maximum_sustained_min": 0.0,
+          "search_end": 136
+        },
+        {
+          "anchor": 108,
+          "maximum_sustained_min": 0.0,
+          "search_end": 148
+        },
+        {
+          "anchor": 120,
+          "maximum_sustained_min": 0.0,
+          "search_end": 160
+        }
+      ],
+      "view_index": 0
+    }
+  ],
+  "calibration_seeds": [
+    101,
+    102,
+    103
+  ],
+  "config_sha256": "4bc3d7fd782a573c5d1f7c022dd80c112f25c72993d9d4cf4a1325735d5e3fd0",
+  "payload_sha256": "70cd8377701b59543d366258e4d0272a4a6a18d4e7e878b381a8b9c2dc14cf93",
+  "persistence": 3,
+  "protocol_sha256": "0b7f8574b9811ebf475491c1d0aed40d41bb96bb3225af30a7ae92908fd6f0b8",
+  "scene": "buildHouse_flat",
+  "schema_version": "rtwm-v2-directional-null-lock-1",
+  "statistic": "maximum_sustained_min",
+  "threshold": 0.0,
+  "view_index": 0,
+  "window_frames": 40
+}

@@ -1,0 +1,6 @@
+results/**/generated.mp4
+results/**/*.pt
+results/**/*.npz
+results/**/*.npy
+results/**/tmp/
+results/**/traces/*.png

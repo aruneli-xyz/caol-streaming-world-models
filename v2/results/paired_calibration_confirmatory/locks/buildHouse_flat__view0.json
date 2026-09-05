@@ -1,0 +1,217 @@
+{
+  "anchors": [
+    72,
+    96,
+    108,
+    120
+  ],
+  "calibration_details": [
+    {
+      "anchor_statistics": [
+        {
+          "anchor": 72,
+          "maximum_sustained_min": 0.0,
+          "search_end": 112
+        },
+        {
+          "anchor": 96,
+          "maximum_sustained_min": 0.0,
+          "search_end": 136
+        },
+        {
+          "anchor": 108,
+          "maximum_sustained_min": 0.0,
+          "search_end": 148
+        },
+        {
+          "anchor": 120,
+          "maximum_sustained_min": 0.0,
+          "search_end": 160
+        }
+      ],
+      "maximum": 0.0,
+      "minimum_finite_fraction": 1.0,
+      "sample_count": 188,
+      "seed": 101
+    },
+    {
+      "anchor_statistics": [
+        {
+          "anchor": 72,
+          "maximum_sustained_min": 0.0,
+          "search_end": 112
+        },
+        {
+          "anchor": 96,
+          "maximum_sustained_min": 0.0,
+          "search_end": 136
+        },
+        {
+          "anchor": 108,
+          "maximum_sustained_min": 0.0,
+          "search_end": 148
+        },
+        {
+          "anchor": 120,
+          "maximum_sustained_min": 0.0,
+          "search_end": 160
+        }
+      ],
+      "maximum": 0.0,
+      "minimum_finite_fraction": 1.0,
+      "sample_count": 188,
+      "seed": 102
+    },
+    {
+      "anchor_statistics": [
+        {
+          "anchor": 72,
+          "maximum_sustained_min": 0.0,
+          "search_end": 112
+        },
+        {
+          "anchor": 96,
+          "maximum_sustained_min": 0.0,
+          "search_end": 136
+        },
+        {
+          "anchor": 108,
+          "maximum_sustained_min": 0.0,
+          "search_end": 148
+        },
+        {
+          "anchor": 120,
+          "maximum_sustained_min": 0.0,
+          "search_end": 160
+        }
+      ],
+      "maximum": 0.0,
+      "minimum_finite_fraction": 1.0,
+      "sample_count": 188,
+      "seed": 103
+    }
+  ],
+  "calibration_seeds": [
+    101,
+    102,
+    103
+  ],
+  "calibration_window": 40,
+  "config_path": "config/confirmatory.json",
+  "config_sha256": "742495a5d00c80ef7ca1b4136dd1594dc4eb050d0c84215e32219cfd41fe80b8",
+  "crossing_operator": "strict",
+  "direction": "rise",
+  "excluded_test_seeds": [
+    201,
+    202,
+    203,
+    204,
+    205,
+    206
+  ],
+  "manifest_path": "results/confirmatory/manifest.json",
+  "manifest_sha256": "aef125eea6c8073a166c90012f4e76fd6edb8164ed4bdb761bc054471aa11bfc",
+  "payload_sha256": "c50e6f9c2e89314a4145542b562b16a2d5bf9fdb658720ac33b1fb6feb0e0af2",
+  "persistence": 3,
+  "scene": "buildHouse_flat",
+  "schema_version": "rtwm-v2-paired-calibration-lock-1",
+  "signal": "flow_field_l2",
+  "source_videos": [
+    {
+      "arm": "null_control_a",
+      "detector_frames_path": "buildHouse_flat/seed101/null_control_a/detector_frames.npz",
+      "detector_frames_sha256": "d29cb5eb7bc94361f866880e40b183ad65f28a738efaa1264adef1e8711b2064",
+      "rollout_id": "buildHouse_flat__seed101__null_control_a",
+      "scene": "buildHouse_flat",
+      "seed": 101
+    },
+    {
+      "arm": "null_control_b",
+      "detector_frames_path": "buildHouse_flat/seed101/null_control_b/detector_frames.npz",
+      "detector_frames_sha256": "d29cb5eb7bc94361f866880e40b183ad65f28a738efaa1264adef1e8711b2064",
+      "rollout_id": "buildHouse_flat__seed101__null_control_b",
+      "scene": "buildHouse_flat",
+      "seed": 101
+    },
+    {
+      "arm": "null_control_a",
+      "detector_frames_path": "buildHouse_flat/seed102/null_control_a/detector_frames.npz",
+      "detector_frames_sha256": "37ddf29fd4e9d0226541c9f7ed9163da0abc6051dfbba6e7d7fc72d095617433",
+      "rollout_id": "buildHouse_flat__seed102__null_control_a",
+      "scene": "buildHouse_flat",
+      "seed": 102
+    },
+    {
+      "arm": "null_control_b",
+      "detector_frames_path": "buildHouse_flat/seed102/null_control_b/detector_frames.npz",
+      "detector_frames_sha256": "37ddf29fd4e9d0226541c9f7ed9163da0abc6051dfbba6e7d7fc72d095617433",
+      "rollout_id": "buildHouse_flat__seed102__null_control_b",
+      "scene": "buildHouse_flat",
+      "seed": 102
+    },
+    {
+      "arm": "null_control_a",
+      "detector_frames_path": "buildHouse_flat/seed103/null_control_a/detector_frames.npz",
+      "detector_frames_sha256": "2181b6723a768280cfe551ef0cdbfd1716cda48d2e6dde5acf891f0ff78dc6e8",
+      "rollout_id": "buildHouse_flat__seed103__null_control_a",
+      "scene": "buildHouse_flat",
+      "seed": 103
+    },
+    {
+      "arm": "null_control_b",
+      "detector_frames_path": "buildHouse_flat/seed103/null_control_b/detector_frames.npz",
+      "detector_frames_sha256": "2181b6723a768280cfe551ef0cdbfd1716cda48d2e6dde5acf891f0ff78dc6e8",
+      "rollout_id": "buildHouse_flat__seed103__null_control_b",
+      "scene": "buildHouse_flat",
+      "seed": 103
+    },
+    {
+      "arm": "null_control_a",
+      "detector_frames_path": "buildHouse_flat/seed104/null_control_a/detector_frames.npz",
+      "detector_frames_sha256": "bda6e0c654f96d37fe094ae1d0717ba787501250180d62e84f7205c762f0622a",
+      "rollout_id": "buildHouse_flat__seed104__null_control_a",
+      "scene": "buildHouse_flat",
+      "seed": 104
+    },
+    {
+      "arm": "null_control_b",
+      "detector_frames_path": "buildHouse_flat/seed104/null_control_b/detector_frames.npz",
+      "detector_frames_sha256": "bda6e0c654f96d37fe094ae1d0717ba787501250180d62e84f7205c762f0622a",
+      "rollout_id": "buildHouse_flat__seed104__null_control_b",
+      "scene": "buildHouse_flat",
+      "seed": 104
+    }
+  ],
+  "threshold": 0.0,
+  "threshold_quantile": 1.0,
+  "threshold_statistic": "maximum",
+  "validation": {
+    "maximum": 0.0,
+    "minimum_finite_fraction": 1.0,
+    "passed": true,
+    "scene": "buildHouse_flat",
+    "seed": 104,
+    "strict_crossings": [
+      {
+        "anchor": 72,
+        "crossing_index": null
+      },
+      {
+        "anchor": 96,
+        "crossing_index": null
+      },
+      {
+        "anchor": 108,
+        "crossing_index": null
+      },
+      {
+        "anchor": 120,
+        "crossing_index": null
+      }
+    ],
+    "threshold": 0.0,
+    "view_index": 0
+  },
+  "validation_seed": 104,
+  "view_index": 0
+}

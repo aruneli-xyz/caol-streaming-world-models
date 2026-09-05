@@ -1,0 +1,144 @@
+{
+  "calibration_seeds": [
+    101,
+    102,
+    103
+  ],
+  "checks": {
+    "all_frame_counts_match": true,
+    "all_input_hashes_match": true,
+    "calibration_uses_null_duplicates_only": true,
+    "protocol_partition_exact": true,
+    "seed104_has_zero_strict_crossings": true
+  },
+  "config_sha256": "742495a5d00c80ef7ca1b4136dd1594dc4eb050d0c84215e32219cfd41fe80b8",
+  "excluded_test_seeds": [
+    201,
+    202,
+    203,
+    204,
+    205,
+    206
+  ],
+  "lock_payload_sha256": {
+    "buildHouse_flat__view0.json": "c50e6f9c2e89314a4145542b562b16a2d5bf9fdb658720ac33b1fb6feb0e0af2",
+    "buildHouse_flat__view1.json": "669a96ac6dfd3e0d3ae4704d9d8c7f1ed7479e717a34c72eb93b740b9f123393",
+    "buildTower_normal__view0.json": "bf8ee66bdee03d0ebf11ec029fdd3098edc6d659b5fb83fc0a9b09719c06aaef",
+    "buildTower_normal__view1.json": "1788c282f55db4199a96429082428f4ad05591f75dde0e91122b0944ce56b7fc"
+  },
+  "manifest_sha256": "aef125eea6c8073a166c90012f4e76fd6edb8164ed4bdb761bc054471aa11bfc",
+  "passed": true,
+  "payload_sha256": "c7cb1d5ee721a93973b1224694f090df4abec10b46dfcb398f1b6cb8a8c11492",
+  "schema_version": "rtwm-v2-paired-calibration-gate-1",
+  "validation_results": [
+    {
+      "maximum": 0.0,
+      "minimum_finite_fraction": 1.0,
+      "passed": true,
+      "scene": "buildTower_normal",
+      "seed": 104,
+      "strict_crossings": [
+        {
+          "anchor": 72,
+          "crossing_index": null
+        },
+        {
+          "anchor": 96,
+          "crossing_index": null
+        },
+        {
+          "anchor": 108,
+          "crossing_index": null
+        },
+        {
+          "anchor": 120,
+          "crossing_index": null
+        }
+      ],
+      "threshold": 0.0,
+      "view_index": 0
+    },
+    {
+      "maximum": 0.0,
+      "minimum_finite_fraction": 1.0,
+      "passed": true,
+      "scene": "buildTower_normal",
+      "seed": 104,
+      "strict_crossings": [
+        {
+          "anchor": 72,
+          "crossing_index": null
+        },
+        {
+          "anchor": 96,
+          "crossing_index": null
+        },
+        {
+          "anchor": 108,
+          "crossing_index": null
+        },
+        {
+          "anchor": 120,
+          "crossing_index": null
+        }
+      ],
+      "threshold": 0.0,
+      "view_index": 1
+    },
+    {
+      "maximum": 0.0,
+      "minimum_finite_fraction": 1.0,
+      "passed": true,
+      "scene": "buildHouse_flat",
+      "seed": 104,
+      "strict_crossings": [
+        {
+          "anchor": 72,
+          "crossing_index": null
+        },
+        {
+          "anchor": 96,
+          "crossing_index": null
+        },
+        {
+          "anchor": 108,
+          "crossing_index": null
+        },
+        {
+          "anchor": 120,
+          "crossing_index": null
+        }
+      ],
+      "threshold": 0.0,
+      "view_index": 0
+    },
+    {
+      "maximum": 0.0,
+      "minimum_finite_fraction": 1.0,
+      "passed": true,
+      "scene": "buildHouse_flat",
+      "seed": 104,
+      "strict_crossings": [
+        {
+          "anchor": 72,
+          "crossing_index": null
+        },
+        {
+          "anchor": 96,
+          "crossing_index": null
+        },
+        {
+          "anchor": 108,
+          "crossing_index": null
+        },
+        {
+          "anchor": 120,
+          "crossing_index": null
+        }
+      ],
+      "threshold": 0.0,
+      "view_index": 1
+    }
+  ],
+  "validation_seed": 104
+}

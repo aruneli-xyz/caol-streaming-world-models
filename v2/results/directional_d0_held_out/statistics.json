@@ -1,0 +1,255 @@
+{
+  "audit_gate_allowed": false,
+  "audit_gate_block_reasons": [
+    "back_cosine_projection_audit_expected_direction",
+    "back_radial_reversal_audit_expected_direction",
+    "yaw_positive_global_horizontal_audit_expected_direction"
+  ],
+  "claims": {
+    "back": {
+      "causal_divergence_pass": true,
+      "directional_obedience_pass": false,
+      "failed_claim": "directional obedience explicitly failed",
+      "scenes": {
+        "buildHouse_flat": {
+          "causal_divergence_pass": true,
+          "claim": "causal_divergence_only",
+          "directional_obedience_pass": false
+        },
+        "buildTower_normal": {
+          "causal_divergence_pass": true,
+          "claim": "causal_divergence_only",
+          "directional_obedience_pass": false
+        }
+      }
+    },
+    "yaw_positive": {
+      "causal_divergence_pass": true,
+      "directional_obedience_pass": false,
+      "failed_claim": "directional obedience explicitly failed",
+      "scenes": {
+        "buildHouse_flat": {
+          "causal_divergence_pass": true,
+          "claim": "causal_divergence_only",
+          "directional_obedience_pass": false
+        },
+        "buildTower_normal": {
+          "causal_divergence_pass": true,
+          "claim": "causal_divergence_only",
+          "directional_obedience_pass": false
+        }
+      }
+    }
+  },
+  "config_sha256": "4bc3d7fd782a573c5d1f7c022dd80c112f25c72993d9d4cf4a1325735d5e3fd0",
+  "partition": "held_out",
+  "protocol_sha256": "0b7f8574b9811ebf475491c1d0aed40d41bb96bb3225af30a7ae92908fd6f0b8",
+  "samples": 20000,
+  "schema_version": "rtwm-v2-directional-bootstrap-1",
+  "summary_sha256": "5a689f3b9217eede39bc4852981c7d652deb47a269449f962555e1e5a35258d1",
+  "transitions": {
+    "back": {
+      "buildHouse_flat": {
+        "directional_features_expected_direction": {
+          "cosine_projection": {
+            "ci95": [
+              -0.6816690173171251,
+              -0.662901398046283
+            ],
+            "mean": -0.6732103455168493,
+            "n_seeds": 4
+          },
+          "radial_reversal": {
+            "ci95": [
+              0.0015310047538043031,
+              0.0022234570994193762
+            ],
+            "mean": 0.0018486027604436676,
+            "n_seeds": 4
+          },
+          "signed_projection": {
+            "ci95": [
+              0.006693161550559107,
+              0.007322036580920429
+            ],
+            "mean": 0.006965569729657673,
+            "n_seeds": 4
+          }
+        },
+        "directional_obedience_fraction": {
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "mean": 0.0,
+          "n_seeds": 4
+        },
+        "paired_flow_field_l2_peak": {
+          "ci95": [
+            0.02112332716696646,
+            0.021650708116626283
+          ],
+          "mean": 0.021387017641796367,
+          "n_seeds": 4
+        },
+        "primary_detection_fraction": {
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "mean": 1.0,
+          "n_seeds": 4
+        },
+        "residual_flow_l2": null,
+        "seed_count": 4
+      },
+      "buildTower_normal": {
+        "directional_features_expected_direction": {
+          "cosine_projection": {
+            "ci95": [
+              -0.7024694250930761,
+              -0.6866489127361521
+            ],
+            "mean": -0.694559168914614,
+            "n_seeds": 4
+          },
+          "radial_reversal": {
+            "ci95": [
+              0.002008957899948138,
+              0.003377224014266428
+            ],
+            "mean": 0.002564380619611747,
+            "n_seeds": 4
+          },
+          "signed_projection": {
+            "ci95": [
+              0.0030919216317658493,
+              0.003650142215294435
+            ],
+            "mean": 0.003371031923530142,
+            "n_seeds": 4
+          }
+        },
+        "directional_obedience_fraction": {
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "mean": 0.0,
+          "n_seeds": 4
+        },
+        "paired_flow_field_l2_peak": {
+          "ci95": [
+            0.012283065586552764,
+            0.012955696535930285
+          ],
+          "mean": 0.012619381061241526,
+          "n_seeds": 4
+        },
+        "primary_detection_fraction": {
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "mean": 1.0,
+          "n_seeds": 4
+        },
+        "residual_flow_l2": null,
+        "seed_count": 4
+      }
+    },
+    "yaw_positive": {
+      "buildHouse_flat": {
+        "directional_features_expected_direction": {
+          "global_horizontal": {
+            "ci95": [
+              -1.8355687681047734,
+              -0.016209372527711506
+            ],
+            "mean": -0.6305866993956348,
+            "n_seeds": 4
+          }
+        },
+        "directional_obedience_fraction": {
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "mean": 0.0,
+          "n_seeds": 4
+        },
+        "paired_flow_field_l2_peak": {
+          "ci95": [
+            5.604669576982916,
+            7.036664489578214
+          ],
+          "mean": 6.320667033280564,
+          "n_seeds": 4
+        },
+        "primary_detection_fraction": {
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "mean": 1.0,
+          "n_seeds": 4
+        },
+        "residual_flow_l2": {
+          "ci95": [
+            1.5643515526858622,
+            1.8414431821097552
+          ],
+          "mean": 1.6827024049653478,
+          "n_seeds": 4
+        },
+        "seed_count": 4
+      },
+      "buildTower_normal": {
+        "directional_features_expected_direction": {
+          "global_horizontal": {
+            "ci95": [
+              -0.0004541812148596424,
+              0.006317969178947485
+            ],
+            "mean": 0.0024398837614771074,
+            "n_seeds": 4
+          }
+        },
+        "directional_obedience_fraction": {
+          "ci95": [
+            0.0,
+            1.0
+          ],
+          "mean": 0.5,
+          "n_seeds": 4
+        },
+        "paired_flow_field_l2_peak": {
+          "ci95": [
+            6.990918480473112,
+            7.661193878573223
+          ],
+          "mean": 7.318611355053657,
+          "n_seeds": 4
+        },
+        "primary_detection_fraction": {
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "mean": 1.0,
+          "n_seeds": 4
+        },
+        "residual_flow_l2": {
+          "ci95": [
+            0.7745915462004569,
+            0.8883648986311966
+          ],
+          "mean": 0.8327380022769616,
+          "n_seeds": 4
+        },
+        "seed_count": 4
+      }
+    }
+  },
+  "unit": "seed; views are repeated observations"
+}
